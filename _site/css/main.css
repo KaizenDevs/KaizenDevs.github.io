@@ -3,6 +3,16 @@
 html, body, .section-container {
   height: 100%; }
 
+.btn-white {
+  background: white;
+  border: 1px solid white;
+  padding: 0.3 0.6em;
+  color: #1dcb73; }
+
+.big {
+  font-size: 2em;
+  padding: 0.85em 1.5em; }
+
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -5799,6 +5809,19 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+html, body, .section-container {
+  height: 100%; }
+
+.btn-white {
+  background: white;
+  border: 1px solid white;
+  padding: 0.3 0.6em;
+  color: #1dcb73; }
+
+.big {
+  font-size: 2em;
+  padding: 0.85em 1.5em; }
+
 .navbar.site-nav .navbar-brand {
   margin: 0;
   padding: 30px 0; }
@@ -5812,17 +5835,23 @@ button.close {
   background: url(../img/home/hero-bg.jpg);
   background-image: linear-gradient(to bottom, rgba(26, 240, 120, 0.9) 0%, rgba(26, 240, 120, 0.9) 100%), url(../img/home/hero-bg.jpg);
   background-size: cover; }
-  .home .hero h1 {
-    text-align: center;
-    color: #0E1B00;
-    text-transform: uppercase;
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    border: 3px solid white;
-    padding: 1em 2.5em;
-    color: white;
+  .home .hero .center-container {
     display: inline-block;
     margin-top: 55px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif; }
+  .home .hero h1 {
+    border: 3px solid white;
+    padding: 1em 1em;
+    text-align: center;
+    color: #0E1B00;
+    text-transform: uppercase;
+    color: white; }
+  .home .hero p {
+    margin: 1em 0;
+    color: #1e804b;
+    font-size: 1.6em;
+    font-weight: 300; }
