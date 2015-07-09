@@ -1,30 +1,28 @@
 ---
 layout: default
 ---
-
-<div class="home section-container">
-  <div class="hero">
-    <div class="center-container text-center">
-      <h1>Have an idea? we help you make it real</h1>
-      <p>Focusing on user outcomes & simplicity, we minimize risk and increase your product’s success with quality code & quality humans.</p>
-      <!-- <a href="" class="btn btn-white big">Contact US</a> -->
-    </div>
+<div class="home-hero container-fluid">
+  <div class="content-container v-center text-center">
+    <h1>Have an idea? we help you make it real</h1>
+    <p>Focusing on user outcomes and simplicity, we minimize risk and increase your product’s success with quality code & quality humans.</p>
   </div>
+  <a class="a-arrow-down page-scroll" href="#about">
+    <figure>
+      <svg width="40px" height="20px" viewBox="0 0 40 20">
+        <g>
+          <polygon fill="#FFFFFF" points="20,21 0,1 1,0 20,19 39,0 40,1 "/>
+        </g>
+      </svg>
+    </figure>
+  </a>
+</div>
+<div class="home-about v-padding-6">
   <div class="container">
-    <h1 class="page-heading">Posts</h1>
-
-    <ul class="post-list">
-      {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-      {% endfor %}
-    </ul>
-
-    <p class="rss-subscribe">subscribe <a class="btn btn-primary" href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <h3>Consectetur adipisicing elit.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis eius accusamus debitis vitae, rem dolorum libero dolorem possimus temporibus velit cum veritatis perspiciatis ullam illum minus iure repudiandae reiciendis, numquam!</p>
+      </div>
+    </div>
   </div>
 </div>

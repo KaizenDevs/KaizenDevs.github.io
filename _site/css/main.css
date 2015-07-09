@@ -1,7 +1,19 @@
 @charset "UTF-8";
 @import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300");
-html, body, .section-container {
+body {
+  width: 100%;
   height: 100%; }
+
+html {
+  width: 100%;
+  height: 100%; }
+
+.v-padding-6 {
+  padding: 6em 0; }
+
+.v-center {
+  display: table-cell;
+  vertical-align: middle; }
 
 .btn-white {
   background: white;
@@ -3688,7 +3700,7 @@ tbody.collapse.in {
 
 .navbar {
   position: relative;
-  min-height: 130px;
+  min-height: 100px;
   margin-bottom: 0;
   border: 1px solid transparent; }
   .navbar:before, .navbar:after {
@@ -3790,10 +3802,10 @@ tbody.collapse.in {
 
 .navbar-brand {
   float: left;
-  padding: 55px 15px;
+  padding: 40px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 130px; }
+  height: 100px; }
   .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none; }
   .navbar-brand > img {
@@ -3807,8 +3819,8 @@ tbody.collapse.in {
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 48px;
-  margin-bottom: 48px;
+  margin-top: 33px;
+  margin-bottom: 33px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -3827,7 +3839,7 @@ tbody.collapse.in {
       display: none; } }
 
 .navbar-nav {
-  margin: 27.5px -15px; }
+  margin: 20px -15px; }
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -3855,8 +3867,8 @@ tbody.collapse.in {
       .navbar-nav > li {
         float: left; }
         .navbar-nav > li > a {
-          padding-top: 55px;
-          padding-bottom: 55px; } }
+          padding-top: 40px;
+          padding-bottom: 40px; } }
 
 .navbar-form {
   margin-left: -15px;
@@ -3866,8 +3878,8 @@ tbody.collapse.in {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 48px;
-  margin-bottom: 48px; }
+  margin-top: 33px;
+  margin-bottom: 33px; }
   @media (min-width: 768px) {
     .navbar-form .form-group {
       display: inline-block;
@@ -3935,18 +3947,18 @@ tbody.collapse.in {
   border-bottom-left-radius: 0; }
 
 .navbar-btn {
-  margin-top: 48px;
-  margin-bottom: 48px; }
+  margin-top: 33px;
+  margin-bottom: 33px; }
   .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
-    margin-top: 50px;
-    margin-bottom: 50px; }
+    margin-top: 35px;
+    margin-bottom: 35px; }
   .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
-    margin-top: 54px;
-    margin-bottom: 54px; }
+    margin-top: 39px;
+    margin-bottom: 39px; }
 
 .navbar-text {
-  margin-top: 55px;
-  margin-bottom: 55px; }
+  margin-top: 40px;
+  margin-bottom: 40px; }
   @media (min-width: 768px) {
     .navbar-text {
       float: left;
@@ -5809,49 +5821,40 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-html, body, .section-container {
-  height: 100%; }
+.site-nav .link-logo {
+  padding: 20px 0;
+  display: inline-block;
+  vertical-align: center; }
 
-.btn-white {
-  background: white;
-  border: 1px solid white;
-  padding: 0.3 0.6em;
-  color: #1dcb73; }
-
-.big {
-  font-size: 2em;
-  padding: 0.85em 1.5em; }
-
-.navbar.site-nav .navbar-brand {
-  margin: 0;
-  padding: 30px 0; }
-  .navbar.site-nav .navbar-brand img {
-    width: 200px;
-    margin: 0;
-    padding: 0; }
-
-.home .hero {
-  height: calc(100% - 130px);
-  background: url(../img/home/hero-bg.jpg);
-  background-image: linear-gradient(to bottom, rgba(26, 240, 120, 0.9) 0%, rgba(26, 240, 120, 0.9) 100%), url(../img/home/hero-bg.jpg);
-  background-size: cover; }
-  .home .hero .center-container {
-    display: inline-block;
-    margin-top: 55px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif; }
-  .home .hero h1 {
-    border: 3px solid white;
-    padding: 1em 1em;
-    text-align: center;
-    color: #0E1B00;
-    text-transform: uppercase;
+.home-hero {
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(142, 239, 6, 0.9) 50%, rgba(100, 160, 10, 0.9) 100%), url(../img/home/hero-bg.jpg);
+  background-size: cover;
+  min-height: 500px; }
+  .home-hero .content-container {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     color: white; }
-  .home .hero p {
+  .home-hero h1 {
+    color: rgba(0, 0, 0, 0.5);
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    padding: 0.8em;
+    text-transform: uppercase; }
+  .home-hero p {
     margin: 1em 0;
-    color: #1e804b;
     font-size: 1.6em;
-    font-weight: 300; }
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.5); }
+  .home-hero .a-arrow-down {
+    padding: 15px;
+    position: relative;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%, 0); }
+    .home-hero .a-arrow-down svg polygon {
+      fill: rgba(0, 0, 0, 0.5); }
+
+/*!
+ * Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */

@@ -1,11 +1,10 @@
 $navbar-default-bg: white;
-$navbar-height: 130px;
+$navbar-height: 100px;
 $navbar-margin-bottom:0;
-html,body, .section-container{height: 100%}
-.btn-white{background: white; border: 1px solid white; padding: 0.3 0.6em; color:#1dcb73}
-.big{font-size: 2em; padding: 0.85em 1.5em;}
+
 //== Colors
 
+$logo-color: rgba(142,239,6,1);
 
 // $brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
 $brand-primary:         darken(#16D8D8, 6.5%) !default; // #337ab7
