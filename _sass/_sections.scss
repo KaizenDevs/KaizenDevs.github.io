@@ -1,53 +1,95 @@
 @import "variables";
-
+body{
+ font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
 .site-nav{
   .link-logo{
+    margin-left: 15px;
     padding: 20px 0;
     display: inline-block;
     vertical-align: center;
+    // svg path {fill: white;}
   }
 }
+
+@media (min-width: 720px) {
+  .home-hero{
+    height: calc(100% - #{$navbar-height});
+  }
+  .content-container{
+    margin-top: 80px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+}
 .home-hero{
-    $hero-text-color: rgba(0,0,0 , 0.5);
-    width: 100%;
-    // height: calc(100% - #{$navbar-height});
-    background-image: linear-gradient(to bottom, rgba(142, 239, 6,0.9) 50%, rgba( 100, 160 , 10 , 0.9) 100%), url(../img/home/hero-bg.jpg);
-    background-size: cover;
-    min-height: 500px;
-    .content-container{
-      // display: inline-block;
-      // margin-top: 55px;
-      // transform: translate(-50%, -50%);
-      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-      color: white;
-    }
-    h1{
-      color: $hero-text-color;
-      border: 3px solid $hero-text-color;
-      padding: 0.8em;
-      text-transform: uppercase;
-    }
-    p{
-      margin: 1em 0;
-      font-size: 1.6em;
-      font-weight: 300;
-      color: $hero-text-color;
-    }
-    .a-arrow-down{
-      padding: 15px;
-      position: relative;
-      bottom: 15px;
-      left: 50%;
-      transform: translate(-50% , 0);
-      svg polygon {
-        fill: $hero-text-color;
-      }
+  padding:8em 0 4em 0;
+  $hero-text-color: rgba(0,0,0 , 0.6);
+  width: 100%;
+
+  background-image: linear-gradient(to bottom, rgba(142, 239, 6,0.9) 50%, rgba( 120, 180 , 10 , 0.9) 100%), url(../img/home/hero-bg.jpg);
+  background-size: cover;
+
+  .content-container{
+    color: white;
+  }
+  h1{
+    margin: 0;
+    color: $hero-text-color;
+    border: 3px solid $hero-text-color;
+    padding: 0.8em;
+    text-transform: uppercase;
+  }
+  p{
+
+    margin: 1em 0;
+    font-size: 1.6em;
+    font-weight: 300;
+    color: $hero-text-color;
+  }
+  .a-arrow-down{
+    position: relative;
+    left: 47.2%;
+    svg polygon {
+      fill: $hero-text-color;
     }
   }
+}
 .home {
 
 }
 
-.home-about{
+#home-about{
+  .row{
+    margin: 0 auto;
+  }
+  p{
+    text-align: justify;
+    font-weight: lighter;
+    color: #595959;
+    font-size: 1.4em;
+    line-height: 1.3em;
+  }
+}
+#home-services{
+  .services-wrapper{
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid $gray-light;
+    text-align: center;
+    color: $gray-dark;
+  }
+  h4{ padding: 0 0.5em;}
+  .glyphicon{
+    margin-top: 50px;
+    // line-height: 200px;
+    display: block;
+    text-align: center;
+  }
 
 }
