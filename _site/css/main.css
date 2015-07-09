@@ -13,6 +13,12 @@ h3 {
   padding-bottom: 1em;
   border-bottom: 2px solid #8eef06; }
 
+p.description {
+  margin: 1em 0;
+  font-size: 1.6em;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.6); }
+
 .v-padding-6 {
   padding: 6em 0; }
 
@@ -5858,11 +5864,6 @@ body {
     border: 3px solid rgba(0, 0, 0, 0.6);
     padding: 0.8em;
     text-transform: uppercase; }
-  .home-hero p {
-    margin: 1em 0;
-    font-size: 1.6em;
-    font-weight: 300;
-    color: rgba(0, 0, 0, 0.6); }
   .home-hero .a-arrow-down {
     position: relative;
     left: 47.2%; }
@@ -5878,18 +5879,10 @@ body {
   font-size: 1.4em;
   line-height: 1.3em; }
 
-#home-services .services-wrapper {
-  margin: 20px auto;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 1px solid #777777;
-  text-align: center;
-  color: #333333; }
 #home-services h4 {
   padding: 0 0.5em; }
 #home-services .glyphicon {
-  margin-top: 50px;
+  margin-top: 25px;
   display: block;
   text-align: center; }
 
@@ -5898,3 +5891,104 @@ body {
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
+.centered {
+  text-align: center; }
+
+.wrapper {
+  width: 100%;
+  padding: 30px 0; }
+
+.container {
+  width: 1200px;
+  margin: 0 auto; }
+
+/* ---------- Zoom container ---------- */
+.image-zoom-container {
+  list-style: none;
+  font-size: 0px; }
+
+.zoom-container {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 33.33%;
+  /* this value + 2 should = 33% */
+  font-size: 16px;
+  font-size: 1rem;
+  border: 1px solid #fff;
+  vertical-align: top;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+.zoom-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-transition: all .5s ease;
+  /* Safari and Chrome */
+  -moz-transition: all .5s ease;
+  /* Firefox */
+  -ms-transition: all .5s ease;
+  /* IE 9 */
+  -o-transition: all .5s ease;
+  /* Opera */
+  transition: all .5s ease; }
+
+.zoom-container .zoom-caption {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(142, 239, 6, 0.85);
+  -webkit-transition: all .5s ease;
+  /* Safari and Chrome */
+  -moz-transition: all .5s ease;
+  /* Firefox */
+  -ms-transition: all .5s ease;
+  /* IE 9 */
+  -o-transition: all .5s ease;
+  /* Opera */
+  transition: all .5s ease; }
+
+.zoom-container .zoom-caption h3 {
+  display: block;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5em;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 23% 0 0;
+  padding: 10px 0;
+  border: none; }
+
+.zoom-container:hover img {
+  -webkit-transform: scale(1.25);
+  /* Safari and Chrome */
+  -moz-transform: scale(1.25);
+  /* Firefox */
+  -ms-transform: scale(1.25);
+  /* IE 9 */
+  -o-transform: scale(1.25);
+  /* Opera */
+  transform: scale(1.25); }
+
+.zoom-container:hover .zoom-caption {
+  background: none; }
+  .zoom-container:hover .zoom-caption h3 {
+    background: rgba(255, 255, 255, 0.8); }
+
+@media (max-width: 1199px) {
+  .container {
+    width: auto;
+    padding: 0 10px; } }
+@media (max-width: 767px) {
+  .zoom-container {
+    width: 50%; } }
+@media (max-width: 480px) {
+  .zoom-container {
+    width: 100%; } }

@@ -27,9 +27,7 @@ body{
 }
 .home-hero{
   padding:8em 0 4em 0;
-  $hero-text-color: rgba(0,0,0 , 0.6);
   width: 100%;
-
   background-image: linear-gradient(to bottom, rgba(142, 239, 6,0.9) 50%, rgba( 120, 180 , 10 , 0.9) 100%), url(../img/home/hero-bg.jpg);
   background-size: cover;
 
@@ -42,13 +40,6 @@ body{
     border: 3px solid $hero-text-color;
     padding: 0.8em;
     text-transform: uppercase;
-  }
-  p{
-
-    margin: 1em 0;
-    font-size: 1.6em;
-    font-weight: 300;
-    color: $hero-text-color;
   }
   .a-arrow-down{
     position: relative;
@@ -76,20 +67,17 @@ body{
 }
 #home-services{
   .services-wrapper{
-    margin: 20px auto;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 1px solid $gray-light;
-    text-align: center;
-    color: $gray-dark;
+
   }
   h4{ padding: 0 0.5em;}
   .glyphicon{
-    margin-top: 50px;
-    // line-height: 200px;
+    margin-top: 25px;
+
     display: block;
     text-align: center;
   }
 
+}
+.inverted{
+  // background-color: $gray-dark;
 }
