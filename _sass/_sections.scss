@@ -12,7 +12,8 @@ body{
   }
 }
 
-@media (min-width: 720px) {
+
+@media all and (min-width: 1024px) and (min-height: 650px){
   .home-hero{
     height: calc(100% - #{$navbar-height});
   }
@@ -23,7 +24,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+  }
 }
 .home-hero{
   padding:8em 0 4em 0;

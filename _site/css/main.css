@@ -5840,7 +5840,7 @@ body {
   display: inline-block;
   vertical-align: center; }
 
-@media (min-width: 720px) {
+@media all and (min-width: 1024px) and (min-height: 650px) {
   .home-hero {
     height: calc(100% - 100px); }
 
