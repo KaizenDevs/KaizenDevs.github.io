@@ -17,10 +17,9 @@ body{
     height: calc(100% - #{$navbar-height});
   }
   .content-container{
-    margin-top: 80px;
     display: inline-block;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
   }

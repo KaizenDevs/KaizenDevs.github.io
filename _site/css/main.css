@@ -5845,10 +5845,9 @@ body {
     height: calc(100% - 100px); }
 
   .content-container {
-    margin-top: 80px;
     display: inline-block;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%); } }
 .home-hero {
@@ -6020,14 +6019,14 @@ body {
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-bottom-color: #ddd;
+  border-bottom-color: #8eef06;
   border-width: 15px;
   left: 50%;
   margin: -20px 0 0 -15px; }
 
 .og-expander {
   position: absolute;
-  background: #ddd;
+  background: #8eef06;
   top: auto;
   left: 0;
   width: 100%;
@@ -6055,7 +6054,7 @@ body {
   width: 100%;
   top: 50%;
   height: 1px;
-  background: #888;
+  background: rgba(0, 0, 0, 0.75);
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   transform: rotate(45deg); }
@@ -6098,12 +6097,12 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: #999; }
+  color: rgba(0, 0, 0, 0.75); }
 
 .og-details a {
   font-weight: 700;
   font-size: 16px;
-  color: #333;
+  color: rgba(0, 0, 0, 0.75);
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 10px 20px;
@@ -6119,7 +6118,7 @@ body {
 
 .og-details a:hover {
   border-color: #999;
-  color: #999; }
+  color: rgba(0, 0, 0, 0.75); }
 
 .og-loading {
   width: 20px;
