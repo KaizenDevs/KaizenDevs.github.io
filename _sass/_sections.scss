@@ -1,44 +1,67 @@
 @import "variables";
+$hero-text-color: white;
+$gradient-opacity-1: 0.5;
+$gradient-opacity-2: 1;
+$gradient-base-color: 30,30,30;
+$gradient-color-1: rgba( 30,30,30 , $gradient-opacity-1);
+$gradient-color-2: rgba( 30,30,30 , $gradient-opacity-2);
+$slice-vertical-height: 25px;
+
 body{
  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 .site-nav{
+  border:none;
+  padding: $slice-vertical-height 0 0 0;
   .link-logo{
+    // svg path {fill: white;}
+    display: inline-block;
     margin-left: 15px;
     padding: 20px 0;
-    display: inline-block;
     vertical-align: center;
-    // svg path {fill: white;}
+  }
+}
+header{
+  &:after{
+    position: relative;
+    content: ' ';
+    border-left: 100vw solid rgb(255,255,255);
+    border-bottom:$slice-vertical-height solid transparent;
   }
 }
 
+.home-hero-bottom:after {
+  position: relative;
+  content: ' ';
+  border-left: 100vw solid rgb(30,30,30);
+  border-bottom: $slice-vertical-height solid transparent;
+}
 
 @media all and (min-width: 1024px) and (min-height: 650px){
   .home-hero{
     height: calc(100% - #{$navbar-height});
   }
   .content-container{
-    margin-top: 80px;
     display: inline-block;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 }
 .home-hero{
+  background-image: linear-gradient(to bottom, rgba(142, 239, 6, 0.85) 50%, rgba( 120, 180 , 10 , 0.9) 100%), url(../img/home/hero-bg.jpg);
+  background-image: linear-gradient(to bottom, $gradient-color-1 0%, $gradient-color-2 100%), url(../img/home/hero-bg.jpg);
+  background-size: cover;
   padding:8em 0 4em 0;
   width: 100%;
-  background-image: linear-gradient(to bottom, rgba(142, 239, 6, 0.85) 50%, rgba( 120, 180 , 10 , 0.9) 100%), url(../img/home/hero-bg.png);
-  background-size: cover;
+  p.description{color:$hero-text-color}
 
-  .content-container{
-    color: white;
-  }
+  .content-container{ color: white }
   h1{
-    margin: 0;
-    color: $hero-text-color;
     border: 3px solid $hero-text-color;
+    color: $hero-text-color;
+    margin: 0;
     padding: 0.8em;
     text-transform: uppercase;
   }
@@ -54,16 +77,10 @@ body{
 
 }
 
-#home-about{
+#home-our-work{
+  margin-top: 10em;
   .row{
     margin: 0 auto;
-  }
-  p{
-    text-align: justify;
-    font-weight: lighter;
-    color: #595959;
-    font-size: 1.4em;
-    line-height: 1.3em;
   }
 }
 #home-services{
@@ -79,6 +96,65 @@ body{
   }
 
 }
+
+
 .inverted{
   // background-color: $gray-dark;
+}
+#home-team{
+  margin: 0 0 4em 0;
+  // h3{margin-bottom: 4em;}
+  .team-members{
+    text-align: center;
+    margin: 4em 0;
+    .member{
+      margin: 0 auto;
+      text-align: center;
+      // @media all and (max-width: 720px) {
+      //   img{
+      //     padding: 0 20%;
+      //   }
+      // }
+    }
+  }
+}
+.home-contact{
+  margin-bottom:6em;
+  p{
+    margin-bottom: 4em;
+  }
+  .btn-contact-us{
+    text-transform: uppercase;
+    font-size: 1.4em;
+    position: relative;
+    padding: 1em 2em;
+    background: white;
+    border: 2px solid $color-logo;
+    transition: all .5s ease;
+    text-decoration: none;
+    color: $color-logo !important;
+    &:hover{
+    background: $color-logo;
+    color: white !important;
+    }
+  }
+}
+.site-footer{
+  padding: 5em;
+  text-align: center;
+  background: rgba(46, 50, 52, 1);
+  svg path {fill: #4d5152;}
+  p{ margin-top:15px;color:#4d5152;}
+}
+
+.site-nav{
+  border:none;
+  padding: $slice-vertical-height 0 0 0;
+  .link-logo{
+    // svg path {fill: white;}
+    display: inline-block;
+    margin-left: 15px;
+    padding: 20px 0;
+    vertical-align: center;
+  }
 }
