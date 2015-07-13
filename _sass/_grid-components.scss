@@ -14,12 +14,47 @@
   height: 250px;
 }
 
-.og-grid li > a,
-.og-grid li > a img {
+.og-grid li > a
+{
+  width: 250px;
   border: none;
   outline: none;
   display: block;
   position: relative;
+  overflow: hidden;
+  &:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: RGBA(255, 255, 255, .5);
+    transition: all .3s linear;
+
+  }
+  &:hover:before {
+    background: none;
+     }
+}
+
+.og-grid li a img  {
+  width: 250px;
+  background: rgba(142,239,6, 0.85);
+  -webkit-transition: all .5s ease; /* Safari and Chrome */
+  -moz-transition: all .5s ease; /* Firefox */
+  -ms-transition: all .5s ease; /* IE 9 */
+  -o-transition: all .5s ease; /* Opera */
+  transition: all .5s ease;
+
+}
+.og-grid li a img:hover  {
+  -webkit-transform:scale(1.25); /* Safari and Chrome */
+  -moz-transform:scale(1.25); /* Firefox */
+  -ms-transform:scale(1.25); /* IE 9 */
+  -o-transform:scale(1.25); /* Opera */
+  transform:scale(1.25);
 }
 
 .og-grid li.og-expanded > a::after {

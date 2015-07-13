@@ -1,8 +1,18 @@
 @import "variables";
+$hero-text-color: white;
+$gradient-opacity-1: 0.5;
+$gradient-opacity-2: 1;
+$gradient-base-color: 30,30,30;
+$gradient-color-1: rgba( 30,30,30 , $gradient-opacity-1);
+$gradient-color-2: rgba( 30,30,30 , $gradient-opacity-2);
+$slice-vertical-height: 25px;
+
 body{
  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 .site-nav{
+  border:none;
+  padding: $slice-vertical-height 0 0 0;
   .link-logo{
     // svg path {fill: white;}
     display: inline-block;
@@ -10,6 +20,21 @@ body{
     padding: 20px 0;
     vertical-align: center;
   }
+}
+header{
+  &:after{
+    position: relative;
+    content: ' ';
+    border-left: 100vw solid rgb(255,255,255);
+    border-bottom:$slice-vertical-height solid transparent;
+  }
+}
+
+.home-hero-bottom:after {
+  position: relative;
+  content: ' ';
+  border-left: 100vw solid rgb(30,30,30);
+  border-bottom: $slice-vertical-height solid transparent;
 }
 
 @media all and (min-width: 1024px) and (min-height: 650px){
@@ -26,9 +51,11 @@ body{
 }
 .home-hero{
   background-image: linear-gradient(to bottom, rgba(142, 239, 6, 0.85) 50%, rgba( 120, 180 , 10 , 0.9) 100%), url(../img/home/hero-bg.jpg);
+  background-image: linear-gradient(to bottom, $gradient-color-1 0%, $gradient-color-2 100%), url(../img/home/hero-bg.jpg);
   background-size: cover;
   padding:8em 0 4em 0;
   width: 100%;
+  p.description{color:$hero-text-color}
 
   .content-container{ color: white }
   h1{
@@ -57,7 +84,7 @@ body{
   p{
     text-align: justify;
     font-weight: lighter;
-    color: #595959;
+    // color: $hero-text-color;
     font-size: 1.4em;
     line-height: 1.3em;
   }
