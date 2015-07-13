@@ -77,16 +77,10 @@ header{
 
 }
 
-#home-about{
+#home-our-work{
+  margin-top: 10em;
   .row{
     margin: 0 auto;
-  }
-  p{
-    text-align: justify;
-    font-weight: lighter;
-    // color: $hero-text-color;
-    font-size: 1.4em;
-    line-height: 1.3em;
   }
 }
 #home-services{
@@ -102,12 +96,65 @@ header{
   }
 
 }
-#home-our-work{
-  .wrapper{
-    // background: $color-logo;
-  }
-}
+
 
 .inverted{
   // background-color: $gray-dark;
+}
+#home-team{
+  margin: 0 0 4em 0;
+  // h3{margin-bottom: 4em;}
+  .team-members{
+    text-align: center;
+    margin: 4em 0;
+    .member{
+      margin: 0 auto;
+      text-align: center;
+      // @media all and (max-width: 720px) {
+      //   img{
+      //     padding: 0 20%;
+      //   }
+      // }
+    }
+  }
+}
+.home-contact{
+  margin-bottom:6em;
+  p{
+    margin-bottom: 4em;
+  }
+  .btn-contact-us{
+    text-transform: uppercase;
+    font-size: 1.4em;
+    position: relative;
+    padding: 1em 2em;
+    background: white;
+    border: 2px solid $color-logo;
+    transition: all .5s ease;
+    text-decoration: none;
+    color: $color-logo !important;
+    &:hover{
+    background: $color-logo;
+    color: white !important;
+    }
+  }
+}
+.site-footer{
+  padding: 5em;
+  text-align: center;
+  background: rgba(46, 50, 52, 1);
+  svg path {fill: #4d5152;}
+  p{ margin-top:15px;color:#4d5152;}
+}
+
+.site-nav{
+  border:none;
+  padding: $slice-vertical-height 0 0 0;
+  .link-logo{
+    // svg path {fill: white;}
+    display: inline-block;
+    margin-left: 15px;
+    padding: 20px 0;
+    vertical-align: center;
+  }
 }

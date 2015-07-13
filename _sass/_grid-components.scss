@@ -1,4 +1,5 @@
 @import "variables";
+$color-og-content:$gray-light-transparent;
 .og-grid {
   list-style: none;
   padding: 20px 0;
@@ -6,17 +7,36 @@
   text-align: center;
   width: 100%;
 }
-
 .og-grid li {
+  // &:hover li h5 { background: none; }
+  h5{
+    position: absolute;
+    background: rgba(0,0,0,0.7);
+    padding: 15px 10px;
+    margin: 0;
+    color:$color-logo;
+    // text-transform: uppercase;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    // position: absolute;
+    margin-top: 55px;
+    width: 250px;
+    text-align: center;
+     z-index: 1000;
+  }
+
   display: inline-block;
   margin: 10px 5px 0 5px;
   vertical-align: top;
-  height: 250px;
+  height: 190px;
 }
 
-.og-grid li > a
+.og-grid li a > div
 {
+  z-index: 100;
   width: 250px;
+  max-height: 400px;
+  overflow: hidden;
   border: none;
   outline: none;
   display: block;
@@ -30,7 +50,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: RGBA(255, 255, 255, .5);
+    background: rgba(145, 237, 47, .8);
+    // background: rgba(0, 0, 0, .8);
     transition: all .3s linear;
 
   }
@@ -40,7 +61,7 @@
 }
 
 .og-grid li a img  {
-  width: 250px;
+  max-width: 250px;
   background: rgba(142,239,6, 0.85);
   -webkit-transition: all .5s ease; /* Safari and Chrome */
   -moz-transition: all .5s ease; /* Firefox */
@@ -57,23 +78,25 @@
   transform:scale(1.25);
 }
 
-.og-grid li.og-expanded > a::after {
-  top: auto;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-bottom-color: $color-logo;
-  border-width: 15px;
-  left: 50%;
-  margin: -20px 0 0 -15px;
-}
+// .og-grid li.og-expanded > a::after {
+//   top: auto;
+//   border: solid transparent;
+//   content: " ";
+//   height: 0;
+//   width: 0;
+//   position: absolute;
+//   pointer-events: none;
+//   border-bottom-color: $color-logo;
+//   border-width: 15px;
+//   left: 50%;
+//   margin: -20px 0 0 -15px;
+// }
 
 .og-expander {
+  color: #FFF;
   position: absolute;
-  background: $color-logo;
+  background: rgba(29, 29, 29, 1);
+  background: white;
   top: auto;
   left: 0;
   width: 100%;
@@ -81,10 +104,13 @@
   text-align: left;
   height: 0;
   overflow: hidden;
+  border-top: 2px solid $gray-light-transparent;
+  border-bottom: 2px solid $gray-light-transparent;
 }
 
 .og-expander-inner {
-  padding: 50px 30px;
+  margin-top: 50px;
+  padding: 50px 30px 0 30px;
   height: 100%;
 }
 
@@ -104,7 +130,7 @@
   width: 100%;
   top: 50%;
   height: 1px;
-  background: $gray-light-transparent;
+  background: $color-og-content;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -144,24 +170,27 @@
   max-width: 100%;
 }
 
-.og-details h3 {
+.og-details h4 {
+  color: $color-og-content;
   font-weight: 300;
   font-size: 52px;
   padding: 40px 0 10px;
   margin-bottom: 10px;
+  border-bottom: 2px solid $color-og-content;
+  display: inline-block;
 }
 
 .og-details p {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: $gray-light-transparent;
+  color: $color-og-content;
 }
 
 .og-details a {
   font-weight: 700;
   font-size: 16px;
-  color: $gray-light-transparent;
+  color: $color-og-content;
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 10px 20px;
@@ -179,7 +208,7 @@
 
 .og-details a:hover {
   border-color: #999;
-  color: $gray-light-transparent;
+  color: $color-og-content;
 }
 
 .og-loading {
