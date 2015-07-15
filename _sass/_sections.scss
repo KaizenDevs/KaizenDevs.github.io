@@ -25,20 +25,26 @@ header{
   &:after{
     position: relative;
     content: ' ';
-    border-left: 100vw solid rgb(255,255,255);
+    border-left: 91.5vw solid rgb(255,255,255);
     border-bottom:$slice-vertical-height solid transparent;
   }
 }
-
-.home-hero-bottom:after {
-  position: relative;
-  content: ' ';
-  border-left: 100vw solid rgb(30,30,30);
-  border-bottom: $slice-vertical-height solid transparent;
+.home-hero-bottom {
+  height: $slice-vertical-height * 2;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+.home-hero-bottom div:after {
+    position: relative;
+    content: ' ';
+    border-left: 100vw solid rgb(30,30,30);
+    border-bottom:$slice-vertical-height solid transparent;
 }
 
 @media all and (min-width: 1024px) and (min-height: 650px){
   .home-hero{
+    overflow:hidden;
     height: calc(100% - #{$navbar-height});
   }
   .content-container{

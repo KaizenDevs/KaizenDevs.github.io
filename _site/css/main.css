@@ -5856,10 +5856,16 @@ body {
 header:after {
   position: relative;
   content: ' ';
-  border-left: 100vw solid white;
+  border-left: 91.5vw solid white;
   border-bottom: 25px solid transparent; }
 
-.home-hero-bottom:after {
+.home-hero-bottom {
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  position: absolute; }
+
+.home-hero-bottom div:after {
   position: relative;
   content: ' ';
   border-left: 100vw solid #1e1e1e;
@@ -5867,6 +5873,7 @@ header:after {
 
 @media all and (min-width: 1024px) and (min-height: 650px) {
   .home-hero {
+    overflow: hidden;
     height: calc(100% - 100px); }
 
   .content-container {
