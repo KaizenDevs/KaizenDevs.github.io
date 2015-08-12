@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
+  <link href="css/nouislider.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -18,7 +19,6 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-<<<<<<< HEAD
         <a class="navbar-brand" href="#"><img src="img/logo-nav.png" alt=""></a>
       </div>
       <div class="navbar-collapse collapse">
@@ -35,7 +35,6 @@
           </li>
         </ul>
       </div>
-
     </div>
   </div>
   <section class="home-hero">
@@ -438,15 +437,90 @@
         <div class="modal-body text-center">
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
-              <h1>Project Planner</h1>
-              <h3>Start a project, get a quote or learn more about how we can partner to build a successful product.</h3>
+              <h1 id="project_form_title">Project Planner</h1>
+              <p id="project_form_subtitle">Start a project, get a quote or learn more about how we can partner to build a successful product.</p>
               <p>all fields are required unless indicated</p>
+
+
+              <h3 class="form-text">Name and Contact Info</h3>
+              <p>Tell us about yourself</p>
+
+              <form method="get" role"form" action="/" name="sentMessage" id="contactForm" novalidate>
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <input type="text" name="name" class="form-control input-lg" placeholder="Full Name" id="name" required data-validation-required-message="Porfavor ingresa un nombre.">
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-8 col-sm-offset-2">
+                        <input type="email" name="_replyto" class="form-control input-lg" placeholder="Email Address" id="email" required data-validation-required-message="Porfavor ingresa una dirección de correo electrónico">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-8 col-sm-offset-2">
+                        <input type="tel" name="tel" class="form-control input-lg" placeholder="Phone Number" id="phone" required data-validation-required-message="Porfavor ingresa un número telefónico">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <input type="text" name="company" class="form-control input-lg" placeholder="Company/Organization" id="company" required data-validation-required-message="Porfavor ingresa un número telefónico">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+
+                <h3 class="form-text">Project Budget</h3>
+                <p>Do you have a budget for this project? Ballparks are fine. (Value in $ USD)</p>
+                <div id="range">
+
+                </div>
+
+                <div class="budget-value">
+                  <span class="budget-min-value"></span> -
+                  <span class="budget-max-value"></span>
+                  <input type="hidden" name="budget" value="" / id="budget">
+                </div>
+
+                <h3 class="form-text">Timeframe</h3>
+                <p>Is there a specific timeframe or deadline for the project?</p>
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <input type="text" name="timeframe" class="form-control input-lg" id="timeframe" required data-validation-required-message="Porfavor ingresa un número telefónico">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+
+                <h3 class="form-text">About the project</h3>
+                <p>Tell us about the project, requirements and objectives.</p>
+                <div class="row">
+                    <div class="form-group col-sm-8 col-sm-offset-2">
+                        <textarea name="about_project" rows="3" class="form-control input-lg" id="about_project" required data-validation-required-message="Porfavor ingresa un mensaje"></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+
+                <h3 class="form-text">How'd you find us?</h3>
+                <p>Tell us about how you found us? Google, Friend, etc?</p>
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <input type="text" name="timeframe" class="form-control input-lg" id="timeframe" required data-validation-required-message="Porfavor ingresa un número telefónico">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+
+                <input type="hidden" name="_subject" value="New project request!" />
+                <br>
+                <div id="success"></div>
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <button type="submit" class="btn btn-lg btn-submit-project">Submit Planner</button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
@@ -456,5 +530,55 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="jquery.easing.min.js"></script>
   <script src="scrolling-nav.js"></script>
+  <script src="js/wNumb.min.js"></script>
+  <script src="js/nouislider.min.js"></script>
+  <script>
+    var slider = document.getElementById('range');
+
+    noUiSlider.create(slider, {
+      start: [ 20, 40 ], // Handle start position
+      step: 5, // Slider moves in increments of '10'
+      margin: 5, // Handles must be more than '20' apart
+      connect: true, // Display a colored bar between the handles
+      direction: 'ltr', // Put '0' at the bottom of the slider
+      orientation: 'horizontal', // Orient the slider vertically
+      behaviour: 'tap-drag', // Move handle on tap, bar is draggable
+      range: { // Slider can select '0' to '100'
+        'min': 5,
+        'max': 75
+      },
+      pips: { // Show a scale with the slider
+        mode: 'steps',
+        density: 5,
+        format: wNumb({
+          decimals: 2,
+          prefix: '$',
+          postfix: 'k'
+        })
+      }
+    });
+
+    // When the slider value changes, update the input and span
+    slider.noUiSlider.on('update', function( values, handle ) {
+      var values = slider.noUiSlider.get();
+      $('span.budget-min-value').text("$"+values[0].replace(".00", "k"));
+      $('span.budget-max-value').text("$"+values[1].replace(".00", "k"));
+      $('input[name="budget"]').attr('value',"$"+values[0].replace(".00", "k USD"+" - $"+values[1].replace(".00", "k USD")));
+      console.log($('input[name="budget"]').val());
+    });
+
+    $("#contactForm").on( "submit", function( event ) {
+    event.preventDefault();
+    var formData = $( this ).serialize();
+    $.ajax({
+      url: "//formspree.io/info@kaizendevs.co",
+      method: "POST",
+      data: formData,
+      dataType: "json"
+    }).done(function(response) {
+      $( '#contactForm' ).html("<h2 class='text-center'>¡See you soon!</h2>")
+    });
+  })
+  </script>
 </body>
 </html>
