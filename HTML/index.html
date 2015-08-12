@@ -4,53 +4,258 @@
   <meta charset="UTF-8">
   <title>Kaizen Devs</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/darkly/bootstrap.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div class="bs-component">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Brand</a>
-        </div>
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle-navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="img/logo-nav.png" alt=""></a>
+      </div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Link</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-          <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Link</a></li>
-          </ul>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Our Work</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Technologies</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li>
+            <a class="btn btn-white-nav">Start a project</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section class="home-hero">
+    <div class="content-container container">
+      <div class="row text-center">
+        <div class="col-xs-10 col-xs-offset-1 col-lg-8 col-lg-offset-2">
+          <h1>We are a technology company that  builds digital products aiming to transform, expand and revolutionaze the world.</h1>
+          <a href="#" class="btn-white">Portafolio</a><a href="#" class="btn-white">Start a Project</a>
         </div>
       </div>
-    </nav>
-    <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
-  </body>
-  </html>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <a class="a-arrow-down page-scroll" href="#home-our-work">
+        <svg width="40px" height="20px" viewBox="0 0 40 20">
+          <polygon fill="#FFFFFF" points="20,21 0,1 1,0 20,19 39,0 40,1 "/>
+        </svg>
+      </a>
+    </div>
+  </section>
+  <section class="home-our-work">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+          <h3 class="section-title">Some of our work</h3>
+          <p class="description">Kaizen Devs is a web design and development company that creates digital solutions based on responsive websites, and mobile applications. We use the latest technologies in the market offering the best solutions to our clients.</p>
+        </div>
+      </div>
+      <br><br>
+      <div class="row no-gutters">
+        <div class="col-lg-3 col-xs-6">
+          <img class="img-responsive" src="img/projects/vuelteros.jpg" alt="">
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <img class="img-responsive" src="img/projects/vuelteros.jpg" alt="">
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <img class="img-responsive" src="img/projects/vuelteros.jpg" alt="">
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <img class="img-responsive" src="img/projects/vuelteros.jpg" alt="">
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <img class="img-responsive" src="img/projects/vuelteros.jpg" alt="">
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <img class="img-responsive" src="img/projects/vuelteros.jpg" alt="">
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <img class="img-responsive" src="img/projects/vuelteros.jpg" alt="">
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <img class="img-responsive" src="img/projects/vuelteros.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-team" class="section gray-bg">
+    <div class="container">
+      <div class="row title text-center">
+        <div class="col-xs-8  col-xs-offset-2">
+          <h3 class="section-title">Team</h3>
+          <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis eius accusamus debitis vitae, rem dolorum libero dolorem possimus temporibus velit cum veritatis perspiciatis ullam illum minus iure repudiandae reiciendis, numquam!</p>
+          <div class="row team-members">
+            <div class="col-xs-4">
+              <div class="member text-center">
+                <img src="img/team/sebas.jpg" alt="Team Image" class="img-responsive">
+                <h4>Sebastian Mardini</h4>
+                <h5 class="muted">Electronic engineer</h5>
+              </div>
+            </div>
+            <div class="col-xs-4">
+              <div class="member text-center">
+                <img src="img/team/alejo.jpg" alt="Team Image" class="img-responsive">
+                <h4>Alejandro Escobar</h4>
+                <h5 class="muted">Business administrator</h5>
+              </div>
+            </div>
+            <div class="col-xs-4">
+              <div class="member text-center">
+                <img src="img/team/german.jpg" alt="Team Image" class="img-responsive">
+                <h4>Germán Hernández</h4>
+                <h5 class="muted">Graphic Designer</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-services">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+          <h3 class="section-title">Our Services</h3>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-xs-6">
+          <h4>Consectetur adipisicing</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a provident asperiores necessitatibus magn.</p>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <h4>Consectetur adipisicing</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a provident asperiores necessitatibus magn.</p>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <h4>Consectetur adipisicing</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a provident asperiores necessitatibus magn.</p>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <h4>Consectetur adipisicing</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a provident asperiores necessitatibus magn.</p>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <h4>Consectetur adipisicing</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a provident asperiores necessitatibus magn.</p>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <h4>Consectetur adipisicing</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a provident asperiores necessitatibus magn.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-technologies">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+          <h3 class="section-title">Technologies</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-xs-6">
+          <h4>Boostrap</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a provident asperiores necessitatibus magn.</p>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <h4>GIT</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a provident asperiores necessitatibus magn.</p>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <h4>POSTGRES</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a provident asperiores necessitatibus magn.</p>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <h4>RUBY</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a provident asperiores necessitatibus magn.</p>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <h4>RAILS</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a provident asperiores necessitatibus magn.</p>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <h4>JQUERY</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a provident asperiores necessitatibus magn.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="home-testimonials">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 ">
+          <h3>Bootstrap Testimonial Slider Example</h3>
+          <br />
+          <div id="carousel-example" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner">
+              <div class="item active">
+                <div class="testimonial-section">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+                <div class="testimonial-section-name">
+                  <img src="img/user2.png" class="img-circle" />
+                  -  Justine Goliyad
+                </div>
+
+              </div>
+              <div class="item">
+               <div class="testimonial-section">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </div>
+              <div class="testimonial-section-name">
+                <img src="img/user.gif" class="img-circle" />
+                -  Justine Goliyad
+              </div>
+
+            </div>
+            <div class="item">
+              <div class="testimonial-section">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </div>
+              <div class="testimonial-section-name">
+                <img src="img/user2.png" class="img-circle" />
+                -  Justine Goliyad
+              </div>
+
+            </div>
+            <!--INDICATORS-->
+            <ol class="carousel-indicators carousel-indicators-set">
+              <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example" data-slide-to="1"></li>
+              <li data-target="#carousel-example" data-slide-to="2"></li>
+            </ol>
+
+          </div>
+
+        </div>
+        <br />
+
+      </div>
+    </div>
+
+    <!-- ROW END -->
+  </div>
+</section>
+
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

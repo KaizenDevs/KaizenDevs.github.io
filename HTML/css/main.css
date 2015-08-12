@@ -1,2 +1,181 @@
 @charset "UTF-8";
 @import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300");
+
+body{
+  font-size: 16px;
+}
+.navbar{
+  z-index: 999;
+}
+.navbar-toggle{margin-top: 30px;}
+.navbar-brand img{
+  padding: 20px;
+  max-width: 200px;
+}
+.navbar-toggle
+{
+  position:relative;
+  float:right;
+  padding:9px 10px;
+  margin-top:30px;
+  margin-right:15px;
+  margin-bottom:8px;
+  background-color:transparent;
+  background-image:none;
+  border-radius:4px
+}
+.jumbotron {
+ min-height: 650px;
+}
+
+.navbar-default {
+  background-color: white;
+  background-image: none;
+  border: none;
+}
+.navbar-brand{
+  line-height: 100px;
+  height: 100px;
+  padding-top: 0;
+}
+@media screen and (min-width: 768px) {
+
+  .navbar-nav li a {
+    line-height: 100px;
+    height: 100px;
+    padding-top: 0;
+  }
+}
+
+.navbar-nav li a.btn{
+  line-height: 30px;
+  display: inline-block;
+  height: 30px;
+  margin-top: 35px;
+  background: #92F20D;
+  color: white;
+  border:none;
+  border-radius: 0 !important;
+
+}
+.affix {
+  position: fixed;
+}
+
+.btn-white{
+  border:1px solid white;
+  padding: 1em 2em;
+  display: inline-block;
+  margin: 0.5em;
+  color: white;
+}
+
+.btn-white-nav{
+  border: 1px solid #E9E9E9;
+  padding: 2em;
+}
+
+.home-hero{
+  color: white;
+  margin-top: 100px;
+  padding: 100px 0 60px 0;
+  /*background: url('../img/hero-bg.jpg');*/
+  background-size: cover;
+  background-image: linear-gradient(to bottom, rgba(30, 30, 30, 0.5) 0%, #1e1e1e 100%), url(../img/hero-bg.jpg);
+}
+.home-hero h1{
+  border:1px solid white;
+  padding: 1.5em;
+}
+.home-hero .a-arrow-down{
+  margin-top: 2em;
+  display: block;
+  text-align: center;
+}
+
+.section-title{
+  text-align: center;
+}
+
+.home-our-work{
+  padding: 100px 0 60px 0;
+  background: #061911;
+  color: white;
+}
+.home-team ,.home-services,.home-technologies {
+  padding: 100px 0 60px 0;
+}
+.home-team{
+  background: white;
+  color: #595959;
+}
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+
+
+
+/*================================
+    GENERAL STYLES
+    ============================  */
+
+    /* GOOGLE FREE FONTS */
+    @import url(http://fonts.googleapis.com/css?family=Oxygen);
+    /* BODY STYLE - JUST FOR GOOD LOOK */
+    body {
+      margin-top: 120px;
+      background-color: #0094ff;
+      color: #fff;
+      font-family: 'Oxygen', sans-serif;
+      min-height:700px;
+      line-height:25px;
+    }
+
+/*================================
+    TESTIMONIAL STYLES
+    ============================  */
+    .testimonial-section {
+      width: 100%;
+      height: auto;
+      padding: 15px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      position: relative;
+      border: 1px solid #fff;
+      font-size:12px;
+    }
+    .testimonial-section:after {
+      top: 100%;
+      left: 10%;
+      border: solid transparent;
+      content: " ";
+      position: absolute;
+      border-top-color: #fff;
+      border-width: 15px;
+      margin-left: -15px;
+    }
+
+    .testimonial-section-name {
+      margin-top: 30px;
+      margin-left: 60px;
+      text-align:left;
+      color:#000;
+    }
+    .testimonial-section-name img {
+      max-width:40px;
+      border: 2px solid #fff;
+    }
+    .carousel-indicators-set {
+      position:static;
+      margin-left:0px;
+      width:100%;
+    }
+
