@@ -1,3 +1,13 @@
+<style>
+  .vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
+  }
+</style>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -430,11 +440,12 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close_modal_button"><span aria-hidden="true">&times;</span></button> -->
-          <input type="button" value="×" id="close_modal_button" data-dismiss="modal" aria-label="Close" class="btn-modal-close pull-right">
+          <div id="input-border" class="pull-right text-center">
+            <span type="button" id="close_modal_button" data-dismiss="modal" aria-label="Close">X</span>
+          </div>
           <img src="images/logo-green-up.png" alt="" id="modal_logo">
         </div>
-        <div class="modal-body text-center">
+        <div class="modal-body text-center" style="">
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
               <h1 id="project_form_title">Project Planner</h1>

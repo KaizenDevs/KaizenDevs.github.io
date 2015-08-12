@@ -376,22 +376,13 @@ img#modal_logo {
 	padding-left: 50px;
 }
 
-input#close_modal_button {
-	background-color: transparent;
+div#input-border {
   border: 3px solid white;
   border-radius: 50%;
-  color: white;
-  font-size: 40px;
-  font-weight: 300;
-  line-height: 50px;
+  cursor: pointer;
   height: 50px;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  padding-bottom: 10px;
   width: 50px;
-  z-index: 5001;
 }
 
 /* Text into start a project modal */
@@ -455,4 +446,15 @@ button.btn-submit-project {
   font-size: 23px;
   line-height: 1.33;
   width: 100%;
+}
+
+span#close_modal_button {
+  display: inline-block;
+  font-size: 29px;
+  font-weight: 300;
+  margin-top: 3px;
+  position: relative;
+  top: 55%;
+  transform: translateY(-50%);
+
 }
