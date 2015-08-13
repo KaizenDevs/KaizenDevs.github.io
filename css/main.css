@@ -410,6 +410,7 @@ h1#project_form_title {
 p#project_form_subtitle {
 	font-size: 30px;
 	font-weight: 100;
+  line-height: 42px;
 }
 
 h3.form-text {
