@@ -6,6 +6,25 @@
     display: flex;
     align-items: center;
   }
+
+  .btn-white{
+    border:1px solid white;
+    padding: 1em 2em;
+    display: inline-block;
+    margin: 0.8em;
+    color: white;
+    cursor: pointer;
+  }
+
+  .btn-white:hover{
+    background-color: rgb(142,239,6);
+    transition: background-color 1s ease;
+  }
+
+  .green-background {
+    background-color: rgb(142,239,6);
+  }
+
 </style>
 
 <!DOCTYPE html>
@@ -15,6 +34,7 @@
   <title>Kaizen Devs</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <link rel="stylesheet" href="css/main.css">
   <link href="css/nouislider.min.css" rel="stylesheet">
 </head>
@@ -482,7 +502,28 @@
                   </div>
                 </div>
                 <h3 class="form-text">Type of Project</h3>
-                <p>select all that apply</p>
+                <p>Select all that apply</p>
+                <label class="btn-white" type="submit" for="checkbox1">
+                    <input type="checkbox" id="checkbox1" value="web-development" class="hidden"><span>Web Development</span>
+                </label>
+                <label class="btn-white" type="submit" for="checkbox2">
+                    <input type="checkbox" id="checkbox2" value="e-commerce" class="hidden"><span>E-Commerce</span>
+                </label>
+                <label class="btn-white" type="submit" for="checkbox3">
+                    <input type="checkbox" id="checkbox3" value="mobile-app" class="hidden"><span>Mobile App</span>
+                </label>
+                <label class="btn-white" type="submit" for="checkbox4">
+                    <input type="checkbox" id="checkbox4" value="marketing-website" class="hidden"><span>Marketing Website</span>
+                </label>
+                <label class="btn-white" type="submit" for="checkbox5">
+                    <input type="checkbox" id="checkbox5" value="mvp" class="hidden"><span>Minimum Viable Product</span>
+                </label>
+                <label class="btn-white" type="submit" for="checkbox6">
+                    <input type="checkbox" id="checkbox6" value="product-prototype" class="hidden"><span>Product Prototype</span>
+                </label>
+                <label class="btn-white" type="submit" for="checkbox7">
+                    <input type="checkbox" id="checkbox7" value="other" class="hidden"><span>Other</span>
+                </label>
                 <h3 class="form-text">Project Budget</h3>
                 <p>Do you have a budget for this project? Ballparks are fine. (Value in $ USD)</p>
                 <div id="range">
@@ -603,31 +644,7 @@
   <script src="js/wNumb.min.js"></script>
   <script src="js/nouislider.min.js"></script>
   <script>
-    var slider = document.getElementById('range');
-
-    noUiSlider.create(slider, {
-      start: [ 20, 40 ], // Handle start position
-      step: 5, // Slider moves in increments of '10'
-      margin: 5, // Handles must be more than '20' apart
-      connect: true, // Display a colored bar between the handles
-      direction: 'ltr', // Put '0' at the bottom of the slider
-      orientation: 'horizontal', // Orient the slider vertically
-      behaviour: 'tap-drag', // Move handle on tap, bar is draggable
-      range: { // Slider can select '0' to '100'
-        'min': 5,
-        'max': 75
-      },
-      pips: { // Show a scale with the slider
-        mode: 'steps',
-        density: 5,
-        format: wNumb({
-          decimals: 2,
-          prefix: '$',
-          postfix: 'k'
-        })
-      }
-    });
-
+  var slider = document.getElementById('range');
     // When the slider value changes, update the input and span
     slider.noUiSlider.on('update', function( values, handle ) {
       var values = slider.noUiSlider.get();
@@ -637,31 +654,63 @@
       console.log($('input[name="budget"]').val());
     });
 
-    $("#contactForm").on( "submit", function( event ) {
-      event.preventDefault();
-      var formData = $( this ).serialize();
-      $.ajax({
-        url: "//formspree.io/info@kaizendevs.co",
-        method: "POST",
-        data: formData,
-        dataType: "json"
-      }).done(function(response) {
-        $( '#contactForm' ).html("<h1 class='text-center'>Thanks for trusting us your idea. Will get in contact with you soon!</h1>")
-      });
-    });
+  noUiSlider.create(slider, {
+    start: [ 20, 40 ], // Handle start position
+    step: 5, // Slider moves in increments of '10'
+    margin: 5, // Handles must be more than '20' apart
+    connect: true, // Display a colored bar between the handles
+    direction: 'ltr', // Put '0' at the bottom of the slider
+    orientation: 'horizontal', // Orient the slider vertically
+    behaviour: 'tap-drag', // Move handle on tap, bar is draggable
+    range: { // Slider can select '0' to '100'
+      'min': 5,
+      'max': 75
+    },
+    pips: { // Show a scale with the slider
+      mode: 'steps',
+      density: 5,
+      format: wNumb({
+        decimals: 2,
+        prefix: '$',
+        postfix: 'k'
+      })
+    }
+  });
 
-    $("#contact-modal").on( "submit", function( event ) {
-      event.preventDefault();
-      var formData = $( this ).serialize();
-      $.ajax({
-        url: "//formspree.io/info@kaizendevs.co",
-        method: "POST",
-        data: formData,
-        dataType: "json"
-      }).done(function(response) {
-        $( '#contact-modal' ).html("<h1 class='text-center'>Will get in contact with you soon!</h1>")
-      });
+  $("#contactForm").on( "submit", function( event ) {
+    event.preventDefault();
+    var formData = $( this ).serialize();
+    $.ajax({
+      url: "//formspree.io/info@kaizendevs.co",
+      method: "POST",
+      data: formData,
+      dataType: "json"
+    }).done(function(response) {
+      $( '#contactForm' ).html("<h1 class='text-center'>Thanks for trusting us your idea. Will get in contact with you soon!</h1>")
     });
+  });
+
+  $("#contact-modal").on( "submit", function( event ) {
+    event.preventDefault();
+    var formData = $( this ).serialize();
+    $.ajax({
+      url: "//formspree.io/info@kaizendevs.co",
+      method: "POST",
+      data: formData,
+      dataType: "json"
+    }).done(function(response) {
+      $( '#contact-modal' ).html("<h1 class='text-center'>Will get in contact with you soon!</h1>")
+    });
+  });
+
+  $("input[type='checkbox']").change(function(){
+    if($(this).is(":checked")){
+        $(this).parent().addClass("green-background");
+    }else{
+        $(this).parent().removeClass("green-background");
+    }
+  });
+
   </script>
 </body>
 </html>
