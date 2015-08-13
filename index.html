@@ -1,193 +1,741 @@
----
-layout: default
----
+<style>
+  .vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
 
-<div class="home-hero">
-  <div class="content-container container">
-    <div class="row text-center">
-      <div class="col-xs-10 col-xs-offset-1 col-lg-8 col-lg-offset-2">
-        <h1>Have an idea? we help you make it real</h1>
-        <p class="description">Focusing on user outcomes and simplicity, we minimize risk and increase your product’s success with quality code & quality humans.</p>
-      </div>
-    </div>
-    <a class="a-arrow-down page-scroll" href="#home-our-work">
-      <svg width="40px" height="20px" viewBox="0 0 40 20">
-        <polygon fill="#FFFFFF" points="20,21 0,1 1,0 20,19 39,0 40,1 "/>
-      </svg>
-    </a>
-  </div>
-</div>
-<div class="home-hero-bottom">
-  <div></div>
-</div>
+    display: flex;
+    align-items: center;
+  }
 
+  .btn-white{
+    border:1px solid white;
+    padding: 1em 2em;
+    display: inline-block;
+    margin: 0.8em;
+    color: white;
+    cursor: pointer;
+  }
 
-<!-- <div id="home-our-work" class="v-padding-6">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-8 col-xs-offset-2">
-        <h3 class="section-title">Some of our work</h3>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis eius accusamus debitis vitae, rem dolorum libero dolorem possimus temporibus velit cum veritatis perspiciatis ullam illum minus iure repudiandae reiciendis, numquam!</p>
-      </div>
-    </div>
-  </div>
-  <div class="wrapper">
+  .btn-white:hover{
+    background-color: rgb(142,239,6);
+    transition: background-color 1s ease;
+  }
+
+  .green-background {
+    background-color: rgb(142,239,6);
+  }
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Kaizen Devs</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="css/nouislider.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
-      <div class="image-zoom-container">
-        <div class="zoom-container">
-          <a href="#">
-            <span class="zoom-caption">
-              <h3>Ventas el hueco</h3>
-            </span>
-            <img src="img/projects/ofertas.jpg" />
-          </a>
-        </div>
-        <div class="zoom-container">
-          <a href="#">
-            <span class="zoom-caption">
-              <h3>Vuelteros</h3>
-            </span>
-            <img src="img/projects/vuelteros.jpg" />
-          </a>
-        </div>
-        <div class="zoom-container">
-          <a href="#">
-            <span class="zoom-caption">
-              <h3>Infinanza</h3>
-            </span>
-            <img src="img/projects/infinanza.jpg" />
-          </a>
-        </div>
-        <div class="zoom-container">
-          <a href="#">
-            <span class="zoom-caption">
-              <h3>Ventas el hueco</h3>
-            </span>
-            <img src="img/projects/ofertas.jpg" />
-          </a>
-        </div>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle-navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="img/logo-nav.png" alt=""></a>
       </div>
-
-    </div>
-
-  </div>
-
-</div> -->
-
-
-<div id="home-our-work">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-8 col-xs-offset-2">
-        <h3 class="section-title">Some of our work</h3>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis eius accusamus debitis vitae, rem dolorum libero dolorem possimus temporibus velit cum veritatis perspiciatis ullam illum minus iure repudiandae reiciendis, numquam!</p>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a  href="#home-our-work">Our Work</a></li>
+          <li><a  href="#home-team">Team</a></li>
+          <li><a  href="#home-our-services">Our Services</a></li>
+          <li><a  href="#home-technologies">Technologies</a></li>
+          <li><a  href="#home-testimonials">Testimonials</a></li>
+          <li>
+            <p class="navbar-btn">
+              <button href="#myModal" data-toggle="modal" data-target="#myModal" class="btn btn-white-nav">Start a project</button>
+            </p>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
-</div>
+  <section class="home-hero">
+    <div class="content-container container">
+      <div class="row text-center">
+        <div class="col-xs-10 col-xs-offset-1 col-lg-8 col-lg-offset-2">
+          <h1>We are a technology company that  builds digital products aiming to transform, expand and revolutionaze the world.</h1>
+          <a href="#" class="btn-white">Portafolio</a><a href="#myModal" data-toggle="modal" data-target="#myModal" class="btn-white green">Start a Project</a>
+        </div>
+      </div>
+      <a class="a-arrow-down page-scroll" href="#home-our-work">
+        <svg width="40px" height="20px" viewBox="0 0 40 20">
+          <polygon fill="#FFFFFF" points="20,21 0,1 1,0 20,19 39,0 40,1 "/>
+        </svg>
+      </a>
+    </div>
+  </section>
+  <section class="home-our-work white">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+          <div class="text-center"><h3 class="section-title">Some of our work</h3></div>
+          <p class="description">Kaizen Devs is a web design and development company that creates digital solutions based on responsive websites, and mobile applications. We use the latest technologies in the market offering the best solutions to our clients.</p>
+        </div>
+      </div>
+      <br><br>
+      <div class="row no-gutters">
+        <div class="col-lg-4 col-xs-6">
+          <a target="_blank" href="http://www.vuelteros.co/"><img class="img-responsive" src="img/projects/vuelteros.jpg" alt=""></a>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <a target="_blank" href="http://www.businesshackers.how/"><img class="img-responsive" src="img/projects/bussiness-hackers.png" alt=""></a>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <a target="_blank" href="https://cien-preguntas.herokuapp.com/"><img class="img-responsive" src="img/projects/cienpreguntas.png" alt=""></a>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <a target="_blank" href="https://www.infinanza.com/"><img class="img-responsive" src="img/projects/infinanza.jpg" alt=""></a>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <a target="_blank" href="http://ventaselhueco.co/"><img class="img-responsive" src="img/projects/ventas-elhueco.jpg" alt=""></a>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <a target="_blank" href="http://www.casahorizontes.com/"><img class="img-responsive" src="img/projects/casa-horizontes.jpg" alt=""></a>
+        </div>
 
-<div class="container">
-  <ul id="og-grid" class="og-grid">
-    <li>
-      <a target="_blank" href="http://www.vuelteros.co" data-largesrc="img/projects/vuelteros.jpg" data-title="Vuelteros.co" data-description="Vuelteros es la solución a sus problemas de tiempo y movilidad; contacte mensajeros o conductores elegidos cerca a usted de forma rápida y segura.">
-        <div>
-          <h5>vuelteros</h5>
-          <img src="img/projects/vuelteros.jpg" alt="vuelteros"/>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a target="_blank" href="http://" data-largesrc="img/projects/ofertas.jpg" data-title="Ofertaselhueco.co" data-description="Ecommerce para tiendas de locales en Medellín.">
-        <div>
-          <h5>ofertas</h5>
-          <img src="img/projects/ofertas.jpg" alt="ofertas"/>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a target="_blank" href="http://" data-largesrc="img/projects/infinanza.jpg" data-title="Infinanza" data-description="Es una aplicación Web que permite organizar los movimientos financieros (facturas, ingresos, etc.) de forma fácil, rápida, y segura, generando impresionantes gráficas y reportes.">
-        <div>
-          <h5>infinanza</h5>
-          <img src="img/projects/infinanza.jpg" alt="Infinanza"/>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a target="_blank" href="http://" data-largesrc="img/projects/bussiness-bites.jpg" data-title="Bussiness Bites" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-        <div>
-          <h5>bussinessBites</h5>
-          <img src="img/projects/bussiness-bites.jpg" alt="Bussiness Bites"/>
-        </div>
-      </a>
-    </li>
-  </ul>
-</div>
-
-<section id="home-team" class="section gray-bg">
-  <div class="container">
-    <div class="row title text-center">
-      <div class="col-xs-8  col-xs-offset-2">
-        <h3 class="section-title">Team</h3>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis eius accusamus debitis vitae, rem dolorum libero dolorem possimus temporibus velit cum veritatis perspiciatis ullam illum minus iure repudiandae reiciendis, numquam!</p>
-        <div class="row team-members">
-          <div class="col-xs-4">
-            <div class="member text-center">
-              <img src="img/team/sebas.jpg" alt="Team Image" class="img-responsive">
-              <h4>Sebastian Mardini</h4>
-              <h5 class="muted">Electronic engineer</h5>
+      </div>
+    </div>
+  </section>
+  <section class="home-team" class="section">
+    <div class="container">
+      <div class="row title text-center">
+        <div class="col-xs-8  col-xs-offset-2">
+          <div class="text-center"><h3 class="section-title">Team</h3></div>
+          <p class="description">We are a multidisciplinary team speaking the same language: code. We share the same passion: building digital products that transform the world.</p>
+          <div class="row team-members">
+            <div class="col-xs-4">
+              <div class="member text-center">
+                <img src="img/team/sebas.jpg" alt="Team Image" class="img-responsive">
+                <h4>Sebastian Mardini</h4>
+                <h5 class="muted">Electronic engineer</h5>
+              </div>
             </div>
-          </div>
-          <div class="col-xs-4">
-            <div class="member text-center">
-              <img src="img/team/alejo.jpg" alt="Team Image" class="img-responsive">
-              <h4>Alejandro Escobar</h4>
-              <h5 class="muted">Business administrator</h5>
+            <div class="col-xs-4">
+              <div class="member text-center">
+                <img src="img/team/alejo.jpg" alt="Team Image" class="img-responsive">
+                <h4>Alejandro Escobar</h4>
+                <h5 class="muted">Business administrator</h5>
+              </div>
             </div>
-          </div>
-          <div class="col-xs-4">
-            <div class="member text-center">
-              <img src="img/team/german.jpg" alt="Team Image" class="img-responsive">
-              <h4>Germán Hernández</h4>
-              <h5 class="muted">Graphic Designer</h5>
+            <div class="col-xs-4">
+              <div class="member text-center">
+                <img src="img/team/german.jpg" alt="Team Image" class="img-responsive">
+                <h4>Germán Hernández</h4>
+                <h5 class="muted">Graphic Designer</h5>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="home-contact">
-  <div class="container">
-    <div class="row title text-center">
-      <div class="col-xs-8  col-xs-offset-2">
-        <h3>Want to get in touch?</h3>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis eius accusamus debitis vitae, rem dolorum libero dolorem possimus temporibus velit cum veritatis perspiciatis ullam illum minus iure repudiandae reiciendis, numquam!</p>
-        <a href="" class="btn btn-info btn-lg btn-contact-us" data-toggle="modal" data-target="#myModal">Contact us</a>
+  </section>
+  <section class="home-services white">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+          <div class="text-center"><h3 class="section-title">Our Services</h3></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-xs-6">
+          <div class="box">
+            <h4>WEB App</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a provident asperiores necessitatibus magn.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <div class="box">
+            <h4>Ecommerce</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a provident asperiores necessitatibus magn.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <div class="box">
+            <h4>Mobile</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a provident asperiores necessitatibus magn.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <div class="box">
+            <h4>Marketing Site</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a provident asperiores necessitatibus magn.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <div class="box">
+            <h4>MVP</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a provident asperiores necessitatibus magn.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <div class="box">
+            <h4>Product Prototype</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a provident asperiores necessitatibus magn.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="home-technologies">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-8 col- col-xs-offset-2">
+          <div class="text-center"><h3 class="section-title">Technologies</h3></div>
+        </div>
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-xs-4">
+          <ul class="tech-list">
+            <li>Ruby</li>
+            <li>Jquery</li>
+            <li>Rails</li>
+            <li>Javascript</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Bootstrap</li>
+            <li>gitHUB</li>
+            <li>PotgreSQL</li>
+          </ul>
+        </div>
+        <div class="col-xs-7 col-xs-offset-1">
+          <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In  -->
+          <svg version="1.1" x="0px" y="0px" width="524.2px" height="372.1px" viewBox="0 0 524.2 372.1" enable-background="new 0 0 524.2 372.1" xml:space="preserve">
+            <defs>
+            </defs>
+            <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="264.1624" y1="57.7472" x2="260.1624" y2="308.7472">
+              <stop  offset="0" style="stop-color:#89F500"/>
+              <stop  offset="1" style="stop-color:#7bda02"/>
+            </linearGradient>
+            <path fill="url(#SVGID_1_)" d="M190.3,76.7l5.6-9l5.6,9H190.3z M210.2,66.1l-11.2,0l5.6,9L210.2,66.1z M204.6,48.7
+            c0-0.9-0.6-1.2-1.8-1.2h-1.3v2.6h1.3C204,50.1,204.6,49.6,204.6,48.7z M179.9,44.4c0-1-0.7-1.4-1.9-1.4h-1.1V46h1.1
+            C179.2,46,179.9,45.4,179.9,44.4z M204.1,44c0-0.7-0.5-1-1.5-1h-1.1v2.3h1.1C203.6,45.3,204.1,44.7,204.1,44z M178.4,67.7l-5.5,9
+            h11.1L178.4,67.7z M192.8,66.1l-11.2,0l5.7,9L192.8,66.1z M173.9,80.2L192,99l-6.1-18.8H173.9z M256.4,35.4v70.9L195,141.7
+            l-61.4-35.4V35.4L195,0L256.4,35.4z M208.1,40.6l3.6,7.8v4.1h3.2v-4.1l3.6-7.8h-3.3l-0.9,2.5c-0.3,0.9-0.6,1.7-0.9,2.7h-0.1
+            c-0.3-0.9-0.6-1.8-0.9-2.7l-0.9-2.5H208.1z M198.3,52.5h4.7c2.6,0,4.7-1.1,4.7-3.5c0-1.6-0.8-2.5-2.5-2.8v-0.1c1.4-0.4,2-1.5,2-2.6
+            c0-2.3-2-3-4.5-3h-4.3V52.5z M185.6,46.7c0,4.1,1.6,6,5,6c3.3,0,4.9-1.9,4.9-6v-6.2h-3v6.5c0,2.1-0.6,2.9-1.8,2.9
+            c-1.2,0-1.8-0.8-1.8-2.9v-6.5h-3.2V46.7z M173.7,52.5h3.2v-4h1.2l2.1,4h3.5l-2.6-4.6c1.2-0.6,1.9-1.7,1.9-3.5c0-3-2.2-3.9-4.8-3.9
+            h-4.5V52.5z M223.6,78.4c0-0.4-0.2-0.8-0.3-1l-8.5-14c0,0-0.1-0.1-0.1-0.2c0,0-0.1-0.1-0.2-0.2c-0.1-0.1-0.1-0.1-0.2-0.1
+            c0,0-0.1-0.1-0.2-0.1c-0.1,0-0.1-0.1-0.2-0.1c0,0-0.2-0.1-0.2-0.1c-0.1,0-0.3-0.1-0.5-0.1l-17.3,0c0,0,0,0-0.1,0l-17.3,0
+            c-0.1,0-0.2,0-0.2,0c-0.5,0-0.9,0.2-1.3,0.6c0,0-0.2,0.2-0.2,0.2l-8.4,13.8c-0.1,0.1-0.2,0.3-0.3,0.5c-0.3,0.6-0.1,1.4,0.3,1.9
+            l26.2,27.2c0,0,0.2,0.2,0.2,0.2c0.1,0.1,0.3,0.2,0.5,0.2c0.1,0,0.2,0.1,0.4,0.1c0,0,0.1,0,0.1,0l0.1,0c0,0,0,0,0,0l0.1,0
+            c0,0,0.2,0,0.2,0c0.5-0.1,0.8-0.4,1-0.6L223,79.8C223.4,79.5,223.6,79,223.6,78.4z M207.7,76.7h11l-5.5-9L207.7,76.7z M189.6,80.2
+            L196,100l6.3-19.8H189.6z M200,98.9l17.8-18.7h-11.9L200,98.9z M305.2,62c-2.9,0.2-4.3,2.4-5,5.9c-0.7,3.4,0,5.7,3,5.7h3.9
+            c0.2,0,0.4-0.1,0.4-0.3l0.7-2.6l0.7-2.6l0,0l0.1-0.3v0C310,64.5,309.2,61.7,305.2,62z M362.1,65.6L362.1,65.6l-0.2-0.6l-0.1,1
+            C362,65.9,362.1,65.8,362.1,65.6z M346.2,76.9l0.3-1.3l-0.4,1.7c0,0.2,0.1,0.3,0.3,0.3l0,0c-0.1,0-0.2-0.1-0.2-0.1
+            C346.1,77.3,346.1,77.1,346.2,76.9z M312.9,77.3L312.9,77.3l0.8-3.2L312.9,77.3L312.9,77.3z M343.9,75.8L343.9,75.8l0.1-1.9
+            c0,0,0,0,0,0l-0.1,2.2L343.9,75.8z M344.3,70.2c-0.1,0-0.2,0.1-0.2,0.2c0,0.1,0.1,0.2,0.2,0.2c0.1,0,0.2-0.1,0.2-0.2
+            C344.5,70.3,344.4,70.2,344.3,70.2z M339.1,65.5c-1.9,0-2.9,0.9-3.3,2.1c0,0.1,0,0.1,0,0.1c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0
+            c0,0.1,0.1,0.3,0.2,0.3h5.1c0.2,0,0.4-0.1,0.4-0.4l0,0h0C341.6,66.6,341.2,65.5,339.1,65.5z M325.5,67.9l1.2-5.5v0L325.5,67.9z
+            M288,72.5l-0.5,2.4L288,72.5C288,72.5,288,72.5,288,72.5z M347.5,70.6l1.3-6.2c0-0.1,0-0.2,0.1-0.3l0,0L347.5,70.6l-1.3,6.2
+            c0,0.2-0.1,0.4,0,0.5c0,0,0.1,0.1,0.2,0.1l2.5-13.4L347.5,70.6z M349,63.8L349,63.8C348.9,63.9,348.9,63.9,349,63.8L349,63.8z
+            M390,35.4v70.9l-61.4,35.4l-61.4-35.4V35.4L328.6,0L390,35.4z M293.6,67.2c0-0.2-0.1-0.3-0.3-0.3l0,0h-3.7c-0.2,0-0.4,0.1-0.4,0.3
+            l-0.5,2.3l-0.5,2.3c0,0,0,0.1,0,0.1l-0.1,0.2l0,0.2c0,0,0,0.1,0,0.1l-0.5,2.4l-0.5,2.4c0,0.2-0.1,0.5-0.2,0.7c0,0-0.7,2.1-1.9,2.1
+            c0,0-0.1,0-0.1,0c-0.6,0-1,0-1,0h0c-0.2,0-0.4,0.1-0.4,0.3l-0.4,1.6l-0.4,1.6c0,0.2,0.1,0.3,0.3,0.3c0.7,0,2.2,0,3.1,0
+            c2.9,0,4.5-1.6,5.5-6.3l1.2-5.4L293.6,67.2z M294.7,62.3c0-0.2-0.1-0.3-0.3-0.3l0,0h-3.7c-0.2,0-0.4,0.1-0.4,0.3l-0.4,1.6l-0.4,1.6
+            c0,0.2,0.1,0.3,0.3,0.3h3.7c0.2,0,0.4-0.1,0.4-0.3l0.3-1.6L294.7,62.3L294.7,62.3z M312.5,77.6L312.5,77.6l-4.9,0L312.5,77.6z
+            M306.1,57.9c-6.6,0-9.5,4.8-10.6,10c-1.1,5.2,0.3,9.8,6.9,9.8l5.2,0l4.9,0c0.2,0,0.4-0.2,0.4-0.3l0.8-3.2c0-0.2-0.1-0.3-0.3-0.3
+            l-0.8,0l-0.8,0c-0.2,0-0.3-0.1-0.2-0.2c0,0,0,0,0-0.1l0,0c0,0,1.8-4.5,2.3-7C314.5,62.9,312.8,57.9,306.1,57.9z M329.2,69.8l1.6-7.4
+            c0-0.2-0.1-0.3-0.3-0.3v0h-3.4c-0.2,0-0.4,0.2-0.4,0.3l-1.2,5.5l-1.2,5.5c0,0.2-0.2,0.3-0.4,0.3h-2h-0.3c-2.4,0-2.1-1.6-1.6-3.9
+            c0,0,0,0,0-0.1l0.1-0.3c0,0,0,0,0-0.1l0.1-0.6l0.1-0.6c0-0.2,0.1-0.5,0.1-0.6l0.5-2.7l0.5-2.7c0-0.2-0.1-0.3-0.3-0.3h-3.5
+            c-0.2,0-0.4,0.2-0.4,0.3l-0.7,3.5l-0.7,3.5c0,0,0,0,0,0l-0.1,0.3c-0.9,3.9-0.6,7.6,4,7.8c0.1,0,0.1,0,0.1,0h7.3
+            c0.2,0,0.4-0.2,0.4-0.3L329.2,69.8z M343.9,76l-0.3,1.3l0,0c0,0,0,0,0,0l0,0v0L343.9,76z M343.9,75.8l-0.3,1.6l0,0v0L343.9,75.8z
+            M345.1,71c1.4-5.5,1-9.1-5.2-9.1l0,0c-6.6,0-8.1,4-9,8c-0.9,4.1-0.8,7.9,6,7.9h0.2c0,0,0,0,0.1,0h0.2h0.1h0.2c0,0,0.1,0,0.1,0
+            c0.1,0,0.1,0,0.2,0h0c0.3,0,0.5,0,0.8,0h0c1.8,0,3.6,0,4.3,0c0.2,0,0.4-0.2,0.4-0.3l0.3-1.3l0,0l0,0l0.1-0.3l0.3-1.6
+            c0-0.2-0.1-0.3-0.3-0.3v0c0,0,0,0,0,0h-6.1c-2.2,0-3-0.6-2.9-2.1c0-0.2,0.2-0.4,0.4-0.4h9.4l0,0c0,0,0,0,0,0
+            C344.9,71.3,345.1,71.2,345.1,71C345.1,71,345.1,71,345.1,71L345.1,71z M351.3,71.9l0,0.2l-0.5,2.3h0l0.5-2.3L351.3,71.9
+            C351.3,71.9,351.3,71.9,351.3,71.9z M353,65.9l8.9,0c0,0,0,0,0,0v0c0.2,0,0.3-0.1,0.3-0.3l-0.2-0.6l0,0l0,0l-0.2-0.7l-0.1-0.3
+            c-0.3-1.2-1.2-1.9-3.1-1.9l-3,0l-2.8,0h-0.2h-2.9c-0.2,0-0.4,0.1-0.4,0.3h0l-0.1,0.7l-0.2,0.8l0,0.2l0,0l0,0l-2.5,11.5l1-4.9
+            l-1.4,6.6c0,0.2,0.1,0.3,0.3,0.3h0h0.3c-0.1,0-0.2,0-0.3,0v0c0.1,0,0.2,0,0.3,0h2.8c0,0,0,0,0,0h0.3c0.2,0,0.4-0.2,0.4-0.3l0.1-0.3
+            c0,0.2-0.2,0.6-0.3,0.6h0c0.1,0,0.3-0.4,0.3-0.6l0.5-2.5l0.5-2.5c0,0,0,0,0,0l0,0c0-0.2,0.1-0.4,0.1-0.6l0.5-2.6l0.5-2.5
+            C352.6,66.1,352.8,65.9,353,65.9z M374.5,59.8l-1.1,0h0c-0.2,0-0.5,0-0.7,0H370c-0.2,0-0.4,0.1-0.5,0.3l-6.3,9.2
+            c-0.1,0.2-0.2,0.1-0.3-0.1l-0.5-2c0-0.2-0.2-0.3-0.4-0.3h-4c-0.2,0-0.3,0.1-0.2,0.3l1.8,6.3c0.1,0.2,0.1,0.5,0,0.7l-0.8,3.1
+            c0,0.2,0.1,0.3,0.3,0.3h4c0.2,0,0.4-0.1,0.4-0.3l0.8-3.1c0-0.2,0.2-0.5,0.3-0.6l10.2-13.5C374.8,59.9,374.7,59.8,374.5,59.8z
+            M351.5,71.3l0.5-2.5L351.5,71.3C351.5,71.3,351.5,71.3,351.5,71.3z M351.3,71.9L351.3,71.9L351.3,71.9
+            C351.3,71.9,351.3,71.9,351.3,71.9z M105.1,208.5h2.7v-2.2h-2.7V208.5z M190.9,149v70.9l-61.4,35.4l-61.4-35.4V149l61.4-35.4
+            L190.9,149z M156.9,148.2l3,1.6l0.6-0.9l-3.5-2.5L156.9,148.2z M142.4,143l0.6,3.1l4.3-0.1l-0.4-2.7L142.4,143z M130.1,146.5
+            l2.5,3.1l3.5-2l-2.5-2.8L130.1,146.5z M118.8,157l3.8,2.5l2.8-3.4l-3.7-2.4L118.8,157z M110.8,172.1l5,1.6l1.5-4.1l-4.8-1.9
+            L110.8,172.1z M106.4,190.6l5.2,0.6l0.9-5.5l-5.5-0.4L106.4,190.6z M112.7,215l-3.9-3.9c0,0,2.8,0,3-4.1c0-3.7-2.8-4.2-6-4.2h-4.1
+            v12.4h3.2v-3.2l2.9,2.9H112.7z M124.4,205.9c0-2.8-3.2-3-4.9-3c-0.2,0-0.4,0-0.7,0c-1.7,0-4.1,0.2-4.1,3.4v8.7h3.3v-2.1h3.2v2.1h3.3
+            V205.9z M131,203h-3.4v11.9h3.4V203z M142.7,211.9h-4.8v-8.8l-3.3,0.1v11.9h8.1V211.9z M138.8,167.8l-1.4,2.7l3.6,3.1l0.8-3.5
+            L138.8,167.8z M143.9,164.4l1.3-2.2L143,159l-2.2,2L143.9,164.4z M137.3,177.4l-0.2,3.7l4.4,1.9l-0.2-3.5L137.3,177.4z M138.6,190.4
+            l1.1,3.8l5.6,0.3l-2-4.1H138.6z M154.1,211.2c0-3.8-2.5-3.7-3.7-3.7s-2.3,0-2.3,0v-1.2h5.4V203h0c0,0-1.7-0.1-4.7-0.1
+            c-3,0-4.4,1.1-4.4,4.1c0,3,2.8,3.7,4.4,3.7c1.5,0,2.3,0.2,2.3,0.6c0,0.4-0.1,0.9-1.6,0.9c-1.5,0-4.9,0-4.9,0v2.9c0,0,0.7,0,4.3,0
+            C152.3,215.2,154.1,215,154.1,211.2z M148.7,158.3l2-1.6l-0.4-1.7l-3,0.7L148.7,158.3z M159.2,155l-2.8-0.6v1.6l2.8,0.3V155z
+            M163.9,153.9c0,0-8.3-8.4-18.9-7.5c-10.5,0.9-17.8,7.9-22.3,16.3c-4.5,8.4-7.2,14.3-9,23.2s-1.1,13.5-1.1,13.5h28
+            c0,0-6.2-14.1-4.6-27.1c1.6-13,11.8-18.9,17.6-19.5c5.8-0.6,9,3,9,3L163.9,153.9z M118,209.5h3.1v-3.4H118V209.5z M324.4,151.5v70.9
+            L263,257.8l-61.4-35.4v-70.9L263,116L324.4,151.5z M286.2,185.3c-0.1-1.5,1.5-1.3,2.5-1.4c5.4-0.4,11.2,0.7,15.4,1.2
+            c-4.5-1.8-11.5-1.1-17.4-1.6c2-7,0.6-15.5-3.5-19.1c1-2.9,0.3-6.8-0.7-9.2c-2.2,0.1-3.8,0.4-5.7,1.2c-1.5,0.6-3.1,2.3-4.6,2.5
+            c-1.5,0.1-3.6-0.8-5.7-0.9c-4.8-0.3-8.5,0.2-12.1,1.2c-2.8-1.9-5.6-3.9-10.1-4.1c-1.5,2.3-1.9,7-0.7,9.9c-4.1,3.4-4.7,12.7-2.8,18.5
+            c-6.1,0-12.4-0.2-16.8,1.4c3.1-0.6,8-1.1,11.9-1.2c2.1-0.1,5.5-0.7,5.9,1.6c-6.5,0.2-12.6,0.9-17.6,2.6c5.4-1.3,11.3-2.2,17.7-2.5
+            c2.7,5.3,8.5,7.5,15.6,8.5c-1.4,1.1-2.4,2.6-2.8,4.6c-1.6,0.4-2.5,0.9-4.3,0.9c-5.7-0.2-5.9-8.2-12.2-6.7c0.5,1.7,2.1,1.9,3.2,3.2
+            c1,1.3,1.3,3,2.1,4.4c1.9,3.2,5.9,4.4,11,3.4c-0.3,3.1,0.6,6-0.4,8.1c-0.7,1.5-2.3,1.2-2.7,2.8c2.4,1,5.6,0,6.6-2.1
+            c1.7-3.7-1.3-11,1.4-13.1c-0.6,4.6,1,10.2-0.4,13.9c-0.4,1.3-1.6,1.8-1.4,3.2c7.2,0.9,5.8-8.3,5.9-15c0-0.8-0.5-2.6,0.7-2.6
+            c1.4,6.9-2.1,18.5,6.2,17.6c0.4-1.3-1-1.9-1.4-3.4c-1.2-3.7,0-9.6-0.2-13.8c2.4,2.6,0.2,8.5,1.1,12.3c0.5,2.2,4.9,4.6,6.7,2.5
+            c-0.7-1.1-1.8-1.2-2.5-2.5c-1.4-2.7,0-8.8-0.5-12.9c-0.4-2.8-1.9-3.4-2.7-5.1c7.3-0.5,12.6-3.1,15.3-8.3c6.4,0.2,12.6,1.5,17.7,2.3
+            C298.8,186.3,292.5,185.8,286.2,185.3z M179.6,310.1H195h0h8.5l-0.8,9l-7.7,2.1v0l0,0l-7.7-2.1l-0.5-5.5h-3.7h-3.2l1,10.8l14.2,3.9
+            l0,0v0l14.1-3.9l0.1-1.2l1.6-18.2l0.2-1.9h-1.9h-14.2h0h-9.1l-0.6-7.1h9.8h0h16.6h0l0.1-1.6l0.3-3.5l0.2-1.9h-17.3h0h-17.3l0.2,1.9
+            L179.6,310.1z M256.6,265.8v70.9l-61.4,35.4l-61.4-35.4v-70.9l61.4-35.4L256.6,265.8z M209.2,272.9h8.5v-3.5h-4.9v-7h-3.5V272.9z
+            M195.6,272.9h3.4v-5.2l2.4,3.7h0.1l2.4-3.7v5.2h3.5v-10.5h-3.7l-2.2,3.7l-2.3-3.7h-3.7V272.9z M184.4,265.9h3.1v7h3.5v-7h3.1v-3.5
+            h-9.7V265.9z M172.6,272.9h3.5v-3.5h3.2v3.5h3.5v-10.5h-3.5v3.5h-3.2v-3.5h-3.5V272.9z M222.7,277.7h-55.2l5,56.3l22.5,6.3l22.6-6.3
+            L222.7,277.7z M75.2,289.1c-0.2,0-0.3,0-0.5,0c-0.8,0.1-1.6,0.5-1.5,0.9c0.1,0.4,0.7,1,1.5,1c0.1,0,0.1,0,0.2,0
+            c0.5-0.1,0.9-0.4,1.1-0.6c0.3-0.3,0.4-0.6,0.4-0.8C76.3,289.3,75.8,289.1,75.2,289.1z M55.2,290.7c0.1-0.6-0.8-1-1.6-1.1
+            c-0.2,0-0.4,0-0.5,0c-0.8,0-1.3,0.2-1.3,0.7c0,0.3,0.2,0.6,0.3,0.8c0.3,0.5,0.9,0.8,1.4,0.8c0.1,0,0.2,0,0.2,0
+            C54.4,291.8,55.1,291.1,55.2,290.7z M122.7,265.8v70.9l-61.4,35.4L0,336.7v-70.9l61.4-35.4L122.7,265.8z M91.3,309.5
+            c-0.4-1.2-1.4-2-2.8-2.2c-0.6-0.1-1.4-0.1-2.2,0.1c-1.5,0.3-2.6,0.4-3.4,0.4c3-5.1,5.5-11,6.9-16.5c2.3-8.9,1.1-13-0.4-14.8
+            c-3.8-4.9-9.4-7.5-16.1-7.6c-3.6,0-6.7,0.7-8.3,1.2c-1.5-0.3-3.2-0.4-4.9-0.4c-3.2-0.1-6.1,0.7-8.5,2.1c-1.3-0.5-3.5-1.1-6-1.5
+            c-5.9-1-10.6-0.2-14.1,2.2c-4.2,3-6.1,8.1-5.8,15.3c0.1,2.3,1.4,9.2,3.4,15.8c1.2,3.8,2.4,6.9,3.7,9.3c1.8,3.4,3.7,5.4,5.9,6.2
+            c1.2,0.4,3.4,0.7,5.7-1.2c0.3,0.4,0.7,0.7,1.2,1c0.7,0.4,1.5,0.8,2.3,1c2.9,0.7,5.6,0.5,8-0.5c0,0.4,0,0.8,0,1.2
+            c0,0.6,0,1.1,0.1,1.6c0.1,3.4,0.4,6.1,1.1,8c0,0.1,0.1,0.3,0.1,0.4c0.3,1.1,0.9,2.8,2.4,4.2c1.5,1.4,3.4,1.9,5.1,1.9
+            c0.8,0,1.7-0.1,2.4-0.3c2.5-0.5,5.4-1.4,7.5-4.3c2-2.8,2.9-7,3.1-13.6c0-0.2,0-0.4,0.1-0.5c0-0.1,0-0.2,0-0.3l0.5,0l0.1,0
+            c2.6,0.1,5.7-0.4,7.6-1.3C87.6,315.6,92.4,313,91.3,309.5z M89.4,309.7c0.6,1.7-2.5,3.7-4.3,4.5c-1.5,0.7-4,1.2-6.1,1.2
+            c-1,0-1.9-0.1-2.7-0.3c-0.3,3.1-1.1,9.3-1.5,11.8c-0.8,4.6-2.9,6.7-7.6,7.8c-0.8,0.2-1.5,0.3-2.2,0.3c-4.6,0-6-3.6-6.6-5.1
+            c-0.7-1.8-1-7.7-0.9-13.7c-1.6,1.5-3.7,2.3-6,2.3h0c-1,0-2-0.1-3-0.4c-0.3-0.1-2.9-0.8-2.9-2.5c0-1.5,2.2-2,3.1-2.2
+            c2.9-0.6,3.1-0.8,4-2c0.2-0.2,0.4-0.5,0.7-0.8c0-0.1,0-0.2,0-0.3c-1.3,0-2.6-0.4-3.7-1c-0.8,0.8-2.9,3.1-5.2,5.9
+            c-1.4,1.7-2.7,2.1-3.8,2.1c-0.4,0-0.8-0.1-1.2-0.2c-3-1-5.8-5.8-8.4-14.3c-2-6.4-3.2-13.2-3.3-15.3c-0.3-6.5,1.4-11.1,5-13.7
+            c3-2.2,7.3-2.8,12.7-1.9c3.1,0.5,5.6,1.4,6.6,1.7c2.3-1.5,5-2.3,8.1-2.2c1.7,0,3.3,0.2,4.8,0.6c0.7-0.3,4.2-1.4,8.4-1.3
+            c6.1,0.1,11.2,2.4,14.6,6.8c0.9,1.1,1.3,2.9,1.2,5.3c0,2.2-0.5,4.9-1.2,7.9c-1.6,6.2-4.6,12.8-8.2,18.3c0.5,0.4,2.2,1.1,6.8,0.1
+            C88.2,308.6,89.1,308.9,89.4,309.7z M68.1,272.9c3.3,1.4,5.7,3.6,7.3,5.5c3,3.5,4.5,7.4,4.6,8.7c0,0.2,0,0.4,0,0.5
+            c0,1.4-0.1,2.5-0.3,3.6c-0.1,0.9-0.3,1.8-0.3,2.9c0,1,0.1,2.1,0.2,3.3c0.3,2.8,0.7,6-1.2,9.2c0,0,0.1,0.1,0.1,0.1
+            c0.1,0.1,0.2,0.2,0.2,0.3c7.5-11.8,10.1-25.5,7.7-28.5c-3.1-3.9-7.4-6-12.9-6.1C71.4,272.4,69.5,272.6,68.1,272.9z M77.5,294.1
+            c0-1.2,0.2-2.2,0.3-3.1c0.1-0.9,0.3-1.7,0.3-2.7c-3.7-0.5-5.2,0.4-5.8,1.2c-2,2.8,1.9,9.7,3.5,12.7c0.4,0.8,0.7,1.3,0.9,1.6
+            c0.2,0.4,0.3,0.7,0.5,1c1.1-2.4,0.8-4.8,0.6-7.2C77.6,296.5,77.4,295.3,77.5,294.1z M48,308c-0.2-0.2-0.5-0.4-0.7-0.6
+            c-2.1-2.2-3-5.2-2.6-8.3c0.5-3.3,0.3-6.2,0.2-7.8c0-0.4,0-0.7,0-1c0-0.6-0.1-9.9,5.3-15.4c0,0,0.1-0.1,0.1-0.1
+            c-3.3-1.1-11.5-3.2-16.5,0.3c-3.1,2.2-4.5,6.2-4.2,12c0.1,1.8,1.3,8.4,3.2,14.9c2.3,7.5,4.9,12.3,7.1,13c0.3,0.1,1.4,0.5,2.9-1.4
+            C45,311.2,47,309,48,308z M53.5,308.2c0.2-0.8,0.5-1.7,0.9-2.7l0.1-0.4c0.2-0.5,0.4-1,0.6-1.5c1.1-2.4,2.4-5.4,0.9-12.6
+            c-0.3-1.4-1-2.2-2.2-2.5c-2.6-0.6-6.3,1.4-7.1,2.1c0,0.2,0,0.4,0,0.6c0.1,1.6,0.3,4.7-0.2,8.2c-0.3,2.5,0.4,4.9,2.1,6.7
+            C50,307.5,51.7,308.2,53.5,308.2z M57.5,312.2c-0.2-0.6-0.6-1.1-1-1.3c-0.2-0.1-0.4-0.2-0.6-0.2c-0.2,0-0.5,0.2-0.8,0.5
+            c-0.4,0.5-0.7,0.8-1,1.2c-1.2,1.5-1.7,2-5.1,2.7c-0.7,0.1-1.1,0.3-1.3,0.4c0.3,0.2,0.7,0.4,1.3,0.5c0.9,0.2,1.8,0.3,2.6,0.3
+            c2.5,0,4.5-1,5.9-3C57.7,313,57.6,312.5,57.5,312.2z M77.5,308.6c-0.1-0.2-0.3-0.4-0.5-0.7c-0.6-0.8-1.4-1.8-2.1-3.4
+            c-0.1-0.2-0.4-0.8-0.8-1.4c-2-3.5-6.1-10.9-3.4-14.7c1.2-1.7,3.6-2.4,7.2-2.1c-0.5-1.4-1.6-4-3.8-6.6c-2.5-3-7-6.6-14-6.7
+            c-3.5-0.1-6.4,1-8.6,3.2c-3.5,3.5-4.4,9-4.6,12c0.2-0.1,0.3-0.2,0.5-0.3c0.9-0.4,2.6-1.2,4.6-1.4c3.2-0.3,5.3,1.1,6,4
+            c1.7,7.8,0.1,11.3-1,13.8c-0.2,0.5-0.4,0.9-0.6,1.3l-0.1,0.4c-0.4,1-0.7,2-0.9,2.8c0.2-0.1,0.4-0.1,0.7-0.1c0.6,0,1,0.2,1.3,0.3
+            c1,0.4,1.8,1.4,2.1,2.5c0.1,0.2,0.1,0.4,0.1,0.6c0,0.1,0,0.2,0,0.3c-0.2,7.9,0.1,15,0.7,16.6c1,2.4,2.5,4.6,6.7,3.7
+            c4-0.9,5.5-2.3,6.2-6.2c0.5-3,1.5-11.5,1.7-13.2c0,0,0,0,0-0.1c0,0,0-0.1,0-0.1C74.5,309.6,76.4,308.9,77.5,308.6z M87.1,310.7
+            C87.1,310.7,87,310.8,87.1,310.7c-3.9,0.8-6.7,0.7-8.2-0.3c-0.1-0.1-0.2-0.1-0.3-0.2c-0.1,0-0.3,0.1-0.4,0.1
+            c-0.9,0.2-1.7,0.5-1.6,2.7c0.2,0.2,1.2,0.5,3.1,0.4c1.7-0.1,3.6-0.5,4.7-1C85.7,311.9,86.5,311.2,87.1,310.7z M329.8,296h0.9
+            l-0.9,0.4l-16.1,6.7l0.5,6.7l15.6,0v0l8.4,0l-0.5,8.9l-7.8,2.2v0l-0.1,0l-7.6-1.9l-0.5-5.5h0h-7h0l0.9,10.6l14.2,4.2v0l0,0l14.2-4.1
+            l1.8-21.1h-16h0l0,0l16.6-7.1l0.7-6.8h-17.3h-17.6l0.8,6.8H329.8z M390.4,265.8v70.9L329,372.1l-61.4-35.4v-70.9l61.4-35.4
+            L390.4,265.8z M337.8,272.8h8.6v-3.4l-3.4-3.4h3.4v-3.7h-8.6c0,0,0,1.8,0,3.7c1.1,1.1,1.7,1.7,3.4,3.4c-1,0-3.4,0-3.4,0V272.8z
+            M325.6,272.8h8.6v-3.4l-3.4-3.4h3.4v-3.7h-8.6c0,0,0,1.8,0,3.7c1.1,1.1,1.7,1.7,3.4,3.4c-1,0-3.4,0-3.4,0V272.8z M313.4,272.8h8.6
+            v-3.4h-4.9v-3.4h4.9v-3.7h-8.6V272.8z M357.6,277.7h-55.5l5.2,56.4l22.6,6.1l22.6-6.1L357.6,277.7z M475.3,303.3
+            c1,1.5,1.5,3.3,1.5,5.5c0,1.3-0.2,2.4-0.7,3.5c-0.4,1.1-1.1,2-2.1,2.8c-1,0.8-2.2,1.4-3.7,1.9s-3.3,0.7-5.3,0.7h-14.7v-32h15.6
+            c2.9,0,5.2,0.7,6.9,2c1.7,1.3,2.6,3.3,2.6,6c0,1.6-0.4,3-1.2,4.1c-0.8,1.1-1.9,2-3.4,2.7v0.1C472.8,300.9,474.3,301.9,475.3,303.3z
+            M455.9,299.1h9.1c1.3,0,2.5-0.4,3.4-1.1c0.9-0.8,1.3-1.9,1.3-3.3c0-1.6-0.4-2.8-1.2-3.4c-0.8-0.7-2-1-3.5-1h-9.1V299.1z M471.2,308
+            c0-1.6-0.5-2.8-1.4-3.6c-0.9-0.9-2.3-1.3-4-1.3h-9.9v10h9.9c1.7,0,3-0.4,4-1.3C470.8,310.9,471.2,309.6,471.2,308z M524.2,265.8
+            v70.9l-61.4,35.4l-61.4-35.4v-70.9l61.4-35.4L524.2,265.8z M490.3,282.9c0-5-4.1-9.1-9.1-9.1h-36.6c-5,0-9.1,4.1-9.1,9.1v36.6
+            c0,5,4.1,9.1,9.1,9.1h36.6c5,0,9.1-4.1,9.1-9.1V282.9z M84.8,45.6v48c0,1.3-1,2.3-2.3,2.3H40.3c-1.3,0-2.3-1-2.3-2.3v-48
+            c0-1.3,1.1-2.3,2.3-2.3h42.2C83.7,43.3,84.8,44.3,84.8,45.6z M54.8,84.3l-6.6-5.9v11.7L54.8,84.3z M74.5,72.6c0-0.4,0-3.6-2.5-6.2v0
+            c-1.2-1.2-3.3-2.6-7-2.6c-4,0-8.1,1-11,2V49.1h-5.9v25.4l4.1-1.9c0.1,0,6.7-3,12.7-3c3,0,3.6,1.6,3.7,3v17.5h5.8V72.6z M74.5,49.1
+            h-5.8c-0.7,3.3-2.1,6.5-4.4,9.5h5.9C72.8,55.7,74.1,52.5,74.5,49.1z M122.7,35.4v70.9l-61.4,35.4L0,106.3V35.4L61.4,0L122.7,35.4z
+            M87.7,45.6c0-2.9-2.4-5.3-5.3-5.3H40.3c-2.9,0-5.3,2.4-5.3,5.3v48c0,2.9,2.4,5.3,5.3,5.3h42.2c2.9,0,5.3-2.4,5.3-5.3V45.6z
+            M457.9,149v70.9l-61.4,35.4l-61.4-35.4V149l61.4-35.4L457.9,149z M412.4,178.3h-7.4v25.3c0,3.7-1.5,4.7-4,4.7
+            c-2.6,0-3.6-1.8-4.8-3.8l-6,3.7c1.8,3.7,5.2,6.8,11.1,6.8c6.6,0,11.1-3.5,11.1-11.2V178.3z M442.2,204.5c0-6.2-3.6-9-9.9-11.7
+            l-1.9-0.8c-3.2-1.4-4.6-2.3-4.6-4.5c0-1.8,1.4-3.2,3.6-3.2c2.1,0,3.5,0.9,4.8,3.2l5.8-3.7c-2.4-4.3-5.8-5.9-10.6-5.9
+            c-6.6,0-10.9,4.2-10.9,9.8c0,6,3.6,8.9,8.9,11.2l1.9,0.8c3.4,1.5,5.4,2.4,5.4,4.9c0,2.1-2,3.7-5,3.7c-3.7,0-5.7-1.9-7.3-4.5l-6,3.5
+            c2.2,4.3,6.6,7.6,13.5,7.6C437,214.9,442.2,211.2,442.2,204.5z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="home-testimonials white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-6 col-md-offset-3 col-sm-3 col-sm-offset-2 ">
+          <div class="text-center"><h3 class="section-title" >Testimonials</h3></div>
+          <br />
+          <div id="carousel-example" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="item active">
+                <div class="testimonial-section">
+                  <i class="fa fa-quote-left size-1"></i> Kaizendevs makes your life easier. Always delivers on time with the highest quality. Contact me if you want to know more <i class="fa fa-quote-right size-1"></i>
+                </div>
+                <div class="testimonial-section-name">
+                  <img src="img/nayib.jpg" class="img-circle" />
+                  <br>Nayib Abdalá<br>
+                  <span>Founder of <a href="http://www.leaninnovationgroup.com/">Lean Innovation Group</a> and <a target="_blank" href="http://www.bussinesshackers.how">Business Hackers</a></span>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="testimonial-section">
+                  <i class="fa fa-quote-left size-1"></i> Kaizendevs makes your life easier. Always delivers on time with the highest quality. Contact me if you want to know more <i class="fa fa-quote-right size-1"></i>
+                </div>
+                <div class="testimonial-section-name">
+                  <img src="img/german.png" class="img-circle" />
+                  <br>Germán Escobar <br>
+                  <span>Founder of <a target="_blank"  href="http://www.makeitreal.camp">Make it real</a></span>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="testimonial-section">
+                  <i class="fa fa-quote-left size-1"></i> By far the best technology team I have worked with <i class="fa fa-quote-right size-1"></i>
+                </div>
+                <div class="testimonial-section-name">
+                  <img src="img/alejandro.jpg" class="img-circle" />
+                  <br>Alejandro Giraldo<br>
+                  <span>Founder of  <a target="_blank" href="http://www.vuelteros.co">vuelteros.co</a></span>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimonial-section">
+                  <i class="fa fa-quote-left size-1"></i> High quality, excellent communication and great work-flow are 3 perfect attributes to describe KaizenDevs work <i class="fa fa-quote-right size-1"></i>
+                </div>
+                <div class="testimonial-section-name">
+                  <img src="img/andres.jpg" class="img-circle" />
+                  <br>Andrés Ángel<br>
+                  <span>Entrepreneur. Co-founder <a target="_blank" href="http://www.quincena.me">www.quincena.me</a></span>
+                </div>
+              </div>
+
+
+              <!--INDICATORS-->
+              <ol class="carousel-indicators carousel-indicators-set">
+                <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example" data-slide-to="1"></li>
+                <li data-target="#carousel-example" data-slide-to="2"></li>
+                <li data-target="#carousel-example" data-slide-to="3"></li>
+              </ol>
+            </div>
+          </div>
+          <br />
+        </div>
+      </div>
+      <!-- ROW END -->
+    </div>
+  </section>
+  <section style="background:#00BF8A; padding: 80px 0 80px 0;">
+    <h2 style="text-align:center;">Get ready </h2>
+    <div style="margin: 40px auto; text-align:center;">
+      <a class="start-with-us" href="#myModal" data-toggle="modal" data-target="#myModal">START A PROJECT WITH US</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12 footer-section">
+          <h4 class="footer-text"><strong>SOCIAL NETWORKS</strong></h4>
+          <a target="_blank" class="social fa fa-twitter-square fa-2x" href="https://twitter.com/kaizendevs"></a>
+          <a target="_blank" class="social fa fa-facebook-square fa-2x" href="https://facebook.com/kaizendevs"></a>
+          <a target="_blank" class="social fa fa-instagram fa-2x" href="https://instagram.com/kaizendevs/"></a>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 text-left footer-section">
+          <svg width="180px" height="57.4px" viewBox="0 0 180 57.4">
+          <path fill="#4d5152" d="M28.7,57.4L0,28.7L28.7,0l28.7,28.7L28.7,57.4z M3.8,28.7l24.9,24.9l24.9-24.9L28.7,3.8L3.8,28.7z
+          M75.5,10.1h6.1l-7.6,9l8.3,10h-6.4l-6.4-8.3h0v8.3h-5V10.1h5v7.9h0L75.5,10.1z M92,25.8l-1.3,3.3h-5.3l7.3-19.1h5.4l7.2,19.1h-5.3
+          l-1.2-3.3H92z M95.5,15.9L95.5,15.9L93.4,22h4.1L95.5,15.9z M115.9,29.1h-5V10.1h5V29.1z M136.6,24.9v4.2h-16.3l9-14.9h-7.5v-4.2
+          h15.8l-9,14.9H136.6z M148.5,14.3v3.2h5.6v4.2h-5.6v3.3h5.9v4.2h-10.8V10.1h10.8v4.2H148.5z M161,10.1h5l9.1,11.6h0.1V10.1h5v19.1
+          h-5L166,17.4h-0.1v11.7h-5V10.1z M69.3,33.1l-9.7,23.3H56l9.7-23.3H69.3z M73.5,35.1h7c5.3,0,9.7,4.2,9.7,9.5s-4.4,9.5-9.7,9.5h-7
+          V35.1z M78.5,49.9h1.1c3,0,5.5-1.6,5.5-5.3c0-3.4-2.2-5.3-5.4-5.3h-1.2V49.9z M100.1,39.3v3.2h5.6v4.2h-5.6v3.3h5.9v4.2H95.2V35.1
+          H106v4.2H100.1z M120.7,46.6l4.6-11.6h5.4l-8.1,19.1h-3.8l-8-19.1h5.4L120.7,46.6z M144.4,40c-0.9-0.8-2.1-1.3-3.3-1.3
+          c-0.9,0-2.1,0.5-2.1,1.6c0,1.1,1.3,1.5,2.2,1.8l1.3,0.4c2.7,0.8,4.7,2.1,4.7,5.2c0,1.9-0.5,3.8-2,5.1c-1.5,1.3-3.5,1.8-5.4,1.8
+          c-2.4,0-4.8-0.8-6.7-2.2l2.1-4c1.2,1.1,2.7,2,4.4,2c1.2,0,2.4-0.6,2.4-1.9c0-1.4-1.9-1.9-3-2.2c-3.1-0.9-5.2-1.7-5.2-5.4
+          c0-3.9,2.8-6.4,6.6-6.4c1.9,0,4.3,0.6,6,1.6L144.4,40z M32.7,32.6c4.5,0,5.5-3,5.9-4.4c0.1-0.3,0.5,0.1,1.8-0.2
+          c1.1-0.3,2.8-1.7,2.8-2.7c0-0.8-3.3-2.9-4.4-3c-2.6-0.1-2.3,3-4.8,3c-2.5,0-4.2-1.4-7.2-1.4c-2.9,0-4.5,1.5-4.5,3.3
+          C22.3,28.9,26.7,32.6,32.7,32.6z M33.9,19c-1.2-0.8-3.3-2.1-3.7-1.7c-0.3,0.3,0.6,2.3,1.7,3.1c1.2,0.9,2.4,1.4,4,2
+          c1.3,0.5,2.1,0.8,2.2,0.6C38.4,22.6,35.8,20.2,33.9,19z M33.6,31.4c3.7,3.2,7.6-1.8,9.1-0.7c1.6,1.2,2.4-0.4,1.5-1.2
+          c-1.6-1.5-4,0-5.3,0.2c-1.3,0.2-1.2-2.1-2.2-3.1c-1-1-1.5-1-2.5-0.8C33.2,26,30.8,28.9,33.6,31.4z M25.8,25
+          c-2.9,0.4-3.9,2.5-4.5,3.6c-0.6,1.1-1.1,1.6-3,1.6c-1.9,0-1.7,2.6-2.3,3.5c-0.5,0.9-1.7,0.4-2.1,0.8c-0.3,0.5-0.2,1.3,0.5,1.5
+          c1.8,0.3,4.1-3.9,4.1-3.9c0.7-0.7,2.4,0.4,5.1,0.1c4.7-0.5,5.9-4.2,5.8-5.2C29.3,26.1,28.3,24.7,25.8,25z M24.8,26
+          c0.5-1.3-0.4-2.6-2.4-2.9c-1.2-0.1-1-1.2-1.4-1.2c-0.4,0-1,1.5-1,2.3C20.1,27.3,24,27.9,24.8,26z"></path>
+          </svg>
+          <p>Copyright 2015 Kaizendevs S.A.S</p>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <h4 class="footer-text"><strong>CONTACT US</strong></h4>
+          <div class="text-left">
+            <span class="footer-text">Cl. 69 #6-20</span><br>
+            <span class="footer-text">Bogotá, Colombia</span><br>
+            <span class="footer-text">301 262 35 73</span><br>
+            <span class="footer-text">info@kaizendevs.com</span><br>            
+          </div>
+          <div class="text-center">
+            <button href="#contact-modal" data-toggle="modal" data-target="#contact-modal" class="btn btn-white-nav-footer">Contact US</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </footer>
+  <!-- Modal -->
+  <div class="modal fade modal-fullscreen" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div id="input-border" data-dismiss="modal" aria-label="Close" class="pull-right text-center">
+            <span type="button" id="close_modal_button">X</span>
+          </div>
+          <img src="images/logo-green-up.png" alt="" id="modal_logo">
+        </div>
+        <div class="modal-body text-center" style="">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <h1 id="project_form_title">Project Planner</h1>
+              <p id="project_form_subtitle">Start a project, get a quote or learn more about how we can partner to build a successful product.</p>
+              <p>all fields are required unless indicated</p>
+
+
+              <h3 class="form-text">Name and Contact Info</h3>
+              <p>Tell us about yourself</p>
+
+              <form method="get" role"form" action="/" name="sentMessage" id="contactForm" novalidate>
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <input type="text" name="name" class="form-control input-lg" placeholder="Full Name" id="name" required data-validation-required-message="Porfavor ingresa un nombre.">
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-8 col-sm-offset-2">
+                        <input type="email" name="_replyto" class="form-control input-lg" placeholder="Email Address" id="email" required data-validation-required-message="Porfavor ingresa una dirección de correo electrónico">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-8 col-sm-offset-2">
+                        <input type="tel" name="tel" class="form-control input-lg" placeholder="Phone Number" id="phone" required data-validation-required-message="Porfavor ingresa un número telefónico">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <input type="text" name="company" class="form-control input-lg" placeholder="Company/Organization" id="company" required data-validation-required-message="Porfavor ingresa un número telefónico">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <h3 class="form-text">Type of Project</h3>
+                <p>Select all that apply</p>
+                <label class="btn-white" type="submit" for="checkbox1">
+                    <input type="checkbox" id="checkbox1" name="web-development" value="web-development" class="hidden"><span>Web Development</span>
+                </label>
+                <label class="btn-white" type="submit" for="checkbox2">
+                    <input type="checkbox" name="e-commerce" id="checkbox2" value="e-commerce" class="hidden"><span>E-Commerce</span>
+                </label>
+                <label class="btn-white" type="submit" for="checkbox3">
+                    <input type="checkbox" name="mobile-app" id="checkbox3" value="mobile-app" class="hidden"><span>Mobile App</span>
+                </label>
+                <label class="btn-white" type="submit" for="checkbox4">
+                    <input type="checkbox" name="marketing-website" id="checkbox4" value="marketing-website" class="hidden"><span>Marketing Website</span>
+                </label>
+                <label class="btn-white" type="submit" for="checkbox5">
+                    <input type="checkbox" name="mvp" id="checkbox5" value="mvp" class="hidden"><span>Minimum Viable Product</span>
+                </label>
+                <label class="btn-white" type="submit" for="checkbox6">
+                    <input type="checkbox" name="product-prototype" id="checkbox6" value="product-prototype" class="hidden"><span>Product Prototype</span>
+                </label>
+                <label class="btn-white" type="submit" for="checkbox7">
+                    <input type="checkbox" name="other" id="checkbox7" value="other" class="hidden"><span>Other</span>
+                </label>
+                <h3 class="form-text">Project Budget</h3>
+                <p>Do you have a budget for this project? Ballparks are fine. (Value in $ USD)</p>
+                <div id="range">
+
+                </div>
+
+                <div class="budget-value">
+                  <span class="budget-min-value"></span> -
+                  <span class="budget-max-value"></span>
+                  <input type="hidden" name="budget" value="" / id="budget">
+                </div>
+
+                <h3 class="form-text">Timeframe</h3>
+                <p>Is there a specific timeframe or deadline for the project?</p>
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <input type="text" name="timeframe" class="form-control input-lg" id="timeframe" required data-validation-required-message="Porfavor ingresa un número telefónico">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+
+                <h3 class="form-text">About the project</h3>
+                <p>Tell us about the project, requirements and objectives.</p>
+                <div class="row">
+                    <div class="form-group col-sm-8 col-sm-offset-2">
+                        <textarea name="about_project" rows="3" class="form-control input-lg" id="about_project" required data-validation-required-message="Porfavor ingresa un mensaje"></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+
+                <h3 class="form-text">How'd you find us?</h3>
+                <p>Tell us about how you found us? Google, Friend, etc?</p>
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <input type="text" name="find-us" class="form-control input-lg" id="find-us" required data-validation-required-message="Porfavor ingresa un número telefónico">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+
+                <input type="hidden" name="_subject" value="New project request from Kaizen Devs" />
+                <br>
+                <div id="success"></div>
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <button type="submit" class="btn btn-lg btn-submit-project">Submit Planner</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</section>
 
+  <!-- Modal -->
+  <div class="modal fade modal-fullscreen" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div id="input-border" data-dismiss="modal" aria-label="Close" class="pull-right text-center">
+            <span type="button" id="close_modal_button">X</span>
+          </div>
+          <img src="images/logo-green-up.png" alt="" id="modal_logo">
+        </div>
+        <div class="modal-body text-center" style="">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <h1 id="project_form_title">Contact Us</h1>
+              <p id="project_form_subtitle">Get in touch with us, if you have comments, suggestions or compliments. If you want to start a project with us use the <a data-dismiss="modal" data-toggle="modal" href="#myModal" class="go-to-project-planner">project planner</a>.</p>
 
+              <form method="get" role"form" action="/" name="sentMessage" id="contactusForm" novalidate>
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <input type="text" name="name" class="form-control input-lg" placeholder="Full Name" id="name" required data-validation-required-message="Porfavor ingresa un nombre.">
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-8 col-sm-offset-2">
+                        <input type="email" name="_replyto" class="form-control input-lg" placeholder="Email Address" id="email" required data-validation-required-message="Porfavor ingresa una dirección de correo electrónico">
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="form-group col-sm-8 col-sm-offset-2">
+                        <input type="tel" name="tel" class="form-control input-lg" placeholder="Phone Number" id="phone" required data-validation-required-message="Porfavor ingresa un número telefónico">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
 
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+                <div class="row">
+                    <div class="form-group col-sm-8 col-sm-offset-2">
+                        <textarea name="message" rows="3" class="form-control input-lg" placeholder="Message" id="about_project" required data-validation-required-message="Porfavor ingresa un mensaje"></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <input type="hidden" name="_subject" value="New contact request from Kaizen Devs" />
+                <br>
+                <div id="success"></div>
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <button type="submit" class="btn btn-lg btn-submit-project">Submit Planner</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
   </div>
-</div>
+
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/scrolling-nav.js"></script>
+  <script src="js/wNumb.min.js"></script>
+  <script src="js/nouislider.min.js"></script>
+  <script>
+  var slider = document.getElementById('range');
+
+
+  noUiSlider.create(slider, {
+    start: [ 20, 40 ], // Handle start position
+    step: 5, // Slider moves in increments of '10'
+    margin: 5, // Handles must be more than '20' apart
+    connect: true, // Display a colored bar between the handles
+    direction: 'ltr', // Put '0' at the bottom of the slider
+    orientation: 'horizontal', // Orient the slider vertically
+    behaviour: 'tap-drag', // Move handle on tap, bar is draggable
+    range: { // Slider can select '0' to '100'
+      'min': 5,
+      'max': 75
+    },
+    pips: { // Show a scale with the slider
+      mode: 'steps',
+      density: 5,
+      format: wNumb({
+        decimals: 2,
+        prefix: '$',
+        postfix: 'k'
+      })
+    }
+  });
+
+  // When the slider value changes, update the input and span
+  slider.noUiSlider.on('update', function( values, handle ) {
+    var values = slider.noUiSlider.get();
+    $('span.budget-min-value').text("$"+values[0].replace(".00", "k"));
+    $('span.budget-max-value').text("$"+values[1].replace(".00", "k"));
+    $('input[name="budget"]').attr('value',"$"+values[0].replace(".00", "k USD"+" - $"+values[1].replace(".00", "k USD")));
+    console.log($('input[name="budget"]').val());
+  });
+
+  $("#contactForm").on( "submit", function( event ) {
+    event.preventDefault();
+    var formData = $( this ).serialize();
+    $.ajax({
+      url: "//formspree.io/info@kaizendevs.com",
+      method: "POST",
+      data: formData,
+      dataType: "json"
+    }).done(function(response) {
+      $( '#contactForm' ).html("<h1 class='text-center'>Thanks for trusting us your idea. Will get in contact with you soon!</h1>")
+    });
+  });
+
+  $("#contact-modal").on( "submit", function( event ) {
+    event.preventDefault();
+    var formData = $( this ).serialize();
+    $.ajax({
+      url: "//formspree.io/info@kaizendevs.com",
+      method: "POST",
+      data: formData,
+      dataType: "json"
+    }).done(function(response) {
+      $( '#contact-modal' ).html("<h1 class='text-center'>Will get in contact with you soon!</h1>")
+    });
+  });
+
+  $("input[type='checkbox']").change(function(){
+    if($(this).is(":checked")){
+        $(this).parent().addClass("green-background");
+    }else{
+        $(this).parent().removeClass("green-background");
+    }
+  });
+
+  </script>
+</body>
+</html>
