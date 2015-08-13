@@ -336,6 +336,7 @@ p.description{
   right: 0;
   top: 0;
   background-color: rgba(0,0,0,0.4);
+  overflow: scroll;
 }
 .modal.modal-fullscreen .modal-dialog {
   margin: 0;
@@ -460,6 +461,13 @@ span#close_modal_button {
   position: relative;
   top: 55%;
   transform: translateY(-50%);
+}
+
+.go-to-project-planner {
+	color: rgb(142,239,6);
+}
+.go-to-project-planner:hover {
+	color: rgb(142,239,6);
 }
 
 @media all and (max-width: 720px){
