@@ -34,7 +34,8 @@
   <title>Kaizen Devs</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/main.css">
   <link href="css/nouislider.min.css" rel="stylesheet">
 </head>
@@ -637,22 +638,13 @@
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="jquery.easing.min.js"></script>
-  <script src="scrolling-nav.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/scrolling-nav.js"></script>
   <script src="js/wNumb.min.js"></script>
   <script src="js/nouislider.min.js"></script>
   <script>
   var slider = document.getElementById('range');
-    // When the slider value changes, update the input and span
-    slider.noUiSlider.on('update', function( values, handle ) {
-      var values = slider.noUiSlider.get();
-      $('span.budget-min-value').text("$"+values[0].replace(".00", "k"));
-      $('span.budget-max-value').text("$"+values[1].replace(".00", "k"));
-      $('input[name="budget"]').attr('value',"$"+values[0].replace(".00", "k USD"+" - $"+values[1].replace(".00", "k USD")));
-      console.log($('input[name="budget"]').val());
-    });
+
 
   noUiSlider.create(slider, {
     start: [ 20, 40 ], // Handle start position
@@ -675,6 +667,15 @@
         postfix: 'k'
       })
     }
+  });
+
+  // When the slider value changes, update the input and span
+  slider.noUiSlider.on('update', function( values, handle ) {
+    var values = slider.noUiSlider.get();
+    $('span.budget-min-value').text("$"+values[0].replace(".00", "k"));
+    $('span.budget-max-value').text("$"+values[1].replace(".00", "k"));
+    $('input[name="budget"]').attr('value',"$"+values[0].replace(".00", "k USD"+" - $"+values[1].replace(".00", "k USD")));
+    console.log($('input[name="budget"]').val());
   });
 
   $("#contactForm").on( "submit", function( event ) {
