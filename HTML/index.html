@@ -1,3 +1,32 @@
+<style>
+  .vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-white{
+    border:1px solid white;
+    padding: 1em 2em;
+    display: inline-block;
+    margin: 0.8em;
+    color: white;
+    cursor: pointer;
+  }
+
+  .btn-white:hover{
+    background-color: rgb(142,239,6);
+    transition: background-color 1s ease;
+  }
+
+  .green-background {
+    background-color: rgb(142,239,6);
+  }
+
+</style>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +34,10 @@
   <title>Kaizen Devs</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/main.css">
+  <link href="css/nouislider.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -30,12 +61,11 @@
           <li><a  href="#home-testimonials">Testimonials</a></li>
           <li>
             <p class="navbar-btn">
-              <button href="#" class="btn btn-white-nav">Start a project</button>
+              <button href="#myModal" data-toggle="modal" data-target="#myModal" class="btn btn-white-nav">Start a project</button>
             </p>
           </li>
         </ul>
       </div>
-
     </div>
   </div>
   <section class="home-hero">
@@ -324,10 +354,7 @@
             c-6.6,0-10.9,4.2-10.9,9.8c0,6,3.6,8.9,8.9,11.2l1.9,0.8c3.4,1.5,5.4,2.4,5.4,4.9c0,2.1-2,3.7-5,3.7c-3.7,0-5.7-1.9-7.3-4.5l-6,3.5
             c2.2,4.3,6.6,7.6,13.5,7.6C437,214.9,442.2,211.2,442.2,204.5z"/>
           </svg>
-
-
         </div>
-
       </div>
     </div>
   </section>
@@ -429,11 +456,262 @@
       <p>Copyright 2015 Kaizendevs S.A.S</p>
     </div>
   </footer>
+  <!-- Modal -->
+  <div class="modal fade modal-fullscreen" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div id="input-border" data-dismiss="modal" aria-label="Close" class="pull-right text-center">
+            <span type="button" id="close_modal_button">X</span>
+          </div>
+          <img src="images/logo-green-up.png" alt="" id="modal_logo">
+        </div>
+        <div class="modal-body text-center" style="">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <h1 id="project_form_title">Project Planner</h1>
+              <p id="project_form_subtitle">Start a project, get a quote or learn more about how we can partner to build a successful product.</p>
+              <p>all fields are required unless indicated</p>
+
+
+              <h3 class="form-text">Name and Contact Info</h3>
+              <p>Tell us about yourself</p>
+
+              <form method="get" role"form" action="/" name="sentMessage" id="contactForm" novalidate>
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <input type="text" name="name" class="form-control input-lg" placeholder="Full Name" id="name" required data-validation-required-message="Porfavor ingresa un nombre.">
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-8 col-sm-offset-2">
+                        <input type="email" name="_replyto" class="form-control input-lg" placeholder="Email Address" id="email" required data-validation-required-message="Porfavor ingresa una dirección de correo electrónico">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-8 col-sm-offset-2">
+                        <input type="tel" name="tel" class="form-control input-lg" placeholder="Phone Number" id="phone" required data-validation-required-message="Porfavor ingresa un número telefónico">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <input type="text" name="company" class="form-control input-lg" placeholder="Company/Organization" id="company" required data-validation-required-message="Porfavor ingresa un número telefónico">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <h3 class="form-text">Type of Project</h3>
+                <p>Select all that apply</p>
+                <label class="btn-white" type="submit" for="checkbox1">
+                    <input type="checkbox" id="checkbox1" value="web-development" class="hidden"><span>Web Development</span>
+                </label>
+                <label class="btn-white" type="submit" for="checkbox2">
+                    <input type="checkbox" id="checkbox2" value="e-commerce" class="hidden"><span>E-Commerce</span>
+                </label>
+                <label class="btn-white" type="submit" for="checkbox3">
+                    <input type="checkbox" id="checkbox3" value="mobile-app" class="hidden"><span>Mobile App</span>
+                </label>
+                <label class="btn-white" type="submit" for="checkbox4">
+                    <input type="checkbox" id="checkbox4" value="marketing-website" class="hidden"><span>Marketing Website</span>
+                </label>
+                <label class="btn-white" type="submit" for="checkbox5">
+                    <input type="checkbox" id="checkbox5" value="mvp" class="hidden"><span>Minimum Viable Product</span>
+                </label>
+                <label class="btn-white" type="submit" for="checkbox6">
+                    <input type="checkbox" id="checkbox6" value="product-prototype" class="hidden"><span>Product Prototype</span>
+                </label>
+                <label class="btn-white" type="submit" for="checkbox7">
+                    <input type="checkbox" id="checkbox7" value="other" class="hidden"><span>Other</span>
+                </label>
+                <h3 class="form-text">Project Budget</h3>
+                <p>Do you have a budget for this project? Ballparks are fine. (Value in $ USD)</p>
+                <div id="range">
+
+                </div>
+
+                <div class="budget-value">
+                  <span class="budget-min-value"></span> -
+                  <span class="budget-max-value"></span>
+                  <input type="hidden" name="budget" value="" / id="budget">
+                </div>
+
+                <h3 class="form-text">Timeframe</h3>
+                <p>Is there a specific timeframe or deadline for the project?</p>
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <input type="text" name="timeframe" class="form-control input-lg" id="timeframe" required data-validation-required-message="Porfavor ingresa un número telefónico">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+
+                <h3 class="form-text">About the project</h3>
+                <p>Tell us about the project, requirements and objectives.</p>
+                <div class="row">
+                    <div class="form-group col-sm-8 col-sm-offset-2">
+                        <textarea name="about_project" rows="3" class="form-control input-lg" id="about_project" required data-validation-required-message="Porfavor ingresa un mensaje"></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+
+                <h3 class="form-text">How'd you find us?</h3>
+                <p>Tell us about how you found us? Google, Friend, etc?</p>
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <input type="text" name="timeframe" class="form-control input-lg" id="timeframe" required data-validation-required-message="Porfavor ingresa un número telefónico">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+
+                <input type="hidden" name="_subject" value="New project request from Kaizen Devs" />
+                <br>
+                <div id="success"></div>
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <button type="submit" class="btn btn-lg btn-submit-project">Submit Planner</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade modal-fullscreen" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div id="input-border" data-dismiss="modal" aria-label="Close" class="pull-right text-center">
+            <span type="button" id="close_modal_button">X</span>
+          </div>
+          <img src="images/logo-green-up.png" alt="" id="modal_logo">
+        </div>
+        <div class="modal-body text-center" style="">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <h1 id="project_form_title">Contact Us</h1>
+              <p id="project_form_subtitle">Get in touch with us, if you have comments, suggestions or compliments. If you want to start a project with us use the <a data-dismiss="modal" data-toggle="modal" href="#myModal" class="go-to-project-planner">project planner</a>.</p>
+
+              <form method="get" role"form" action="/" name="sentMessage" id="contactusForm" novalidate>
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <input type="text" name="name" class="form-control input-lg" placeholder="Full Name" id="name" required data-validation-required-message="Porfavor ingresa un nombre.">
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-8 col-sm-offset-2">
+                        <input type="email" name="_replyto" class="form-control input-lg" placeholder="Email Address" id="email" required data-validation-required-message="Porfavor ingresa una dirección de correo electrónico">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-8 col-sm-offset-2">
+                        <input type="tel" name="tel" class="form-control input-lg" placeholder="Phone Number" id="phone" required data-validation-required-message="Porfavor ingresa un número telefónico">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-8 col-sm-offset-2">
+                        <textarea name="message" rows="3" class="form-control input-lg" placeholder="Message" id="about_project" required data-validation-required-message="Porfavor ingresa un mensaje"></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+
+                <input type="hidden" name="_subject" value="New contact request from Kaizen Devs" />
+                <br>
+                <div id="success"></div>
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <button type="submit" class="btn btn-lg btn-submit-project">Submit Planner</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/scrolling-nav.js"></script>
+  <script src="js/wNumb.min.js"></script>
+  <script src="js/nouislider.min.js"></script>
+  <script>
+  var slider = document.getElementById('range');
+
+
+  noUiSlider.create(slider, {
+    start: [ 20, 40 ], // Handle start position
+    step: 5, // Slider moves in increments of '10'
+    margin: 5, // Handles must be more than '20' apart
+    connect: true, // Display a colored bar between the handles
+    direction: 'ltr', // Put '0' at the bottom of the slider
+    orientation: 'horizontal', // Orient the slider vertically
+    behaviour: 'tap-drag', // Move handle on tap, bar is draggable
+    range: { // Slider can select '0' to '100'
+      'min': 5,
+      'max': 75
+    },
+    pips: { // Show a scale with the slider
+      mode: 'steps',
+      density: 5,
+      format: wNumb({
+        decimals: 2,
+        prefix: '$',
+        postfix: 'k'
+      })
+    }
+  });
+
+  // When the slider value changes, update the input and span
+  slider.noUiSlider.on('update', function( values, handle ) {
+    var values = slider.noUiSlider.get();
+    $('span.budget-min-value').text("$"+values[0].replace(".00", "k"));
+    $('span.budget-max-value').text("$"+values[1].replace(".00", "k"));
+    $('input[name="budget"]').attr('value',"$"+values[0].replace(".00", "k USD"+" - $"+values[1].replace(".00", "k USD")));
+    console.log($('input[name="budget"]').val());
+  });
+
+  $("#contactForm").on( "submit", function( event ) {
+    event.preventDefault();
+    var formData = $( this ).serialize();
+    $.ajax({
+      url: "//formspree.io/info@kaizendevs.co",
+      method: "POST",
+      data: formData,
+      dataType: "json"
+    }).done(function(response) {
+      $( '#contactForm' ).html("<h1 class='text-center'>Thanks for trusting us your idea. Will get in contact with you soon!</h1>")
+    });
+  });
+
+  $("#contact-modal").on( "submit", function( event ) {
+    event.preventDefault();
+    var formData = $( this ).serialize();
+    $.ajax({
+      url: "//formspree.io/info@kaizendevs.co",
+      method: "POST",
+      data: formData,
+      dataType: "json"
+    }).done(function(response) {
+      $( '#contact-modal' ).html("<h1 class='text-center'>Will get in contact with you soon!</h1>")
+    });
+  });
+
+  $("input[type='checkbox']").change(function(){
+    if($(this).is(":checked")){
+        $(this).parent().addClass("green-background");
+    }else{
+        $(this).parent().removeClass("green-background");
+    }
+  });
+
+  </script>
 </body>
 </html>
-
-
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="jquery.easing.min.js"></script>
-<script src="scrolling-nav.js"></script>
