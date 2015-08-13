@@ -456,5 +456,28 @@ span#close_modal_button {
   position: relative;
   top: 55%;
   transform: translateY(-50%);
+}
 
+@media all and (max-width: 720px){
+	h1#project_form_title {
+		font-size: 45px;
+	}
+  p#project_form_subtitle {
+		font-size: 23px;
+  }
+}
+
+@media all and (max-width: 540px){
+	h1#project_form_title {
+		font-size: 35px;
+	}
+  p#project_form_subtitle {
+		font-size: 18px;
+  }
+}
+
+@media all and (max-width: 600px){
+	div.noUi-value.noUi-value-horizontal.noUi-value-sub {
+		display: none;
+	}
 }
