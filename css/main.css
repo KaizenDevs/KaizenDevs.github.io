@@ -178,6 +178,7 @@ p.description{
   margin-top: 2.1em;
   border:1px solid white;
   box-sizing: border-box;
+  height: 25%;
   padding: 1.5em;
 }
 .home-team ,.home-services,.home-technologies,.home-testimonials {
@@ -494,7 +495,7 @@ span#close_modal_button {
 }
 
 a.social {
-	margin-right: 8px;	
+	margin-right: 8px;
 	color: #4d5152;
 }
 
