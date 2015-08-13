@@ -1,11 +1,22 @@
 @charset "UTF-8";
-@import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:100,300,400,500,600,700");
 
 body{
   font-size: 16px;
+  margin:0;
 }
 .navbar{
   z-index: 999;
+  margin-bottom: 0 !important;
+
+}
+.navbar a {
+  /*font-size: 12px;*/
+  margin:0;
+  padding: 0;
+  font-weight: 300;
+  font-family: 'Open Sans', 'Helvetica', Arial, sans-serif;
+  /*text-transform: uppercase;*/
 }
 .navbar-toggle{margin-top: 30px;}
 .navbar-brand img{
@@ -47,7 +58,7 @@ body{
   }
 }
 
-.navbar-nav li a.btn{
+/*.navbar-nav li a.btn{
   line-height: 30px;
   display: inline-block;
   height: 30px;
@@ -57,7 +68,7 @@ body{
   border:none;
   border-radius: 0 !important;
 
-}
+}*/
 .affix {
   position: fixed;
 }
@@ -66,22 +77,54 @@ body{
   border:1px solid white;
   padding: 1em 2em;
   display: inline-block;
-  margin: 0.5em;
+  margin: 0.8em;
   color: white;
+}
+.btn-white:hover{
+  background: white;
+  color: #555555;
 }
 
 .btn-white-nav{
-  border: 1px solid #E9E9E9;
-  padding: 2em;
+  margin-top: 25px;
+  border: 2px solid #81da02;
+  border-radius: 0;
+  background: none;
+  color: #81da02;
+}
+.btn-white-nav:hover{
+  background: #81da02;
+  color: white;
+}
+
+h3.section-title{
+  padding-bottom: 2em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #333;
+  display: inline-block;
+}
+.white h3.section-title{
+  border-bottom: 2px solid white;
+}
+p.description{
+  font-family: 'Open Sans', 'Helvetica', Arial, sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 1.3em;
+  margin-bottom: 2em;
 }
 
 .home-hero{
+
   color: white;
-  margin-top: 100px;
-  padding: 100px 0 60px 0;
+  /*margin-top: 100px;*/
+  padding: 200px 0 60px 0;
   /*background: url('../img/hero-bg.jpg');*/
   background-size: cover;
   background-image: linear-gradient(to bottom, rgba(30, 30, 30, 0.5) 0%, #1e1e1e 100%), url(../img/hero-bg.jpg);
+  /*background: #0094ff;*/
 }
 .home-hero h1{
   border:1px solid white;
@@ -98,14 +141,26 @@ body{
 }
 
 .home-our-work{
-  padding: 100px 0 60px 0;
+  padding: 100px 0 100px 0;
   background: #061911;
+  background: #00BF8A;
   color: white;
+  background: url('img/project_papper.png') #061911;
 }
-.home-team ,.home-services,.home-technologies {
+.home-our-work img{
+  box-sizing: border-box;
+  border:1px solid transparent;
+}
+.home-services .box{
+  margin-top: 2.1em;
+  border:1px solid white;
+  box-sizing: border-box;
+  padding: 1.5em;
+}
+.home-team ,.home-services,.home-technologies,.home-testimonials {
   padding: 100px 0 60px 0;
 }
-.home-team{
+.home-team, .home-technologies{
   background: white;
   color: #595959;
 }
@@ -130,10 +185,10 @@ body{
     @import url(http://fonts.googleapis.com/css?family=Oxygen);
     /* BODY STYLE - JUST FOR GOOD LOOK */
     body {
-      margin-top: 120px;
+
       background-color: #0094ff;
       color: #fff;
-      font-family: 'Oxygen', sans-serif;
+      /*font-family: 'Oxygen', sans-serif;*/
       min-height:700px;
       line-height:25px;
     }
@@ -147,29 +202,42 @@ body{
       padding: 15px;
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
-      border-radius: 5px;
+      border-radius: 0;
       position: relative;
       border: 1px solid #fff;
-      font-size:12px;
+      font-size:28px;
+      line-height: 32px;
+      font-weight: 100;
+      color: rgba(255,255,255,0.95);
+      padding: 2em;
+      letter-spacing: 1px;
     }
+    .size-1{
+      font-size: 18px;
+    }
+     .testimonial-section span {
+      font-weight: 600;
+      font-size: 44px;
+     }
     .testimonial-section:after {
-      top: 100%;
+     /* top: 100%;
       left: 10%;
       border: solid transparent;
       content: " ";
       position: absolute;
       border-top-color: #fff;
       border-width: 15px;
-      margin-left: -15px;
+      margin-left: -15px;*/
     }
 
     .testimonial-section-name {
       margin-top: 30px;
-      margin-left: 60px;
+      /*margin-left: 60px;*/
       text-align:left;
-      color:#000;
+      color:white;
     }
     .testimonial-section-name img {
+      margin-left: 20px;
       max-width:40px;
       border: 2px solid #fff;
     }
