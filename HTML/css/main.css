@@ -358,6 +358,10 @@ p.description{
 .modal.modal-fullscreen.force-fullscreen .modal-body {
   padding: 0;
 }
+
+.modal-header {
+	border: none;
+}
 .modal.modal-fullscreen.force-fullscreen .modal-header,
 .modal.modal-fullscreen.force-fullscreen .modal-footer {
   left: 0;

@@ -440,8 +440,8 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <div id="input-border" class="pull-right text-center">
-            <span type="button" id="close_modal_button" data-dismiss="modal" aria-label="Close">X</span>
+          <div id="input-border" data-dismiss="modal" aria-label="Close" class="pull-right text-center">
+            <span type="button" id="close_modal_button">X</span>
           </div>
           <img src="images/logo-green-up.png" alt="" id="modal_logo">
         </div>
@@ -522,7 +522,65 @@
                   </div>
                 </div>
 
-                <input type="hidden" name="_subject" value="New project request!" />
+                <input type="hidden" name="_subject" value="New project request from Kaizen Devs" />
+                <br>
+                <div id="success"></div>
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <button type="submit" class="btn btn-lg btn-submit-project">Submit Planner</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade modal-fullscreen" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div id="input-border" data-dismiss="modal" aria-label="Close" class="pull-right text-center">
+            <span type="button" id="close_modal_button">X</span>
+          </div>
+          <img src="images/logo-green-up.png" alt="" id="modal_logo">
+        </div>
+        <div class="modal-body text-center" style="">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <h1 id="project_form_title">Contact Us</h1>
+              <p id="project_form_subtitle">Get in touch with us, if you have comments, suggestions or compliments. If you want to start a project with us use the <a id="close_modal_button" data-dismiss="modal" aria-label="Close" href="#myModal" data-toggle="modal" data-target="#myModal">project planner</a>.</p>
+
+              <form method="get" role"form" action="/" name="sentMessage" id="contactusForm" novalidate>
+                <div class="row">
+                  <div class="form-group col-sm-8 col-sm-offset-2">
+                    <input type="text" name="name" class="form-control input-lg" placeholder="Full Name" id="name" required data-validation-required-message="Porfavor ingresa un nombre.">
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-8 col-sm-offset-2">
+                        <input type="email" name="_replyto" class="form-control input-lg" placeholder="Email Address" id="email" required data-validation-required-message="Porfavor ingresa una dirección de correo electrónico">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-8 col-sm-offset-2">
+                        <input type="tel" name="tel" class="form-control input-lg" placeholder="Phone Number" id="phone" required data-validation-required-message="Porfavor ingresa un número telefónico">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-8 col-sm-offset-2">
+                        <textarea name="message" rows="3" class="form-control input-lg" placeholder="Message" id="about_project" required data-validation-required-message="Porfavor ingresa un mensaje"></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+
+                <input type="hidden" name="_subject" value="New contact request from Kaizen Devs" />
                 <br>
                 <div id="success"></div>
                 <div class="row">
@@ -580,17 +638,30 @@
     });
 
     $("#contactForm").on( "submit", function( event ) {
-    event.preventDefault();
-    var formData = $( this ).serialize();
-    $.ajax({
-      url: "//formspree.io/info@kaizendevs.co",
-      method: "POST",
-      data: formData,
-      dataType: "json"
-    }).done(function(response) {
-      $( '#contactForm' ).html("<h2 class='text-center'>¡See you soon!</h2>")
+      event.preventDefault();
+      var formData = $( this ).serialize();
+      $.ajax({
+        url: "//formspree.io/info@kaizendevs.co",
+        method: "POST",
+        data: formData,
+        dataType: "json"
+      }).done(function(response) {
+        $( '#contactForm' ).html("<h2 class='text-center'>¡See you soon!</h2>")
+      });
     });
-  })
+
+    $("#contact-modal").on( "submit", function( event ) {
+      event.preventDefault();
+      var formData = $( this ).serialize();
+      $.ajax({
+        url: "//formspree.io/info@kaizendevs.co",
+        method: "POST",
+        data: formData,
+        dataType: "json"
+      }).done(function(response) {
+        $( '#contact-modal' ).html("<h2 class='text-center'>¡See you soon!</h2>")
+      });
+    });
   </script>
 </body>
 </html>
