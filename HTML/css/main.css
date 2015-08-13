@@ -110,7 +110,6 @@ body{
   background: none;
   color: #81da02;
   font-weight: 400;
-
 }
 .btn-white-nav:hover{
   background: #81da02;
@@ -492,4 +491,31 @@ span#close_modal_button {
 	div.noUi-value.noUi-value-horizontal.noUi-value-sub {
 		display: none;
 	}
+}
+
+a.social {
+	margin-right: 8px;	
+	color: #4d5152;
+}
+
+.footer-text {
+	color: #4d5152;
+}
+
+.footer-section {
+	margin-bottom: 80px;
+}
+
+.btn-white-nav-footer{
+  padding: 15px 20px;
+  margin-top: 15px;
+  border: 2px solid #4d5152;
+  border-radius: 0;
+  background: none;
+  color: #4d5152;
+  font-weight: 400;
+}
+.btn-white-nav-footer:hover{
+  border-color: white;
+  color: white;
 }
