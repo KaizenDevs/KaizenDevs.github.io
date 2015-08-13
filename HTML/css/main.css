@@ -3,8 +3,10 @@
 
 body{
   font-size: 16px;
+  font-family: 'Open Sans', 'Helvetica', Arial, sans-serif;
   margin:0;
 }
+
 .navbar{
   z-index: 999;
   margin-bottom: 0 !important;
@@ -80,123 +82,145 @@ body{
     margin: 0.8em;
     color: white;
   }
-  .btn-white:hover{
-    background: white;
-    color: #555555;
-  }
-
-  .btn-white-nav{
-    margin-top: 25px;
-    border: 2px solid #81da02;
-    border-radius: 0;
-    background: none;
+  .btn-white.green{
+    border: 1px solid #81da02;
     color: #81da02;
   }
-  .btn-white-nav:hover{
-    background: #81da02;
-    color: white;
-  }
+  .btn-white.green:hover{
+   background: #81da02;
+   color: white;
+ }
+ .btn-white:hover{
+  background: white;
+  color: #555555;
+}
+.start-with-us{
+  border: 1px solid white; padding: 1.5em; text-transform: uppercase; color:white;
+}
+.start-with-us:hover{
+  background: white;
+  color: #00C089;
+}
 
-  h3.section-title{
-    padding-bottom: 2em;
-    margin-bottom: 1em;
-    border-bottom: 2px solid #333;
-    display: inline-block;
-  }
-  .white h3.section-title{
-    border-bottom: 2px solid white;
-  }
-  p.description{
-    font-family: 'Open Sans', 'Helvetica', Arial, sans-serif;
-    font-size: 1.2em;
-    text-align: center;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-    line-height: 1.3em;
-    margin-bottom: 2em;
-  }
+.btn-white-nav{
+  padding: 15px 20px;
+  margin-top: 15px;
+  border: 2px solid #81da02;
+  border-radius: 0;
+  background: none;
+  color: #81da02;
+  font-weight: 400;
 
-  .home-hero{
+}
+.btn-white-nav:hover{
+  background: #81da02;
+  color: white;
+}
 
-    color: white;
-    /*margin-top: 100px;*/
-    padding: 200px 0 60px 0;
-    /*background: url('../img/hero-bg.jpg');*/
-    background-size: cover;
-    background-image: linear-gradient(to bottom, rgba(30, 30, 30, 0.5) 0%, #1e1e1e 100%), url(../img/hero-bg.jpg);
-    /*background: #0094ff;*/
-  }
-  .home-hero h1{
-    border:1px solid white;
-    padding: 1.5em;
-  }
-  .home-hero .a-arrow-down{
-    margin-top: 2em;
-    display: block;
-    text-align: center;
-  }
+h3.section-title{
+  padding-bottom: 2em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #333;
+  display: inline-block;
+  color: #333;
+}
+.white h3.section-title{
+  border-bottom: 2px solid white;
+  color: white;
+}
+p.description{
+  font-family: 'Open Sans', 'Helvetica', Arial, sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 1.3em;
+  margin-bottom: 2em;
+}
 
-  .section-title{
-    text-align: center;
-  }
+.home-hero{
 
-  .home-our-work{
-    padding: 100px 0 100px 0;
-    background: #061911;
-    background: #00BF8A;
-    color: white;
-    background: url('img/project_papper.png') #061911;
-  }
-  .home-our-work img{
-    box-sizing: border-box;
-    border:1px solid transparent;
-  }
-  .home-services .box{
-    margin-top: 2.1em;
-    border:1px solid white;
-    box-sizing: border-box;
-    padding: 1.5em;
-  }
-  .home-team ,.home-services,.home-technologies,.home-testimonials {
-    padding: 100px 0 60px 0;
-  }
-  .home-team, .home-technologies{
-    background: white;
-    color: #595959;
-  }
-  .home-technologies{
-    padding-bottom: 100px;
-  }
-  .home-technologies svg{
-    width: 100%;
-    padding-right: 20%;
-  }
-  @media screen and (max-width: 768px) {
-    .home-technologies .tech-list li{
-      font-size: 28px;
-      line-height: 40px;
+  color: white;
+  /*margin-top: 100px;*/
+  padding: 200px 0 60px 0;
+  /*background: url('../img/hero-bg.jpg');*/
+  background-size: cover;
+  background-image: linear-gradient(to bottom, rgba(30, 30, 30, 0.5) 0%, #1e1e1e 100%), url(../img/hero-bg.jpg);
+  /*background: #0094ff;*/
+}
+.home-hero h1{
+  border:1px solid white;
+  padding: 1.5em;
+  font-family: 'Open Sans', 'Helvetica', Arial, sans-serif;
+  font-weight: 600;
+}
+.home-hero .a-arrow-down{
+  margin-top: 2em;
+  display: block;
+  text-align: center;
+}
 
-      letter-spacing: 0.5px;
-    }
-  }
+.section-title{
+  text-align: center;
+}
+
+.home-our-work{
+  padding: 100px 0 100px 0;
+  background: #061911;
+  background: #00BF8A;
+  color: white;
+  background: url('img/project_papper.png') #061911;
+}
+.home-our-work img{
+  box-sizing: border-box;
+  border:1px solid transparent;
+}
+.home-services .box{
+  margin-top: 2.1em;
+  border:1px solid white;
+  box-sizing: border-box;
+  padding: 1.5em;
+}
+.home-team ,.home-services,.home-technologies,.home-testimonials {
+  padding: 100px 0 60px 0;
+}
+.home-team, .home-technologies{
+  background: white;
+  color: #595959;
+}
+.home-technologies{
+  padding-bottom: 100px;
+}
+.home-technologies svg{
+  width: 100%;
+  padding-right: 20%;
+}
+@media screen and (max-width: 768px) {
   .home-technologies .tech-list li{
+    font-size: 28px;
+    line-height: 40px;
 
-    list-style: none;
-    font-weight: 100;
-    color: #ACACAC;
-    text-align: right;
-    font-size: 18px;
-    line-height: 30px;
+    letter-spacing: 0.5px;
   }
-  .row.no-gutters {
-    margin-right: 0;
-    margin-left: 0;
-  }
-  .row.no-gutters > [class^="col-"],
-  .row.no-gutters > [class*=" col-"] {
-    padding-right: 0;
-    padding-left: 0;
-  }
+}
+.home-technologies .tech-list li{
+
+  list-style: none;
+  font-weight: 100;
+  color: #333;
+  text-align: right;
+  font-size: 24px;
+  line-height: 40px;
+}
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
 
 
 
@@ -265,22 +289,30 @@ body{
      text-decoration: underline;
      font-weight: 400;
      color: white;
-    }
-    .testimonial-section-name span{
-      font-weight: 100;
-      letter-spacing: 1px;
-      font-size: 16px;
+   }
+   .testimonial-section-name span{
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 16px;
 
-    }
-    .testimonial-section-name img {
-      margin-left: 20px;
-      max-width:80px;
-      margin-bottom: 10px;
-      border: 2px solid #fff;
-    }
-    .carousel-indicators-set {
-      position:static;
-      margin-left:0px;
-      width:100%;
-    }
+  }
+  .testimonial-section-name img {
+    margin-left: 20px;
+    max-width:80px;
+    margin-bottom: 10px;
+    border: 2px solid #fff;
+  }
+  .carousel-indicators-set {
+    position:static;
+    margin-left:0px;
+    width:100%;
+  }
+
+  .site-footer{
+    padding: 5em;
+    text-align: center;
+    background: rgba(46, 50, 52, 1);
+  }
+
+  .site-footer p{ margin-top:15px;color:#4d5152;}
 
