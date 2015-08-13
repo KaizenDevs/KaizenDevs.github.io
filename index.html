@@ -490,7 +490,7 @@
           </div>
           <img src="images/logo-green-up.png" alt="" id="modal_logo">
         </div>
-        <div class="modal-body text-center" style="">
+        <div class="modal-body modal-project text-center" style="">
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
               <h1 id="project_form_title">Project Planner</h1>
@@ -614,13 +614,13 @@
           </div>
           <img src="images/logo-green-up.png" alt="" id="modal_logo">
         </div>
-        <div class="modal-body text-center" style="">
+        <div class="modal-body text-center modal-contact" style="">
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
               <h1 id="project_form_title">Contact Us</h1>
               <p id="project_form_subtitle">Get in touch with us, if you have comments, suggestions or compliments. If you want to start a project with us use the <a data-dismiss="modal" data-toggle="modal" href="#myModal" class="go-to-project-planner">project planner</a>.</p>
 
-              <form method="get" role"form" action="/" name="sentMessage" id="contactusForm" novalidate>
+              <form method="get" role"form" action="/" name="sentMessage2" id="contactusForm" novalidate>
                 <div class="row">
                   <div class="form-group col-sm-8 col-sm-offset-2">
                     <input type="text" name="name" class="form-control input-lg" placeholder="Full Name" id="name" required data-validation-required-message="Porfavor ingresa un nombre.">
@@ -711,11 +711,11 @@
       data: formData,
       dataType: "json"
     }).done(function(response) {
-      $( '#contactForm' ).html("<h1 class='text-center'>Thanks for trusting us your idea. Will get in contact with you soon!</h1>")
+      $( 'div.modal-project' ).html("<h1 class='text-center'>Thanks for trusting us your idea. Will get in contact with you soon!</h1>")
     });
   });
 
-  $("#contact-modal").on( "submit", function( event ) {
+  $("#contactusForm").on( "submit", function( event ) {
     event.preventDefault();
     var formData = $( this ).serialize();
     $.ajax({
@@ -724,7 +724,7 @@
       data: formData,
       dataType: "json"
     }).done(function(response) {
-      $( '#contact-modal' ).html("<h1 class='text-center'>Will get in contact with you soon!</h1>")
+      $( 'div.modal-contact' ).html("<h1 class='text-center'>Will get in contact with you soon!</h1>")
     });
   });
 
