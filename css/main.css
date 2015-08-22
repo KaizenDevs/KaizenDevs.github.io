@@ -490,6 +490,7 @@ span#close_modal_button {
 	}
   p#project_form_subtitle {
 		font-size: 23px;
+    line-height: 30px;
   }
 }
 
@@ -499,6 +500,7 @@ span#close_modal_button {
 	}
   p#project_form_subtitle {
 		font-size: 18px;
+    line-height: 25px;
   }
 }
 
@@ -589,4 +591,8 @@ img.img-responsive {
   .collapsing {
       overflow: hidden!important;
   }
+}
+
+.modal.modal-fullscreen .modal-dialog, .modal.modal-fullscreen .modal-content{
+  background-color: rgba(0,0,0,0.55);
 }
