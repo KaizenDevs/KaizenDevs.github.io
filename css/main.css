@@ -510,15 +510,25 @@ span#close_modal_button {
 	}
 }
 
+ h1#header_title {
+    font-size: 30px;
+    line-height: 1.3em;
+    font-weight: 300;
+  }
+
 @media all and (max-width: 660px){
   h1#header_title {
     font-size: 30px;
+    line-height: 1.3em;
+    font-weight: 300;
   }
 }
 
 @media all and (max-width: 486px){
   h1#header_title {
     font-size: 23px;
+    line-height: 1.3em;
+    font-weight: 300;
   }
 }
 
