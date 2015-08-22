@@ -320,7 +320,7 @@ p.description{
   }
 
   .site-footer{
-    padding: 5em;
+    padding: 5em 0;
     text-align: center;
     background: rgba(46, 50, 52, 1);
   }
