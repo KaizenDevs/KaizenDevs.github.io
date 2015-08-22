@@ -411,6 +411,7 @@ p#project_form_subtitle {
 	font-size: 30px;
 	font-weight: 100;
   line-height: 42px;
+  padding: 0 5em;
 }
 
 h3.form-text {
@@ -489,7 +490,6 @@ span#close_modal_button {
 	}
   p#project_form_subtitle {
 		font-size: 23px;
-    padding: 0 5em;
   }
 }
 
