@@ -51,12 +51,13 @@ body{
   height: 100px;
   padding-top: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
 
   .navbar-nav li a {
     line-height: 100px;
     height: 100px;
     padding-top: 0;
+    margin-left:0;
   }
 }
 
@@ -587,8 +588,12 @@ img.img-responsive {
       float: none;
   }
   .navbar-nav>li>a {
+      margin-left: 1.5em;
       padding-top: 10px;
       padding-bottom: 10px;
+  }
+  .navbar-nav>li> p.navbar-btn {
+    margin-left: 1.5em !important;
   }
   .navbar-text {
       float: none;
