@@ -471,8 +471,9 @@ span#close_modal_button {
   font-weight: 300;
   margin-top: 3px;
   position: relative;
-  top: 55%;
-  transform: translateY(-50%);
+  /*top: 55%;*/
+  line-height: 37px;
+  /*transform: translateY(-50%);*/
 }
 
 .go-to-project-planner {
@@ -488,6 +489,7 @@ span#close_modal_button {
 	}
   p#project_form_subtitle {
 		font-size: 23px;
+    padding: 0 5em;
   }
 }
 
@@ -581,7 +583,7 @@ img.img-responsive {
       margin: 15px 0;
   }
   /* since 3.1.0 */
-  .navbar-collapse.collapse.in { 
+  .navbar-collapse.collapse.in {
       display: block!important;
   }
   .collapsing {
