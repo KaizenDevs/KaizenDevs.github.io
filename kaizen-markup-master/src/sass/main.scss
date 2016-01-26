@@ -201,7 +201,10 @@ button {
 .more-works {
 	color: $buttonColor;
 	padding: 20px 0;
-	display: inline-block;
+	display: none;
+	@media screen and (min-width:$break-medium){
+		display: inline-block;
+	}
 	font-weight: 800;
 	&:hover {
 		&:after {

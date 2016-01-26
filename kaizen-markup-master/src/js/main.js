@@ -8,10 +8,10 @@ $(function() {
         featuredWorkimageBox = ".featured-works .item .image img",
         wrapper = $('.wrapper'),
         contactAction = $("#contact"),
-        contactClose = $(".form-close"),
+        // contactClose = $(".form-close"),
         check = (".check"),
         checkInput = (".check input"),
-        contactBox = $(".contact"),
+        // contactBox = $(".contact"),
         bxsliderServices = null;
 
 
@@ -21,6 +21,12 @@ $(function() {
         $(nav).fadeToggle();
         $(wrapper).fadeToggle();
     });
+   $('.btn-team-members').on('click', function(e) {
+        e.preventDefault();
+        $('.box-members').toggleClass('hide-medium');
+    });
+
+
 
     $(window).resize(function(){
         windowWidth = $(window).width();
@@ -33,17 +39,17 @@ $(function() {
         }
     });
 
-   $(contactAction).on('click', function(e) {
-    e.preventDefault();
-    $(contactBox).fadeIn();
-    $(nav).fadeOut();
-    $(pull).toggleClass(active);
-    });
+   // $(contactAction).on('click', function(e) {
+   //  e.preventDefault();
+   //  $(contactBox).fadeIn();
+   //  $(nav).fadeOut();
+   //  $(pull).toggleClass(active);
+   //  });
 
-   $(contactClose).on('click', function() {
-        $(contactBox).fadeOut();
-        $(wrapper).fadeIn();
-   });
+   // $(contactClose).on('click', function() {
+   //      $(contactBox).fadeOut();
+   //      $(wrapper).fadeIn();
+   // });
 
     $(window).scroll(function() {
         if ($(this).scrollTop()>0 && windowWidth < 868)

@@ -6780,9 +6780,6 @@ footer {
         position: relative;
         top: 1px; } }
 
-.contact {
-  display: none; }
-
 .project.form {
   padding-bottom: 40px;
   position: relative; }
@@ -7164,8 +7161,11 @@ button {
 .more-works {
   color: #3CD52E;
   padding: 20px 0;
-  display: inline-block;
+  display: none;
   font-weight: 800; }
+  @media screen and (min-width: 868px) {
+    .more-works {
+      display: inline-block; } }
   .more-works:hover:after {
     left: 12px; }
   .more-works:after {
