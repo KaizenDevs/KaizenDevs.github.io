@@ -21,9 +21,16 @@ $(function() {
         $(nav).fadeToggle();
         $(wrapper).fadeToggle();
     });
+
    $('.btn-team-members').on('click', function(e) {
         e.preventDefault();
         $('.box-members').toggleClass('hide-medium');
+    });
+
+
+   $('.btn-1').on('click', function(e) {
+        e.preventDefault();
+        window.location.href = 'project.html';
     });
 
 
