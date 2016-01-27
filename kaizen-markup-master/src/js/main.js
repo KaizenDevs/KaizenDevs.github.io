@@ -111,18 +111,18 @@ $(function() {
         $(this).find('img').remove();
     });
 
-    $('.bx-slider').bxSlider({
-        minSlides: 1,
-        maxSlides: 1
-    });
+    // $('.bx-slider').bxSlider({
+    //     minSlides: 1,
+    //     maxSlides: 1
+    // });
 
-    bxsliderServices = $('#services').bxSlider({
-        minSlides: 1,
-        maxSlides: 1
-    });
+    // bxsliderServices = $('#services').bxSlider({
+    //     minSlides: 1,
+    //     maxSlides: 1
+    // });
 
     if(windowWidth > 868){
-        bxsliderServices.destroySlider();
+        // bxsliderServices.destroySlider();
     }
 
     if(windowWidth > 868){
@@ -142,11 +142,36 @@ $(function() {
         });
     }
 
+
+    $(".contact-form").validate({
+      errorClass:'form-error',
+      rules: {
+        name: "required",
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        name: " Please specify your name",
+        email: {
+          required: "We need your email address to contact you",
+          email: "Your email address must be in the format of name@domain.com"
+        }
+      }
+    });
+
+
+
+
+
 });
 
 
-$('.works-slide').bxSlider({
-    controls: true,
-    minSlides: 1,
-    maxSlides: 1
-});
+
+
+// $('.works-slide').bxSlider({
+//     controls: true,
+//     minSlides: 1,
+//     maxSlides: 1
+// });

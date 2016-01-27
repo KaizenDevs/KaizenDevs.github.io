@@ -6759,15 +6759,18 @@ footer {
     opacity: .4; }
 
 .form-error {
-  font-size: 0.8125em;
+  font-weight: normal !important;
+  font-size: 1em !important;
   padding: 10px 0;
-  display: inline-block; }
+  display: inline-block;
+  text-transform: none !important; }
   @media screen and (min-width: 868px) {
     .form-error {
       font-size: 1.125em; } }
   .form-error:before {
     content: "";
     background-image: url("../images/misc/error-icon.svg");
+    background-color: #a34d4d;
     width: 15px;
     height: 13px;
     background-size: cover;

@@ -24,15 +24,18 @@
 }
 
 .form-error {
-	font-size: em(13);
+	font-weight: normal !important;
+	font-size: em(16) !important;
 	padding: 10px 0;
 	display: inline-block;
+	text-transform: none !important;
 	@media screen and (min-width:$break-medium){
 		font-size: em(18);
 	}
 	&:before {
 		content: "";
 		background-image: url("../images/misc/error-icon.svg");
+		background-color: #a34d4d;
 		width: 15px;
 		height: 13px;
 		background-size: cover;
