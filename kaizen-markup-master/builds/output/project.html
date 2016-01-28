@@ -14,62 +14,64 @@
   <body id="home">
     <div class="project form">
       <div class="header-form hide-small">
-        <div class="image"><img src="images/misc/home-icon-featured.svg" alt=""></div><span class="name">Project</span>
+        <div class="image"><img src="images/misc/home-icon-featured.svg" alt=""></div><span class="name">Project planner</span>
       </div>
       <div class="content medium"><a href="index.html" class="form-close"></a>
         <h4 class="text">Start a project, get a quote or learn more about how we can partner to build a successful product.</h4>
-        <form action="">
+        <form action="#" class="project-form">
           <fieldset>
-            <label for="">full name</label>
-            <input type="text" placeholder="Your first name">
+            <label for="name">full name</label>
+            <input type="text" name="name" placeholder="Your first name">
           </fieldset>
           <fieldset>
-            <label for="">email address</label>
-            <input type="mail" placeholder="Your emal address you@example.com">
+            <label for="email">email address</label>
+            <input type="email" name="email" placeholder="Your emal address you@example.com">
           </fieldset>
           <fieldset>
-            <label for="">phone number</label>
-            <input type="tel" placeholder="Country code + city + phone number">
+            <label for="phone">phone number</label>
+            <input type="tel" name="phone" placeholder="Country code + city + phone number">
           </fieldset>
           <fieldset>
-            <label for="">organization</label>
-            <input type="text" placeholder="Where you work">
+            <label for="organization">organization</label>
+            <input type="text" name="organization" placeholder="Where you work">
           </fieldset>
           <div class="type">
             <div class="type-title">type of project</div><span class="type-text">select all that apply</span>
+            <label class="project-type"></label>
           </div>
           <div class="box-type">
             <div class="box-label">
               <label class="check">
-                <input type="checkbox" name="checkbox">
+                <input type="checkbox" name="project_type" value="Web app">
                 <div class="web icon"></div><span>web app</span>
               </label>
             </div>
             <div class="box-label">
               <label class="check">
-                <input type="checkbox" name="checkbox">
+                <input type="checkbox" name="project_type" value="Ecommerce">
                 <div class="ecommerce icon"></div><span>ecommerce</span>
               </label>
             </div>
             <div class="box-label">
               <label class="check">
-                <input type="checkbox" name="checkbox">
+                <input type="checkbox" name="project_type" value="Mobile">
                 <div class="mobile icon"></div><span>mobile</span>
               </label>
             </div>
             <div class="box-label">
               <label class="check">
-                <input type="checkbox" name="checkbox">
+                <input type="checkbox" name="project_type" value="MVP">
                 <div class="mvp icon"></div><span>mvp</span>
               </label>
             </div>
             <div class="box-label">
               <label class="check">
-                <input type="checkbox" name="checkbox">
+                <input type="checkbox" name="project_type" value="Protoype">
                 <div class="product icon"></div><span>product prototype</span>
               </label>
             </div>
           </div><a href="" class="more-services"><span>more about our services</span></a>
+          <label class="project-type"></label>
           <fieldset>
             <label for="">ABOUT THE PROJECT</label>
             <p class="info">Tell us about the project, requirements and objectives.</p>
@@ -87,5 +89,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.9.0/jquery.validate.min.js"></script>
     <script src="js/vendor/bx-slider.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
   </body>
 </html>

@@ -33,9 +33,9 @@
 		font-size: em(18);
 	}
 	&:before {
-		content: "";
-		background-image: url("../images/misc/error-icon.svg");
-		background-color: #a34d4d;
+		font-family: 'FontAwesome';
+    content: "\f071";
+		// color: #F51C2C;
 		width: 15px;
 		height: 13px;
 		background-size: cover;

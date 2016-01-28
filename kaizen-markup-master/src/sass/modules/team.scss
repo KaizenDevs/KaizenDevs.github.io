@@ -315,12 +315,17 @@
 		@media screen and (min-width:$break-medium){
 			min-height: 320px;
 		}
+		.text span a{
+			color: $white;
+			text-decoration: none;
+		}
 		&:hover {
 			background-size: 105%;
 			.text span {
 				background-color: $white;
-				color: $baseColor;
+
 				border-bottom: 4px solid rgba($baseColor, .2);
+				a { color: $baseColor; }
 			}
 			&:before {
 				background-color: rgba($baseColor, .8);

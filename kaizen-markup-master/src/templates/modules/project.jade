@@ -2,54 +2,56 @@
 	.header-form.hide-small
 		.image
 			img(src="images/misc/home-icon-featured.svg", alt="")
-		span.name Project
+		span.name Project planner
 	.content.medium
 		a(href="index.html").form-close
 		h4.text Start a project, get a quote or learn more about how we can partner to build a successful product.
-		form(action="")
+		form(action="#").project-form
 			fieldset
-				label(for="") full name
-				input(type="text" placeholder="Your first name")
+				label(for="name") full name
+				input(type="text" name="name" placeholder="Your first name")
 			fieldset
-				label(for="") email address
-				input(type="mail" placeholder="Your emal address you@example.com")
+				label(for="email") email address
+				input(type="email" name="email" placeholder="Your emal address you@example.com")
 			fieldset
-				label(for="") phone number
-				input(type="tel" placeholder="Country code + city + phone number")
+				label(for="phone") phone number
+				input(type="tel" name="phone" placeholder="Country code + city + phone number")
 			fieldset
-				label(for="") organization
-				input(type="text" placeholder="Where you work")
+				label(for="organization") organization
+				input(type="text" name="organization" placeholder="Where you work")
 			.type
 				.type-title type of project
 				span.type-text select all that apply
+				label.project-type
 			.box-type
 				.box-label
 					label.check
-						input(type="checkbox" name="checkbox")
+						input(type="checkbox" name="project_type" value="Web app")
 						.web.icon
 						span web app
 				.box-label
 					label.check
-						input(type="checkbox" name="checkbox")
+						input(type="checkbox" name="project_type" value="Ecommerce")
 						.ecommerce.icon
 						span ecommerce
 				.box-label
 					label.check
-						input(type="checkbox" name="checkbox")
+						input(type="checkbox" name="project_type" value="Mobile")
 						.mobile.icon
 						span mobile
 				.box-label
 					label.check
-						input(type="checkbox" name="checkbox")
+						input(type="checkbox" name="project_type" value="MVP")
 						.mvp.icon
 						span mvp
 				.box-label
 					label.check
-						input(type="checkbox" name="checkbox")
+						input(type="checkbox" name="project_type" value="Protoype")
 						.product.icon
 						span product prototype
 			a(href="").more-services
 				span more about our services
+			label.project-type
 			fieldset
 				label(for="") ABOUT THE PROJECT
 				p.info Tell us about the project, requirements and objectives.

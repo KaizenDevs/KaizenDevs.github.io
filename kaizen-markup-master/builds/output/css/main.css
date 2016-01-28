@@ -5913,12 +5913,16 @@ button.close {
     @media screen and (min-width: 868px) {
       .start-featured .item {
         min-height: 320px; } }
+    .start-featured .item .text span a {
+      color: white;
+      text-decoration: none; }
     .start-featured .item:hover {
       background-size: 105%; }
       .start-featured .item:hover .text span {
         background-color: white;
-        color: #010101;
         border-bottom: 4px solid rgba(1, 1, 1, 0.2); }
+        .start-featured .item:hover .text span a {
+          color: #010101; }
       .start-featured .item:hover:before {
         background-color: rgba(1, 1, 1, 0.8); }
     .start-featured .item:before {
@@ -6768,9 +6772,8 @@ footer {
     .form-error {
       font-size: 1.125em; } }
   .form-error:before {
-    content: "";
-    background-image: url("../images/misc/error-icon.svg");
-    background-color: #a34d4d;
+    font-family: 'FontAwesome';
+    content: "\f071";
     width: 15px;
     height: 13px;
     background-size: cover;

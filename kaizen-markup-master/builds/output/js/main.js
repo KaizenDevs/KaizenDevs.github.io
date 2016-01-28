@@ -33,6 +33,12 @@ $(function() {
         window.location.href = 'project.html';
     });
 
+   $('.btn-go-to-home').on('click', function(e) {
+        e.preventDefault();
+        window.location.href = 'index.html';
+    });
+   $('.position').on('click', function(event) { event.preventDefault();});
+
 
 
     $(window).resize(function(){
@@ -89,21 +95,7 @@ $(function() {
             $(nav).removeAttr('style');
         };
 
-        if(windowWidth < 868){
-            bxsliderServices.reloadSlider({
-                minSlides: 1,
-                maxSlides: 1
-            });
-        }
-
-        if(windowWidth > 868){
-            bxsliderServices.destroySlider();
-            setTimeout(function(){
-                $("#services li").removeAttr('style');
-                $("#services").removeAttr('style');
-            }, 10);
-            }
-        });
+    });
 
     $(featuredWorkitem).each(function(){
         var bgImg = $(this).find('img').attr("src");
@@ -111,19 +103,8 @@ $(function() {
         $(this).find('img').remove();
     });
 
-    // $('.bx-slider').bxSlider({
-    //     minSlides: 1,
-    //     maxSlides: 1
-    // });
 
-    // bxsliderServices = $('#services').bxSlider({
-    //     minSlides: 1,
-    //     maxSlides: 1
-    // });
 
-    if(windowWidth > 868){
-        // bxsliderServices.destroySlider();
-    }
 
     if(windowWidth > 868){
         $('a[href*=#]').click(function() {
@@ -141,29 +122,6 @@ $(function() {
         }
         });
     }
-
-
-    $(".contact-form").validate({
-      errorClass:'form-error',
-      rules: {
-        name: "required",
-        email: {
-          required: true,
-          email: true
-        }
-      },
-      messages: {
-        name: " Please specify your name",
-        email: {
-          required: "We need your email address to contact you",
-          email: "Your email address must be in the format of name@domain.com"
-        }
-      }
-    });
-
-
-
-
 
 });
 
