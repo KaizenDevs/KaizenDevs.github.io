@@ -5514,14 +5514,18 @@ button.close {
     .featured-call .text h1 {
       font-size: 1em;
       line-height: 1.5625em;
-      margin-top: 10px; }
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto; }
       @media screen and (min-width: 868px) {
         .featured-call .text h1 {
           font-size: 2.25em;
-          padding-bottom: 20px; } }
+          padding-bottom: 20px;
+          width: 80%; } }
       @media screen and (min-width: 1400px) {
         .featured-call .text h1 {
-          padding-bottom: 10px; } }
+          padding-bottom: 10px;
+          width: 80%; } }
   .featured-call .button {
     margin: 10px 0;
     padding: 3px 16px 5px 16px;
@@ -5551,6 +5555,8 @@ button.close {
       background-size: 100%;
       background-repeat: no-repeat;
       transition: all 0.5s; }
+      .featured-works .item .image:hover {
+        width: 105%; }
       @media screen and (min-width: 868px) {
         .featured-works .item .image {
           height: 400px;
@@ -6011,6 +6017,10 @@ button.close {
   .talk .info {
     font-size: 0.875em; }
   .talk .mail {
+    color: #010101; }
+  .talk .phone {
+    padding: 10px 0;
+    display: inline-block;
     color: #010101; }
 
 footer {

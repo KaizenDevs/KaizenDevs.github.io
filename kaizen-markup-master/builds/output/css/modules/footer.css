@@ -59,6 +59,10 @@
     font-size: em(14); }
   .talk .mail {
     color: #010101; }
+  .talk .phone {
+    padding: 10px 0;
+    display: inline-block;
+    color: #010101; }
 
 footer {
   background-color: #1E1E1E;
