@@ -22,9 +22,12 @@ $(function() {
         $(wrapper).fadeToggle();
     });
 
-   $('.btn-team-members').on('click', function(e) {
+   $('.btn-about-us').on('click', function(e) {
         e.preventDefault();
         $('.box-members').toggleClass('hide-medium');
+        $('.collaborators').toggleClass('hide-medium');
+        $('.btn-about-us').toggleClass("more less");
+
     });
 
 

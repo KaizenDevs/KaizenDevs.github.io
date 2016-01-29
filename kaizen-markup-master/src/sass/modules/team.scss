@@ -10,6 +10,17 @@
 	.more-about-us {
 		position: relative;
 		bottom: 40px;
+
+	}
+	.btn-about-us.more{
+		&:before{
+			content: 'more ';
+		}
+	}
+	.btn-about-us.less{
+		&:before{
+			content: 'less ';
+		}
 	}
 	.text {
 		font-size: em(14);
