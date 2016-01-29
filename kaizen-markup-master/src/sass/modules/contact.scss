@@ -53,7 +53,9 @@
 // .contact {
 // 	display: none;
 // }
+.contact{
 
+}
 .project.form {
 	padding-bottom: 40px;
 	position: relative;
@@ -235,9 +237,10 @@
 		font-family: $titleFont;
 		font-size: em(16);
 		line-height: 1.4;
+		padding: 10px 10px;
 		@media screen and (min-width:$break-medium){
 			font-size: em(32);
-			padding: 40px 0;
+			padding: 40px 40px;
 		}
 		a {
 			color: $menuColor;

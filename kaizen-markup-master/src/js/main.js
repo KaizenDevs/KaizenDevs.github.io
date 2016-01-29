@@ -40,7 +40,7 @@ $(function() {
         e.preventDefault();
         window.location.href = 'index.html';
     });
-   $('.position').on('click', function(event) { event.preventDefault();});
+   $('.disable-link').on('click', function(event) { event.preventDefault();});
 
 
 

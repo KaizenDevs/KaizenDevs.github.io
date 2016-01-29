@@ -13,21 +13,24 @@
 	text-align: center;
 	.inner {
 		display: inline-block;
-		top: 35%;
+		top: 50%;
 		position: absolute;
 		left: 0;
 		width: 100%;
+		-ms-transform: translateY(-50%); /* IE 9 */
+   	-webkit-transform: translateY(-50%); /* Safari */
+    transform: translateY(-50%);
 	}
 	.text {
 		font-family: $titleFont;
 		color: $white;
 		line-height: 1.8;
-		padding: 20px em(20);
+		padding: 40px em(20);
 		text-align: center;
 		@media screen and (min-width:$break-medium){
 			font-size: em(36);
 			line-height: 1.4;
-			padding: 20px em(80);
+			padding: 60px em(80);
 		}
 	}
 	.close-notifications {

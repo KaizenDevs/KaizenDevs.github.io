@@ -35,7 +35,7 @@ $(function() {
         type: "POST",
         data: $('.contact-form').serialize(),
         success: function() {
-          window.location.href = 'success.html';
+          window.location.href = 'success-contact.html';
         },
         headers: {
           'Accept': 'application/json',
@@ -102,7 +102,7 @@ $(function() {
         type: "POST",
         data: $('.project-form').serialize(),
         success: function() {
-          window.location.href = 'success.html';
+          window.location.href = 'success-project.html';
         },
         headers: {
           'Accept': 'application/json',
