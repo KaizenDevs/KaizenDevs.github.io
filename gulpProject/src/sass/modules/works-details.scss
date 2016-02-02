@@ -36,7 +36,7 @@
 	}
 	.wrapp-center {
 		position: relative;
-		bottom: 50px;
+		bottom: 20px;
 		@media screen and (min-width:$break-medium){
 			bottom: 0;
 		}
@@ -50,98 +50,34 @@
 			li {
 				margin-bottom: 50px;
 				display: inline-block;
+				width: 100%;
 			}
 		}
 		img {
 			width: 100%;
 		}
 	}
-	.bx-viewport {
-		left: 0 !important;
-	}
-	.bx-controls {
-		position: relative;
-		display: inline-block;
-		width: 100%;
-	}
-	.bx-controls-direction {
-		display: inline-block;
-		width:100%;
-		a {
-			top: 35px !important;
-			bottom: 0;
-			margin-top: 0 !important;
-			margin-bottom: 0 !important;
-			text-indent: 0 !important;
-			font-size: em(16);
-			background-image: none;
-			text-decoration: none;
-			font-size: em(12) !important;
-			height: auto!important;
-			color: $baseColor;
-			@media screen and (min-width:$break-medium){
-				top: 90px !important;
-				font-size: em(16) !important;
-				text-transform: uppercase;
-				font-weight: 800;
-				letter-spacing: 4px;
-			}
-		}
-		.bx-prev {
-			width: 50px;
-			margin-left: 20px;
-			@media screen and (min-width:$break-medium){
-				width: auto;
-			}
-			&:before {
-				content: '';
-				background-image: url("../images/misc/see-more-icon-black.svg");
-				width: 10px;
-				height: 9px;
-				background-size: cover;
-				float: left;
-				position: relative;
-				top: 2px;
-				margin-right: em(10);
-				transform: rotate(180deg);
-				@media screen and (min-width:$break-medium){
-					top: 5px;
-				}
-			}
-		}
-		.bx-next {
+	
+	.controls {
+		margin: em(40) auto;
+		.next {
+			float: right;
+			text-align: right;
+			left: 0;
 			margin-right: 20px;
 			@media screen and (min-width:$break-medium){
-				width: auto;
-				text-align: center;
-				margin-right: 10px !important;
-			}
-			&:after {
-				content: '';
-				background-image: url("../images/misc/see-more-icon-black.svg");
-				width: 10px;
-				height: 9px;
-				background-size: cover;
-				float: left;
 				position: absolute;
-				top: 2px;
-				margin-left: em(10);
-				@media screen and (min-width:$break-medium){
-					top: 5px;
-				}
+				right: 0;
 			}
 		}
-		.bx-next, .bx-prev {
-			transition: all 0.5s;
+		.prev {
 			@media screen and (min-width:$break-medium){
-				font-size: em(19);
-			}
-			&:hover {
-				opacity: .4;
+				position: absolute;
+				left: 0;
 			}
 		}
-	}
-	.bx-default-pager {
-		display: none;
+		.prev, .next {
+			z-index: 999;
+		}
 	}
 }

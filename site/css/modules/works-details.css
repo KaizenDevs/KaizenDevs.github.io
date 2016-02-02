@@ -38,7 +38,7 @@
 
 .works-detail .wrapp-center {
   position: relative;
-  bottom: 50px; }
+  bottom: 20px; }
   @media screen and (min-width: 868px) {
     .works-detail .wrapp-center {
       bottom: 0; } }
@@ -50,89 +50,26 @@
 @media screen and (min-width: 868px) {
   .works-detail .works-slide li {
     margin-bottom: 50px;
-    display: inline-block; } }
+    display: inline-block;
+    width: 100%; } }
 
 .works-detail .works-slide img {
   width: 100%; }
 
-.works-detail .bx-viewport {
-  left: 0 !important; }
-
-.works-detail .bx-controls {
-  position: relative;
-  display: inline-block;
-  width: 100%; }
-
-.works-detail .bx-controls-direction {
-  display: inline-block;
-  width: 100%; }
-  .works-detail .bx-controls-direction a {
-    top: 35px !important;
-    bottom: 0;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    text-indent: 0 !important;
-    font-size: em(16);
-    background-image: none;
-    text-decoration: none;
-    font-size: em(12) !important;
-    height: auto !important;
-    color: #010101; }
-    @media screen and (min-width: 868px) {
-      .works-detail .bx-controls-direction a {
-        top: 90px !important;
-        font-size: em(16) !important;
-        text-transform: uppercase;
-        font-weight: 800;
-        letter-spacing: 4px; } }
-  .works-detail .bx-controls-direction .bx-prev {
-    width: 50px;
-    margin-left: 20px; }
-    @media screen and (min-width: 868px) {
-      .works-detail .bx-controls-direction .bx-prev {
-        width: auto; } }
-    .works-detail .bx-controls-direction .bx-prev:before {
-      content: '';
-      background-image: url("../images/misc/see-more-icon-black.svg");
-      width: 10px;
-      height: 9px;
-      background-size: cover;
-      float: left;
-      position: relative;
-      top: 2px;
-      margin-right: em(10);
-      -webkit-transform: rotate(180deg);
-              transform: rotate(180deg); }
-      @media screen and (min-width: 868px) {
-        .works-detail .bx-controls-direction .bx-prev:before {
-          top: 5px; } }
-  .works-detail .bx-controls-direction .bx-next {
+.works-detail .controls {
+  margin: em(40) auto; }
+  .works-detail .controls .next {
+    float: right;
+    text-align: right;
+    left: 0;
     margin-right: 20px; }
     @media screen and (min-width: 868px) {
-      .works-detail .bx-controls-direction .bx-next {
-        width: auto;
-        text-align: center;
-        margin-right: 10px !important; } }
-    .works-detail .bx-controls-direction .bx-next:after {
-      content: '';
-      background-image: url("../images/misc/see-more-icon-black.svg");
-      width: 10px;
-      height: 9px;
-      background-size: cover;
-      float: left;
+      .works-detail .controls .next {
+        position: absolute;
+        right: 0; } }
+  @media screen and (min-width: 868px) {
+    .works-detail .controls .prev {
       position: absolute;
-      top: 2px;
-      margin-left: em(10); }
-      @media screen and (min-width: 868px) {
-        .works-detail .bx-controls-direction .bx-next:after {
-          top: 5px; } }
-  .works-detail .bx-controls-direction .bx-next, .works-detail .bx-controls-direction .bx-prev {
-    transition: all 0.5s; }
-    @media screen and (min-width: 868px) {
-      .works-detail .bx-controls-direction .bx-next, .works-detail .bx-controls-direction .bx-prev {
-        font-size: em(19); } }
-    .works-detail .bx-controls-direction .bx-next:hover, .works-detail .bx-controls-direction .bx-prev:hover {
-      opacity: .4; }
-
-.works-detail .bx-default-pager {
-  display: none; }
+      left: 0; } }
+  .works-detail .controls .prev, .works-detail .controls .next {
+    z-index: 999; }

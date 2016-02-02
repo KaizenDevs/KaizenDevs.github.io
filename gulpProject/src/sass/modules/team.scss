@@ -128,14 +128,22 @@
 		justify-content: center;
 		align-items: center;
 		padding-top: 25px;
+		flex-wrap: wrap;
 		@media screen and (min-width:$break-medium){
 			display: inline-block;
+			text-align: center;
 		}
 	}
 	.item {
 		flex: auto;
+		width: 33%;
+		padding-bottom: em(20);
 		@media screen and (min-width:$break-medium){
-			float: left;
+			display: inline-block;
+			width: 24%;
+		}
+		@media screen and (min-width:$break-desktop){
+			width: 16%;
 		}
 		.image {
 			width: 70px;
@@ -153,8 +161,10 @@
 			width: 100%;
 			display: inline-block;
 			text-align: center;
-			font-size: em(13);
+			font-size: 13px;
 			margin-bottom: 5px;
+			padding: 0 em(8);
+			margin: em(5) 0;
 			@media screen and (min-width:$break-medium){
 				font-size: em(16);
 			}

@@ -1,51 +1,53 @@
 $(function() {
 
-	$(window).on("resize", function(){
-        windowWidth = $(window).width();
+    // Variables 
 
+    var bxsliderServices = null,
+    services = $("#services"),
+    windowWidth = $(window).width();
 
-        if(windowWidth < 868){
-            bxsliderServices.reloadSlider({
-                minSlides: 1,
-                maxSlides: 1
-            });
-        }
+    // Resize Function
 
-        if(windowWidth > 868){
-            bxsliderServices.destroySlider();
-        }
+    $(window).on("resize", function(){
+    windowWidth = $(window).width();
+        if(services.length){
+            if(windowWidth < 868){
+                bxsliderServices.reloadSlider({
+                    minSlides: 1,
+                    maxSlides: 1
+                });
+            }
 
-        if(windowWidth > 868){
-
-            setTimeout(function(){
+            if(windowWidth > 868){
+                bxsliderServices.destroySlider();
+                setTimeout(function(){
                 $("#services li").removeAttr('style');
                 $("#services").removeAttr('style');
-            }, 10);
+                }, 10);
+            }
         }
-        if(windowWidth > 868){
-        	bxsliderServices.destroySlider();
-    		}
-
-
     });
 
-	$('.bx-slider').bxSlider({
+
+
+    $('.testimonials-slider').bxSlider({
         minSlides: 1,
         maxSlides: 1
     });
 
-    bxsliderServices = $('#services').bxSlider({
+    bxsliderServices = services.bxSlider({
         minSlides: 1,
         maxSlides: 1
     });
+
+    if(windowWidth > 868 && services.length){
+        bxsliderServices.destroySlider();
+    }
+
 });
 
 
 
 
 
-$('.works-slide').bxSlider({
-    controls: true,
-    minSlides: 1,
-    maxSlides: 1
-});
+

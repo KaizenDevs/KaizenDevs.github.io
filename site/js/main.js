@@ -126,6 +126,15 @@ $(function() {
         });
     }
 
+    var target = location.hash;
+    if (target.length) {
+      var targetOffset = $target.offset().top - 78;
+      $('html,body')
+      .animate({scrollTop: targetOffset}, 1000);
+    }
+ 
+
+
 });
 
 
