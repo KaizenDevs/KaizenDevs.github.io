@@ -43,6 +43,9 @@ $(function() {
    $('.disable-link').on('click', function(event) { event.preventDefault();});
 
 
+  $("#services-box").on('click', function(e) {
+        console.log($(this).attr('value'));
+    });
 
     $(window).resize(function(){
         windowWidth = $(window).width();
@@ -55,17 +58,6 @@ $(function() {
         }
     });
 
-   // $(contactAction).on('click', function(e) {
-   //  e.preventDefault();
-   //  $(contactBox).fadeIn();
-   //  $(nav).fadeOut();
-   //  $(pull).toggleClass(active);
-   //  });
-
-   // $(contactClose).on('click', function() {
-   //      $(contactBox).fadeOut();
-   //      $(wrapper).fadeIn();
-   // });
 
     $(window).scroll(function() {
         if ($(this).scrollTop()>0 && windowWidth < 868)

@@ -123,4 +123,12 @@ $(function() {
         console.log('clicked');
     });
 
+  var checkBoxNameGetter  = window.location.href.split("?checkbox=")[1];
+
+  preselectCheckBox = function(checkBoxName){
+    $("input[value='"+ checkBoxName + "']").prop('checked', true).parent().addClass('active');
+  }
+    preselectCheckBox(checkBoxNameGetter);
+
+
 });
