@@ -12,6 +12,7 @@
 	.brand {
 		display: block;
 		text-align: center;
+		margin: 80px auto -80px auto;
 		@media screen and (min-width:$break-medium){
 			display: none;
 		}

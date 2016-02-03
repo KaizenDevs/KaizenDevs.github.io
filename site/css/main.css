@@ -5505,7 +5505,8 @@ button.close {
       padding: 30px 13.75em 0 13.75em; } }
   .featured-call .brand {
     display: block;
-    text-align: center; }
+    text-align: center;
+    margin: 80px auto -80px auto; }
     @media screen and (min-width: 868px) {
       .featured-call .brand {
         display: none; } }
