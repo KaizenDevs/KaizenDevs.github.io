@@ -19,13 +19,15 @@ $(function() {
 
     breakPointExecuter = function(){
         if(checkBreakPointVsWindow(868) == 'greater' ||  checkBreakPointVsWindow(868) == 'equal'){
-            slider = $('#services').bxSlider({
+             slider = $('#services').bxSlider({
                 minSlides: 1,
                 maxSlides: 1
             });
         }
         if(checkBreakPointVsWindow(868) == 'lesser'){
-            slider.destroySlider();
+            if (typeof slider != 'undefined'){
+                slider.destroySlider();
+            }
         }
     }
 
@@ -35,12 +37,8 @@ $(function() {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function() {
             // Run code here, resizing has "stopped"
-            var breakPointer = new checkBreakPointVsWindow(868);
-            console.log(breakPointer.windowWidth);
             breakPointExecuter();
-
         }, 250);
-
   });
 
  breakPointExecuter();
