@@ -31,6 +31,37 @@ h1 {
   font-family: $mainFont;
 }
 
+#home .detail-icon {
+	display: none;
+}
+
+.type-two .detail-icon {
+	display: block;
+}
+
+.detail-icon {
+	float: left;
+	text-decoration: none;
+	transition: all 0.3s;
+	.image {
+		display: inline-block;
+	}
+	span {
+	color: #3CD52E;
+	font-weight: 800;
+	font-size: 1.3125em;
+	position: relative;
+	bottom: 23px;
+	left: 10px;
+	}
+	&:hover {
+		opacity: .6;
+	}
+}
+
+.type-two .home-icon {
+	display: none !important;
+}
 
 .medium {
 	@media screen and (min-width:$break-medium){
@@ -89,8 +120,14 @@ h1 {
     visibility: visible;
   }
 
-.wrapper{
-	padding-top: 76px
+// .wrapper{
+// 	padding-top: 76px;
+// }
+
+.section:before {
+    content: " ";
+    display: block;
+    height: 76px;
 }
 
 .wrapp-center {
@@ -226,10 +263,5 @@ button {
 		width: 40px;
 		height: 6px;
 	}
-}
-
-
-.section {
-	margin-bottom: 50px;
 }
 

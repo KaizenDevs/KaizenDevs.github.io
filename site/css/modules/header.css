@@ -12,7 +12,8 @@
   position: fixed;
   height: 76px;
   background-color: white;
-  z-index: 999; }
+  z-index: 999;
+  top: 0; }
   @media screen and (min-width: 868px) {
     .header {
       padding: 20px em(50);

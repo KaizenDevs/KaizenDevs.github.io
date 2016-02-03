@@ -111,16 +111,12 @@
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
     padding-top: 25px;
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
     @media screen and (min-width: 868px) {
       .collaborators .wrapp-items {
-        display: inline-block;
         text-align: center; } }
   .collaborators .item {
     -webkit-flex: auto;

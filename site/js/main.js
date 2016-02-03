@@ -107,8 +107,6 @@ $(function() {
     });
 
 
-
-
     if(windowWidth > 868){
         $('a[href*=#]').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
@@ -117,7 +115,7 @@ $(function() {
           $target = $target.length && $target
           || $('[name=' + this.hash.slice(1) +']');
           if ($target.length) {
-            var targetOffset = $target.offset().top - 78;
+            var targetOffset = $target.offset().top;
             $('html,body')
             .animate({scrollTop: targetOffset}, 1000);
            return false;
@@ -125,24 +123,5 @@ $(function() {
         }
         });
     }
-
-    var target = location.hash;
-    if (target.length) {
-      var targetOffset = $target.offset().top - 78;
-      $('html,body')
-      .animate({scrollTop: targetOffset}, 1000);
-    }
- 
-
-
 });
-
-
-
-
-// $('.works-slide').bxSlider({
-//     controls: true,
-//     minSlides: 1,
-//     maxSlides: 1
-// });
 

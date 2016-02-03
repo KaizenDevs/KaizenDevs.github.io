@@ -126,11 +126,9 @@
 	.wrapp-items{
 		display: flex;
 		justify-content: center;
-		align-items: center;
 		padding-top: 25px;
 		flex-wrap: wrap;
 		@media screen and (min-width:$break-medium){
-			display: inline-block;
 			text-align: center;
 		}
 	}

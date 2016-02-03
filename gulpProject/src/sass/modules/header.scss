@@ -9,6 +9,7 @@
 	height: 76px;
 	background-color: $white;
 	z-index: 999;
+	top: 0;
 	@media screen and (min-width:$break-medium){
 		padding: 20px em(50);
 		height: auto;
