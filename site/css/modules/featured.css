@@ -9,10 +9,10 @@
   padding-bottom: 30px; }
   @media screen and (min-width: 868px) {
     .featured-call {
-      padding: 30px em(35) 50px em(35); } }
+      padding: 30px em(35) 0 em(35); } }
   @media screen and (min-width: 1400px) {
     .featured-call {
-      padding: 30px em(220) 60px em(220); } }
+      padding: 30px em(220) 0 em(220); } }
   .featured-call .brand {
     display: block;
     text-align: center; }
@@ -20,12 +20,12 @@
       .featured-call .brand {
         display: none; } }
   .featured-call .text {
-    padding: 0 em(20);
+    padding: 0 em(20) 0 em(20);
     text-align: center; }
     .featured-call .text h1 {
       font-size: em(16);
       line-height: em(25);
-      margin-top: 10px;
+      margin-top: 85px;
       margin-left: auto;
       margin-right: auto; }
       @media screen and (max-width: 868px) {
@@ -34,11 +34,7 @@
       @media screen and (min-width: 868px) {
         .featured-call .text h1 {
           font-size: em(34);
-          padding-bottom: 20px;
           width: 750px; } }
-      @media screen and (min-width: 1400px) {
-        .featured-call .text h1 {
-          padding-bottom: 10px; } }
   .featured-call .button {
     margin: 10px 0;
     padding: 3px 16px 5px 16px;

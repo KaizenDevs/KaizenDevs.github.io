@@ -31,7 +31,7 @@ $(function() {
     });
 
 
-   $('.btn-1').on('click', function(e) {
+   $('.btn-go-to-project-planner').on('click', function(e) {
         e.preventDefault();
         window.location.href = 'project.html';
     });

@@ -238,7 +238,7 @@ button {
 .more-works {
 	color: $buttonColor;
 	padding: 20px 0;
-	display: none;
+	// display: none;
 	@media screen and (min-width:$break-medium){
 		display: inline-block;
 	}

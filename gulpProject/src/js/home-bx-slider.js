@@ -1,53 +1,48 @@
 $(function() {
 
-    // Variables 
-
-    var bxsliderServices = null,
-    services = $("#services"),
-    windowWidth = $(window).width();
-
-    // Resize Function
-
-    $(window).on("resize", function(){
-    windowWidth = $(window).width();
-        if(services.length){
-            if(windowWidth < 868){
-                bxsliderServices.reloadSlider({
-                    minSlides: 1,
-                    maxSlides: 1
-                });
-            }
-
-            if(windowWidth > 868){
-                bxsliderServices.destroySlider();
-                setTimeout(function(){
-                $("#services li").removeAttr('style');
-                $("#services").removeAttr('style');
-                }, 10);
-            }
-        }
-    });
-
-
-
     $('.testimonials-slider').bxSlider({
         minSlides: 1,
         maxSlides: 1
     });
 
-    bxsliderServices = services.bxSlider({
-        minSlides: 1,
-        maxSlides: 1
-    });
+    checkBreakPointVsWindow = function (breakPoint){
+        this.windowWidth = $(window).width();
+        this.breakPoint = breakPoint;
+        if ( this.breakPoint > this.windowWidth ){
+            return 'greater';
+        } else if ( this.breakPoint < this.windowWidth ) {
+            return 'lesser';
+        } else if ( this.breakPoint === this.windowWidth ) {
+            return 'equal';
+        };
+    };
 
-    if(windowWidth > 868 && services.length){
-        bxsliderServices.destroySlider();
+    breakPointExecuter = function(){
+        if(checkBreakPointVsWindow(868) == 'greater' ||  checkBreakPointVsWindow(868) == 'equal'){
+            slider = $('#services').bxSlider({
+                minSlides: 1,
+                maxSlides: 1
+            });
+        }
+        if(checkBreakPointVsWindow(868) == 'lesser'){
+            slider.destroySlider();
+        }
     }
 
+    var resizeTimer;
+
+    $(window).on('resize', function(e) {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+            // Run code here, resizing has "stopped"
+            var breakPointer = new checkBreakPointVsWindow(868);
+            console.log(breakPointer.windowWidth);
+            breakPointExecuter();
+
+        }, 250);
+
+  });
+
+ breakPointExecuter();
+
 });
-
-
-
-
-
-

@@ -3,10 +3,10 @@
 .featured-call {
 	padding-bottom: 30px;
 	@media screen and (min-width:$break-medium) {
-		padding: 30px em(35) 50px em(35);
+		padding: 30px em(35) 0 em(35);
 	}
 	@media screen and (min-width:$break-large) {
-		padding: 30px em(220) 60px em(220);
+		padding: 30px em(220) 0 em(220);
 
 	}
 	.brand {
@@ -17,12 +17,12 @@
 		}
 	}
 	.text {
-		padding: 0 em(20);
+		padding: 0 em(20) 0 em(20);
 		text-align: center;
 		h1 {
 			font-size: em(16);
 			line-height: em(25);
-			margin-top: 10px;
+			margin-top: 85px;
 			margin-left: auto;
 			margin-right: auto;
 
@@ -31,11 +31,11 @@
 			}
 			@media screen and (min-width:$break-medium){
 				font-size: em(34);
-				padding-bottom: 20px;
+				// padding-bottom: 20px;
 				width: 750px;
 			}
 			@media screen and (min-width:$break-large) {
-				padding-bottom: 10px;
+				// padding-bottom: 10px;
 			}
 		}
 	}

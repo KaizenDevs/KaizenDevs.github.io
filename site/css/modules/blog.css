@@ -312,6 +312,7 @@
         width: 100%;
         -webkit-align-items: flex-start;
             -ms-flex-align: start;
+                    -ms-grid-row-align: flex-start;
                 align-items: flex-start;
         -webkit-flex-direction: column;
             -ms-flex-direction: column;

@@ -5499,10 +5499,10 @@ button.close {
   padding-bottom: 30px; }
   @media screen and (min-width: 868px) {
     .featured-call {
-      padding: 30px 2.1875em 50px 2.1875em; } }
+      padding: 30px 2.1875em 0 2.1875em; } }
   @media screen and (min-width: 1400px) {
     .featured-call {
-      padding: 30px 13.75em 60px 13.75em; } }
+      padding: 30px 13.75em 0 13.75em; } }
   .featured-call .brand {
     display: block;
     text-align: center; }
@@ -5510,12 +5510,12 @@ button.close {
       .featured-call .brand {
         display: none; } }
   .featured-call .text {
-    padding: 0 1.25em;
+    padding: 0 1.25em 0 1.25em;
     text-align: center; }
     .featured-call .text h1 {
       font-size: 1em;
       line-height: 1.5625em;
-      margin-top: 10px;
+      margin-top: 85px;
       margin-left: auto;
       margin-right: auto; }
       @media screen and (max-width: 868px) {
@@ -5524,11 +5524,7 @@ button.close {
       @media screen and (min-width: 868px) {
         .featured-call .text h1 {
           font-size: 2.125em;
-          padding-bottom: 20px;
           width: 750px; } }
-      @media screen and (min-width: 1400px) {
-        .featured-call .text h1 {
-          padding-bottom: 10px; } }
   .featured-call .button {
     margin: 10px 0;
     padding: 3px 16px 5px 16px;
@@ -6680,6 +6676,7 @@ footer {
         width: 100%;
         -webkit-align-items: flex-start;
             -ms-flex-align: start;
+                    -ms-grid-row-align: flex-start;
                 align-items: flex-start;
         -webkit-flex-direction: column;
             -ms-flex-direction: column;
@@ -7162,7 +7159,6 @@ button {
 .more-works {
   color: #3CD52E;
   padding: 20px 0;
-  display: none;
   font-weight: 800; }
   @media screen and (min-width: 868px) {
     .more-works {
