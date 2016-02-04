@@ -1,0 +1,60 @@
+.project.form
+	.header-form.hide-small
+		.image
+			img(src="images/misc/home-icon-featured.svg", alt="")
+		span.name Project planner
+	.content.medium
+		a(href="index.html").form-close
+		h4.text Start a project, get a quote or learn more about how we can partner to build a successful product.
+		form(action="#").project-form
+			fieldset
+				label(for="name") full name
+				input(type="text" name="name" placeholder="Your first name")
+			fieldset
+				label(for="email") email address
+				input(type="email" name="email" placeholder="Your emal address you@example.com")
+			fieldset
+				label(for="phone") phone number
+				input(type="number" name="phone" placeholder="Country code + city + phone number")
+			fieldset
+				label(for="organization") organization
+				input(type="text" name="organization" placeholder="Where you work")
+			.type
+				.type-title type of project
+				span.type-text select all that apply
+				label.project-type
+			.box-type
+				.box-label
+					label.check
+						input(type="checkbox" name="project_type" value="webapp")
+						.web.icon
+						span web app
+				.box-label
+					label.check
+						input(type="checkbox" name="project_type" value="ecommerce")
+						.ecommerce.icon
+						span ecommerce
+				.box-label
+					label.check
+						input(type="checkbox" name="project_type" value="mobile")
+						.mobile.icon
+						span mobile
+				.box-label
+					label.check
+						input(type="checkbox" name="project_type" value="mvp")
+						.mvp.icon
+						span mvp
+				.box-label
+					label.check
+						input(type="checkbox" name="project_type" value="prototype")
+						.product.icon
+						span product prototype
+			a(href="index.html#services-box").more-services
+				span more about our services
+			label.project-type
+			fieldset
+				label(for="") ABOUT THE PROJECT
+				p.info Tell us about the project, requirements and objectives.
+				textarea(name="about the project" placeholder="Write a few lines about the project")
+			.wrapp-center
+				button.button Submit a project

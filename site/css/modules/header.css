@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'league_spartanregular';
+  src: url("../fonts/leaguespartan-bold-webfont.eot");
+  src: url("../fonts/leaguespartan-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/leaguespartan-bold-webfont.woff2") format("woff2"), url("../fonts/leaguespartan-bold-webfont.woff") format("woff"), url("../fonts/leaguespartan-bold-webfont.ttf") format("truetype"), url("../fonts/leaguespartan-bold-webfont.svg#league_spartanregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.header {
+  width: 100%;
+  display: inline-block;
+  padding: 14px 0;
+  position: fixed;
+  height: 76px;
+  background-color: white;
+  z-index: 999;
+  top: 0; }
+  @media screen and (min-width: 868px) {
+    .header {
+      padding: 20px em(50);
+      height: auto; } }
+  .header .content {
+    display: block; }
+  @media screen and (min-width: 868px) {
+    .header #blog {
+      display: none; } }
+  .header .home-icon {
+    background-image: url(../images/misc/home-icon-small.svg);
+    background-size: 100%;
+    width: em(48);
+    height: em(48);
+    float: left;
+    display: none; }
+    @media screen and (min-width: 868px) {
+      .header .home-icon {
+        background-image: url(../images/misc/home-icon-large.svg);
+        width: em(160);
+        height: em(52);
+        background-position: center center;
+        display: block; } }
+  .header .action_mobile {
+    cursor: pointer;
+    padding: 0;
+    float: right;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    right: 1.25em;
+    height: 40px;
+    width: 35px;
+    padding-top: 19px; }
+    @media screen and (min-width: 868px) {
+      .header .action_mobile {
+        display: none; } }
+    .header .action_mobile.active span {
+      background-color: transparent; }
+    .header .action_mobile.active span:before, .header .action_mobile.active span:after {
+      top: 0;
+      background: white; }
+    .header .action_mobile.active span:before {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .header .action_mobile.active span:after {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+    .header .action_mobile span {
+      background-color: transparent; }
+      .header .action_mobile span:before {
+        top: em(-10); }
+      .header .action_mobile span:after {
+        bottom: em(-10); }
+    .header .action_mobile span, .header .action_mobile span:before, .header .action_mobile span:after {
+      cursor: pointer;
+      border-radius: 1px;
+      height: em(4);
+      width: em(35);
+      background-color: #010101;
+      position: absolute;
+      display: block;
+      content: ''; }
+  .header .nav {
+    display: none;
+    font-family: "league_spartanregular";
+    position: fixed;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #3CD52E;
+    transition: width 250ms ease-out; }
+    @media screen and (min-width: 868px) {
+      .header .nav {
+        position: relative;
+        display: -webkit-flex !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        background-color: white;
+        -webkit-justify-content: flex-end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        font-family: "proxima-nova";
+        line-height: 2; } }
+    .header .nav ul {
+      position: relative;
+      top: 28%; }
+      @media screen and (min-width: 868px) {
+        .header .nav ul {
+          margin: 0;
+          line-height: 3; } }
+      .header .nav ul li {
+        display: inline-block;
+        width: 100%; }
+        @media screen and (min-width: 868px) {
+          .header .nav ul li {
+            -webkit-flex: auto;
+                -ms-flex: auto;
+                    flex: auto;
+            display: initial;
+            width: auto;
+            padding: 0 em(10); } }
+        .header .nav ul li a {
+          color: white;
+          display: inherit;
+          width: inherit;
+          text-align: center;
+          padding: em(10) 0;
+          font-size: em(20);
+          text-decoration: none;
+          transition: color 250ms ease-out,background 250ms ease-out; }
+          @media screen and (min-width: 868px) {
+            .header .nav ul li a {
+              color: #010101;
+              font-size: em(14);
+              text-transform: uppercase;
+              font-weight: 800; } }
+          .header .nav ul li a:hover {
+            background-color: white;
+            color: #3CD52E; }

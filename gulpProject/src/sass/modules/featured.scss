@@ -1,0 +1,232 @@
+@import 'variables';
+
+.featured-call {
+	padding-bottom: 30px;
+	@media screen and (min-width:$break-medium) {
+		padding: 30px em(35) 0 em(35);
+	}
+	@media screen and (min-width:$break-large) {
+		padding: 30px em(220) 0 em(220);
+
+	}
+	.brand {
+		display: block;
+		text-align: center;
+		margin: 80px auto -80px auto;
+		@media screen and (min-width:$break-medium){
+			display: none;
+		}
+	}
+	.text {
+		padding: 0 em(20) 0 em(20);
+		text-align: center;
+		h1 {
+			font-size: em(16);
+			line-height: em(25);
+			margin-top: 85px;
+			margin-left: auto;
+			margin-right: auto;
+
+			@media screen and (max-width:$break-medium){
+				font-size: em(16);
+			}
+			@media screen and (min-width:$break-medium){
+				font-size: em(34);
+				// padding-bottom: 20px;
+				width: 750px;
+			}
+			@media screen and (min-width:$break-large) {
+				// padding-bottom: 10px;
+			}
+		}
+	}
+	.button {
+		margin: 10px 0;
+		padding: 3px 16px 5px 16px;
+		font-size: 1.3em !important;
+	}
+}
+
+.featured-works {
+	display: inline-block;
+	width: 100%;
+	@media screen and (min-width:$break-medium){
+		.item {
+			width: 50%;
+			float: left;
+		}
+		.content {
+			display: none;
+		}
+	}
+	.item {
+		overflow: hidden;
+		cursor: pointer;
+		margin-bottom: 7px;
+		border: 0;
+		@media screen and (min-width:$break-medium){
+			margin-bottom: 0;
+		}
+		.image {
+			width: 100%;
+			height: 188px;
+			overflow: hidden;
+			position: relative;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			transition: all 0.5s;
+			&:hover{ width: 105%}
+			@media screen and (min-width:$break-medium){
+				height: 400px;
+				background-size: cover;
+			}
+			&:after {
+				content: "";
+				position: absolute;
+				background-color: rgba($baseColor, .5);
+				top: 0;
+				width: 100%;
+				height: 100%;
+				display: none;
+				@media screen and (min-width:$break-medium){
+					background-color: rgba($menuColor, .5);
+				}
+			}
+			.top, .bottom {
+				position: absolute;
+				width:100%;
+				padding:15px 10px;
+				color: $white;
+				transition: all 0.5s;
+				z-index: 99;
+				@media screen and (min-width:$break-medium){
+					padding:inherit 20px;
+				}
+			}
+			.top {
+				top:0;
+				@media screen and (min-width:$break-medium){
+					padding:60px 30px;
+				}
+			}
+			.bottom {
+				bottom: 0;
+				@media screen and (min-width:$break-medium){
+					padding:40px 30px;
+					font-weight: 800;
+					letter-spacing: 5px;
+				}
+			}
+		}
+		.type {
+			text-transform: uppercase;
+			font-size: em(12);
+			@media screen and (min-width:$break-medium){
+				font-size: em(26);
+				font-weight: 800;
+			}
+		}
+		.name {
+			font-family: $titleFont;
+			font-size: em(21);
+			@media screen and (min-width:$break-medium){
+				font-size: em(36);
+				letter-spacing: 3px;
+			}
+		}
+		&:hover {
+			.top {
+				top: 10px;
+			}
+			.bottom {
+				// bottom: 10px;
+			}
+			.see-more {
+				&:after {
+					left: 12px;
+				}
+			}
+			.image {
+				background-size: 105%;
+				@media screen and (min-width:$break-medium){
+					background-size: cover;
+				}
+			}
+			.image:after {
+				display: block;
+			}
+			@media screen and (min-width:$break-medium){
+				.content {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+.start-featured {
+	padding: 30px 0;
+	@media screen and (min-width:$break-medium){
+		padding: 0;
+	}
+	.item {
+		background-image: url("../images/fpo/thumb-business-hackers.jpg");
+		background-repeat: no-repeat;
+		background-position: center center;
+		min-height: 198px;
+		background-size: 100%;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		position: relative;
+		transition: all 0.5s;
+		cursor: pointer;
+		@media screen and (min-width:$break-medium){
+			min-height: 320px;
+		}
+		.text span a{
+			color: $white;
+			text-decoration: none;
+		}
+		&:hover {
+			background-size: 105%;
+			.text span {
+				background-color: $white;
+				color: $baseColor;
+				border-bottom: 4px solid rgba($baseColor, .2);
+			}
+			&:before {
+				background-color: rgba($baseColor, .8);
+			}
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			background-color: rgba($baseColor, .15);
+			top: 0;
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+		.text {
+			display: inline-block;
+			position: relative;
+			z-index: 2;
+			span {
+				color: $white;
+				font-family: $titleFont;
+				font-size: em(20);
+				border: 4px solid $white;
+				padding: 5px em(15);
+				display: inline-block;
+				background-color: rgba($baseColor, .5);
+				transition: all 0.2s;
+				@media screen and (min-width:$break-medium){
+					font-size: em(36);
+					padding: 12px em(15) 20px em(15);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+block variables
+	title Kaizen
+extend ../basetemplate_details.jade
+block content
+	include ../modules/header.jade
+	.wrapper
+		.inner
+				.works-detail
+					.wrapp-title.medium
+						ul.works-slide
+							li
+								.wrapper-works-interna
+									.title Casa Horizontes
+									p.text Amazing platform for the promotion of Casa Horizontes boutique Hotel. It counts with a powerful and intuitive inline CMS, based on an HTML5 editor for modern browsers, that allows you to make changes on your website without having to write a single line of code. What you see is what you get.
+								img(src="images/projects/2-casa-horizontes.jpg", alt="")
+					.controls.medium
+						a(href="businesshackers.html").prev prev
+						a(href="cienpreguntas.html").next next
+						.wrapp-center
+							a(href="index.html").button Back to home
+	include ../modules/footer.jade
