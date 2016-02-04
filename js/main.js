@@ -31,10 +31,10 @@ $(function() {
     });
 
 
-   // $('.btn-go-to-project-planner').on('click', function(e) {
-   //      e.preventDefault();
-   //      window.location.href = 'project.html';
-   //  });
+   $('.btn-go-to-project-planner').on('click', function(e) {
+        e.preventDefault();
+        window.location.href = 'project.html';
+    });
 
    $('.btn-go-to-home').on('click', function(e) {
         e.preventDefault();
