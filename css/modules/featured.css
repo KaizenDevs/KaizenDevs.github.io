@@ -1,0 +1,199 @@
+@font-face {
+  font-family: 'league_spartanregular';
+  src: url("../fonts/leaguespartan-bold-webfont.eot");
+  src: url("../fonts/leaguespartan-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/leaguespartan-bold-webfont.woff2") format("woff2"), url("../fonts/leaguespartan-bold-webfont.woff") format("woff"), url("../fonts/leaguespartan-bold-webfont.ttf") format("truetype"), url("../fonts/leaguespartan-bold-webfont.svg#league_spartanregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.featured-call {
+  padding-bottom: 30px; }
+  @media screen and (min-width: 868px) {
+    .featured-call {
+      padding: 30px em(35) 0 em(35); } }
+  @media screen and (min-width: 1400px) {
+    .featured-call {
+      padding: 30px em(220) 0 em(220); } }
+  .featured-call .brand {
+    display: block;
+    text-align: center;
+    margin: 80px auto -80px auto; }
+    @media screen and (min-width: 868px) {
+      .featured-call .brand {
+        display: none; } }
+  .featured-call .text {
+    padding: 0 em(20) 0 em(20);
+    text-align: center; }
+    .featured-call .text h1 {
+      font-size: em(16);
+      line-height: em(25);
+      margin-top: 85px;
+      margin-left: auto;
+      margin-right: auto; }
+      @media screen and (max-width: 868px) {
+        .featured-call .text h1 {
+          font-size: em(16); } }
+      @media screen and (min-width: 868px) {
+        .featured-call .text h1 {
+          font-size: em(34);
+          width: 750px; } }
+  .featured-call .button {
+    margin: 10px 0;
+    padding: 3px 16px 5px 16px;
+    font-size: 1.3em !important; }
+
+.featured-works {
+  display: inline-block;
+  width: 100%; }
+  @media screen and (min-width: 868px) {
+    .featured-works .item {
+      width: 50%;
+      float: left; }
+    .featured-works .content {
+      display: none; } }
+  .featured-works .item {
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 7px;
+    border: 0; }
+    @media screen and (min-width: 868px) {
+      .featured-works .item {
+        margin-bottom: 0; } }
+    .featured-works .item .image {
+      width: 100%;
+      height: 188px;
+      overflow: hidden;
+      position: relative;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      transition: all 0.5s; }
+      .featured-works .item .image:hover {
+        width: 105%; }
+      @media screen and (min-width: 868px) {
+        .featured-works .item .image {
+          height: 400px;
+          background-size: cover; } }
+      .featured-works .item .image:after {
+        content: "";
+        position: absolute;
+        background-color: rgba(1, 1, 1, 0.5);
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: none; }
+        @media screen and (min-width: 868px) {
+          .featured-works .item .image:after {
+            background-color: rgba(60, 213, 46, 0.5); } }
+      .featured-works .item .image .top, .featured-works .item .image .bottom {
+        position: absolute;
+        width: 100%;
+        padding: 15px 10px;
+        color: white;
+        transition: all 0.5s;
+        z-index: 99; }
+        @media screen and (min-width: 868px) {
+          .featured-works .item .image .top, .featured-works .item .image .bottom {
+            padding: inherit 20px; } }
+      .featured-works .item .image .top {
+        top: 0; }
+        @media screen and (min-width: 868px) {
+          .featured-works .item .image .top {
+            padding: 60px 30px; } }
+      .featured-works .item .image .bottom {
+        bottom: 0; }
+        @media screen and (min-width: 868px) {
+          .featured-works .item .image .bottom {
+            padding: 40px 30px;
+            font-weight: 800;
+            letter-spacing: 5px; } }
+    .featured-works .item .type {
+      text-transform: uppercase;
+      font-size: em(12); }
+      @media screen and (min-width: 868px) {
+        .featured-works .item .type {
+          font-size: em(26);
+          font-weight: 800; } }
+    .featured-works .item .name {
+      font-family: "league_spartanregular";
+      font-size: em(21); }
+      @media screen and (min-width: 868px) {
+        .featured-works .item .name {
+          font-size: em(36);
+          letter-spacing: 3px; } }
+    .featured-works .item:hover .top {
+      top: 10px; }
+    .featured-works .item:hover .see-more:after {
+      left: 12px; }
+    .featured-works .item:hover .image {
+      background-size: 105%; }
+      @media screen and (min-width: 868px) {
+        .featured-works .item:hover .image {
+          background-size: cover; } }
+    .featured-works .item:hover .image:after {
+      display: block; }
+    @media screen and (min-width: 868px) {
+      .featured-works .item:hover .content {
+        display: block; } }
+
+.start-featured {
+  padding: 30px 0; }
+  @media screen and (min-width: 868px) {
+    .start-featured {
+      padding: 0; } }
+  .start-featured .item {
+    background-image: url("../images/fpo/thumb-business-hackers.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 198px;
+    background-size: 100%;
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer; }
+    @media screen and (min-width: 868px) {
+      .start-featured .item {
+        min-height: 320px; } }
+    .start-featured .item .text span a {
+      color: white;
+      text-decoration: none; }
+    .start-featured .item:hover {
+      background-size: 105%; }
+      .start-featured .item:hover .text span {
+        background-color: white;
+        color: #010101;
+        border-bottom: 4px solid rgba(1, 1, 1, 0.2); }
+      .start-featured .item:hover:before {
+        background-color: rgba(1, 1, 1, 0.8); }
+    .start-featured .item:before {
+      content: "";
+      position: absolute;
+      background-color: rgba(1, 1, 1, 0.15);
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: block; }
+    .start-featured .item .text {
+      display: inline-block;
+      position: relative;
+      z-index: 2; }
+      .start-featured .item .text span {
+        color: white;
+        font-family: "league_spartanregular";
+        font-size: em(20);
+        border: 4px solid white;
+        padding: 5px em(15);
+        display: inline-block;
+        background-color: rgba(1, 1, 1, 0.5);
+        transition: all 0.2s; }
+        @media screen and (min-width: 868px) {
+          .start-featured .item .text span {
+            font-size: em(36);
+            padding: 12px em(15) 20px em(15); } }
