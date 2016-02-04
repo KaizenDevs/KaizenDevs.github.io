@@ -1,0 +1,21 @@
+block variables
+	title Kaizen
+extend ../basetemplate_details.jade
+block content
+	include ../modules/header.jade
+	.wrapper
+		.inner
+				.works-detail
+					.wrapp-title.medium
+						ul.works-slide
+							li
+								.wrapper-works-interna
+									.title Quincena.me
+									p.text A powerful WEB app that automates the process of payroll in your company. From this app you can manage your employees, generate their payroll payment slips, manage taxes, generate reports, get to know the analytics behind your payroll and manage your legal provisions.
+								img(src="images/projects/1-quincename.jpg", alt="")
+					.controls.medium
+						//- a(href="quincename.html").prev prev
+						a(href="vuelteros.html").next next
+						.wrapp-center
+							a(href="index.html").button Back to home
+	include ../modules/footer.jade

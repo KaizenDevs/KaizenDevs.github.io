@@ -51,6 +51,7 @@
     .featured-works .content {
       display: none; } }
   .featured-works .item {
+    overflow: hidden;
     cursor: pointer;
     margin-bottom: 7px;
     border: 0; }

@@ -5541,6 +5541,7 @@ button.close {
     .featured-works .content {
       display: none; } }
   .featured-works .item {
+    overflow: hidden;
     cursor: pointer;
     margin-bottom: 7px;
     border: 0; }
@@ -6306,7 +6307,7 @@ footer {
 
 .works-detail .title {
   text-align: left;
-  padding: 20px 0.625em; }
+  padding: 100px 0.625em 20px 0.625em; }
   @media screen and (min-width: 868px) {
     .works-detail .title {
       font-size: 2.25em;

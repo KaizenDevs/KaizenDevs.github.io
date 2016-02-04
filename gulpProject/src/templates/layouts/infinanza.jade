@@ -1,0 +1,21 @@
+block variables
+	title Kaizen
+extend ../basetemplate_details.jade
+block content
+	include ../modules/header.jade
+	.wrapper
+		.inner
+				.works-detail
+					.wrapp-title.medium
+						ul.works-slide
+							li
+								.wrapper-works-interna
+									.title Infinanza
+									p.text The easiest way to organize and monitor the financial operation of your business. Infinanza is a Web app that allows you to organize your business’ day to day transactions (invoicing, income, etc.) in an agile, safe and easy way, generating amazing graphs and reports. It is directed to small and medium service companies that wish to monitor their business’ behavior every day, without having to wait accountant reports.
+								img(src="images/projects/3-infinanzas.jpg", alt="")
+					.controls.medium
+						a(href="vuelteros.html").prev prev
+						a(href="businesshackers.html").next next
+						.wrapp-center
+							a(href="index.html").button Back to home
+	include ../modules/footer.jade

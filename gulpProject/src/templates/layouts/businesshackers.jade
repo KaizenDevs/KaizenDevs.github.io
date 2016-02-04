@@ -1,0 +1,21 @@
+block variables
+	title Kaizen
+extend ../basetemplate_details.jade
+block content
+	include ../modules/header.jade
+	.wrapper
+		.inner
+				.works-detail
+					.wrapp-title.medium
+						ul.works-slide
+							li
+								.wrapper-works-interna
+									.title Business hackers
+									p.text E-learning platform for the training of new entrepreneurs that want to change the world through technology oriented business models. In Business Hackers you have access to a complete library of guides and multimedia to build your business idea.
+								img(src="images/projects/5-businesshackers.jpg", alt="")
+					.controls.medium
+						a(href="infinanza.html").prev prev
+						a(href="casa-horizontes.html").next next
+						.wrapp-center
+							a(href="index.html").button Back to home
+	include ../modules/footer.jade
