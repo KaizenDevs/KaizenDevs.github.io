@@ -1,0 +1,188 @@
+$font: 'Roboto', sans-serif;
+
+body{ font-family: $font }
+.jumbotron{
+	background:url('../../images/bg-hero.jpg');
+	background-size: cover;
+}
+.icon-feature{
+	text-align: center !important;
+	font-size: 160px;
+	display: block;
+	margin:2rem auto;
+}
+.caption p {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 23px;
+	color: #4E4E4E;
+}
+.phones{
+	width: 90%;
+}
+.hero-icon-wrapper{display: inline-block;}
+.ios-icon{
+	width: 100px;
+	font-family: $font;
+	position: relative;
+	top:-30px;
+}
+h1{
+	font-weight: 300;
+	color: #232F48;
+}
+p.slogan{
+	font-size: 16px;
+	font-weight: 300;
+	color: #4E4E4E;
+}
+
+h2.section-title{
+	font-weight: 300;
+	font-size: 28px;
+	color: #232F48;
+	text-align: center;
+	margin-top: 32px;
+}
+.info-section{
+	padding-bottom: 62px;
+}
+footer{
+	background: #222E49;
+	padding: 3rem 0;
+	width: 100%;
+	color: #FFF;
+}
+footer {
+	color: #FFF;
+	padding-top:45px;
+	p{
+		font-size: 13px;
+		margin-top: 20px;
+		font-weight: 300;
+		margin-bottom: 0px;
+	}
+	a{
+		font-size: 13px;
+		display: inline-block;
+		padding: 12px;
+		color: #FFF;
+		&:hover{ color: #FFF;}
+	}
+}
+
+@media only screen and (min-width:320px) and (max-width: 640px)  {
+	.jumbotron{
+		background:url('../../images/bg-hero.jpg');
+		background-size: cover;
+		background-position: center top;
+	}
+	.caption {
+		padding: 0 10%;
+		margin-top: 0;
+	}
+	.icon-feature{
+		font-size: 150px;
+		line-height: 110px;
+	}
+	h1{
+		font-size: 26px;
+		text-align: center;
+	}
+	h2.section-title{
+		font-size: 19px;
+		font-weight: 100;
+	}
+	.img-responsive{
+		padding: 5px;
+	}
+
+}
+@media only screen and (min-width:1200px) {
+	.left-hero{
+		margin-left: 50px;
+	}
+
+	}
+@media only screen and (min-width:641px) and (max-width: 768px)  {
+	.caption {
+		padding: 0 25%;
+	}
+}
+@media only screen and (min-width:992px)  {
+	.left-hero{
+		// background: rgba(25,255,255,0.3);
+		margin-top: 100px;
+		height: 100px;
+		display: inline-block;
+		#download-android, #download-ios{
+			max-width: 168px;
+		}
+	}
+	.right-hero{
+
+	}
+	.ios-icon{
+		// float: left;
+		// margin: 100px;
+		display: inline-block;
+		width: 100px;
+		height: 100px;
+
+		img{
+			display: inline-block;
+			// margin-top: -50px;
+		}
+		// background: rgba(25,55,255,0.3);
+	}
+	.hero-text{
+		// background: rgba(25,255,255,0.3);
+		display: inline-block;
+	}
+	h1 {
+		display: inline-block;
+		font-size: 42px !important;
+		margin:0 0 15px 15px !important;
+		padding: 0 0 20px;
+		padding: 0;
+		margin:0;
+		font-weight: 300;
+		// text-align: left;
+	}
+	p.slogan{
+		font-size: 24px;
+		margin:0 0 0 15px !important;
+		padding: 0;
+		br {display: none}
+	}
+
+}
+@media only screen and (min-width:641px) and (max-width: 991px)  {
+	h1{text-align: center; font-size: 48px !important;}
+ 	p.slogan{
+ 		font-size: 24px;
+ 	}
+ 	.ios-icon{
+		padding-top: 40px;
+		width: 80px;
+	}
+	.jumbotron{
+		padding: 40px 0 60px 0;
+	}
+}
+@media only screen and (min-width:320px) and (max-width: 991px)  {
+	.hero-icon-wrapper{
+		display: block;
+		text-align: center;
+		height: 90px;
+
+	}
+	p.slogan{
+		text-align: center;
+		br {display: none;}
+	}
+		.jumbotron{
+		padding: 80px 0 60px 0;
+	}
+
+}
