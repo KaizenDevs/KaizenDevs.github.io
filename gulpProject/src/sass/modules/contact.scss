@@ -185,6 +185,9 @@
 			.product {
 			background-image: url("../images/fpo/service-product-hover.svg");
 			}
+			.digital-strategy {
+			background-image: url("../images/fpo/service-digital-strategy-hover.svg");
+			}
 		}
 		span {
 			display: inline-block;
@@ -231,6 +234,11 @@
 			width: 75px;
 			height: 40px;
 			background-image: url("../images/fpo/service-product.svg");
+		}
+		.digital-strategy {
+			width: 75px;
+			height: 40px;
+			background-image: url("../images/fpo/service-digital-strategy.svg");
 		}
 	}
 	.text {

@@ -6872,6 +6872,8 @@ footer {
         background-image: url("../images/fpo/service-mvp-hover.svg"); }
       .form .check.active .product {
         background-image: url("../images/fpo/service-product-hover.svg"); }
+      .form .check.active .digital-strategy {
+        background-image: url("../images/fpo/service-digital-strategy-hover.svg"); }
     .form .check span {
       display: inline-block;
       width: 100%;
@@ -6912,6 +6914,10 @@ footer {
       width: 75px;
       height: 40px;
       background-image: url("../images/fpo/service-product.svg"); }
+    .form .check .digital-strategy {
+      width: 75px;
+      height: 40px;
+      background-image: url("../images/fpo/service-digital-strategy.svg"); }
   .form .text {
     font-family: "league_spartanregular";
     font-size: 1em;
